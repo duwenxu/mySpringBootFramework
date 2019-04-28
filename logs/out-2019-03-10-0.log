@@ -1,0 +1,59 @@
+13:53:00.535  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器配置::JettyConfig [port=9000, host=127.0.0.1, tempDir=null, logDir=logs, webDir=/E:/filemanager/src/main/webapp, contextPath=/fm, jettyMaxThreadNum=500, jettyMinThreadNum=1500, idleTimeOut=300000, acceptQueueSize=1000, acceptors=-1, selectors=4]
+13:53:00.644  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- webroot:file:///E:/filemanager/src/main/webapp/  descriptor:/E:/filemanager/src/main/webapp/WEB-INF/web.xml
+13:53:01.068  [main] INFO  /fm- Initializing Spring root WebApplicationContext
+13:53:01.523  [main] INFO  /fm- Initializing Spring FrameworkServlet 'spring-mvc'
+13:53:02.272  [main] INFO  org.hibernate.validator.internal.util.Version- HV000001: Hibernate Validator 5.0.2.Final
+13:53:02.958  [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+13:53:03.345  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器已经启动成功....
+13:54:05.625  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器配置::JettyConfig [port=9000, host=127.0.0.1, tempDir=null, logDir=logs, webDir=/E:/filemanager/src/main/webapp, contextPath=/fm, jettyMaxThreadNum=500, jettyMinThreadNum=1500, idleTimeOut=300000, acceptQueueSize=1000, acceptors=-1, selectors=4]
+13:54:05.723  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- webroot:file:///E:/filemanager/src/main/webapp/  descriptor:/E:/filemanager/src/main/webapp/WEB-INF/web.xml
+13:54:06.045  [main] INFO  /fm- Initializing Spring root WebApplicationContext
+13:54:06.487  [main] INFO  /fm- Initializing Spring FrameworkServlet 'spring-mvc'
+13:54:07.093  [main] INFO  org.hibernate.validator.internal.util.Version- HV000001: Hibernate Validator 5.0.2.Final
+13:54:07.719  [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+13:54:08.048  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器已经启动成功....
+13:54:39.053  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器配置::JettyConfig [port=9000, host=127.0.0.1, tempDir=null, logDir=logs, webDir=/E:/filemanager/src/main/webapp, contextPath=/fm, jettyMaxThreadNum=500, jettyMinThreadNum=1500, idleTimeOut=300000, acceptQueueSize=1000, acceptors=-1, selectors=4]
+13:54:39.156  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- webroot:file:///E:/filemanager/src/main/webapp/  descriptor:/E:/filemanager/src/main/webapp/WEB-INF/web.xml
+13:54:39.519  [main] INFO  /fm- Initializing Spring root WebApplicationContext
+13:54:40.054  [main] INFO  /fm- Initializing Spring FrameworkServlet 'spring-mvc'
+13:54:40.818  [main] INFO  org.hibernate.validator.internal.util.Version- HV000001: Hibernate Validator 5.0.2.Final
+13:54:41.454  [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+13:59:39.714  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器配置::JettyConfig [port=9000, host=127.0.0.1, tempDir=null, logDir=logs, webDir=/E:/filemanager/src/main/webapp, contextPath=/fm, jettyMaxThreadNum=500, jettyMinThreadNum=1500, idleTimeOut=300000, acceptQueueSize=1000, acceptors=-1, selectors=4]
+13:59:39.814  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- webroot:file:///E:/filemanager/src/main/webapp/  descriptor:/E:/filemanager/src/main/webapp/WEB-INF/web.xml
+13:59:40.133  [main] INFO  /fm- Initializing Spring root WebApplicationContext
+13:59:40.622  [main] INFO  /fm- Initializing Spring FrameworkServlet 'spring-mvc'
+13:59:41.285  [main] INFO  org.hibernate.validator.internal.util.Version- HV000001: Hibernate Validator 5.0.2.Final
+13:59:41.969  [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+13:59:42.259  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器已经启动成功....
+14:00:00.302  [qtp1164371389-32] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser findListByCond action
+14:00:00.302  [qtp1164371389-32] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser findListByCond action
+14:00:00.435  [qtp1164371389-32] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser findListByCond action
+14:00:00.435  [qtp1164371389-32] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser findListByCond action
+14:00:00.963  [qtp1164371389-41] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getFirstMenu
+14:00:00.964  [qtp1164371389-41] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+14:00:00.997  [qtp1164371389-41] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+14:00:00.998  [qtp1164371389-41] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+14:00:01.007  [qtp1164371389-41] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+14:00:01.008  [qtp1164371389-41] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam findListByCond action
+14:00:01.014  [qtp1164371389-41] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam findListByCond action
+14:00:01.055  [qtp1164371389-17] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getSubMenu
+14:00:01.055  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+14:00:01.061  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+14:00:01.061  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+14:00:01.066  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+14:00:01.066  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+14:00:01.070  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+14:00:01.070  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+14:00:01.075  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+14:00:01.075  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+14:00:01.079  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+14:00:01.079  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+14:00:01.083  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+14:00:01.083  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+14:00:01.087  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+14:00:01.088  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+14:00:01.092  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+14:00:01.092  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+14:00:01.097  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+14:00:01.097  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+14:00:01.104  [qtp1164371389-17] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action

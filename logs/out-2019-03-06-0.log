@@ -1,0 +1,211 @@
+11:19:18.214  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器配置::JettyConfig [port=9000, host=127.0.0.1, tempDir=null, logDir=logs, webDir=/E:/filemanager/src/main/webapp, contextPath=/fm, jettyMaxThreadNum=500, jettyMinThreadNum=1500, idleTimeOut=300000, acceptQueueSize=1000, acceptors=-1, selectors=4]
+11:19:18.336  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- webroot:file:///E:/filemanager/src/main/webapp/  descriptor:/E:/filemanager/src/main/webapp/WEB-INF/web.xml
+11:19:18.664  [main] INFO  /fm- Initializing Spring root WebApplicationContext
+11:19:19.206  [main] INFO  /fm- Initializing Spring FrameworkServlet 'spring-mvc'
+11:19:19.783  [main] INFO  org.hibernate.validator.internal.util.Version- HV000001: Hibernate Validator 5.0.2.Final
+11:19:20.463  [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+11:19:20.818  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器已经启动成功....
+11:19:30.207  [qtp327177752-34] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser findListByCond action
+11:19:30.208  [qtp327177752-34] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser findListByCond action
+11:19:30.362  [qtp327177752-34] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser findListByCond action
+11:19:30.363  [qtp327177752-34] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser findListByCond action
+11:19:30.852  [qtp327177752-55] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getFirstMenu
+11:19:30.853  [qtp327177752-55] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:19:30.873  [qtp327177752-55] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:19:30.873  [qtp327177752-55] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:19:30.879  [qtp327177752-55] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:19:30.880  [qtp327177752-55] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam findListByCond action
+11:19:30.883  [qtp327177752-55] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam findListByCond action
+11:19:30.923  [qtp327177752-51] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getSubMenu
+11:19:30.924  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:19:30.926  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:19:30.926  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:19:30.928  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:19:30.929  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:19:30.930  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:19:30.931  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:19:30.932  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:19:30.932  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:19:30.934  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:19:30.934  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:19:30.936  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:19:30.936  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:19:30.937  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:19:30.937  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:19:30.939  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:19:30.939  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:19:30.940  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:19:30.940  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:19:30.942  [qtp327177752-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:19:32.868  [qtp327177752-67] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findUserCombox
+11:19:32.868  [qtp327177752-67] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser findListByCond action
+11:19:32.868  [qtp327177752-67] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser findListByCond action
+11:19:32.875  [qtp327177752-66] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findDepartCombox
+11:19:32.876  [qtp327177752-66] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart findListByCond action
+11:19:32.876  [qtp327177752-66] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart findListByCond action
+11:19:32.880  [qtp327177752-67] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser findListByCond action
+11:19:32.880  [qtp327177752-66] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart findListByCond action
+11:19:32.880  [qtp327177752-67] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser findListByCond action
+11:19:32.880  [qtp327177752-66] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart findListByCond action
+11:19:32.889  [qtp327177752-70] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:19:32.896  [qtp327177752-145] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:19:32.897  [qtp327177752-145] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0042 isDefault=true
+11:19:32.897  [qtp327177752-145] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam findListByCond action
+11:19:32.900  [qtp327177752-145] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam findListByCond action
+11:19:32.903  [qtp327177752-70] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0041 isDefault=true
+11:19:32.903  [qtp327177752-70] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam findListByCond action
+11:19:32.905  [qtp327177752-143] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:19:32.906  [qtp327177752-70] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam findListByCond action
+11:19:32.907  [qtp327177752-143] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0041 isDefault=false
+11:19:32.915  [qtp327177752-26] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:19:32.915  [qtp327177752-26] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0042 isDefault=false
+11:19:33.005  [qtp327177752-73] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getFirstMenu
+11:19:33.005  [qtp327177752-73] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:19:33.007  [qtp327177752-73] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:19:33.007  [qtp327177752-73] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:19:33.016  [qtp327177752-73] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:19:33.037  [qtp327177752-74] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findFileInfo
+11:19:33.049  [qtp327177752-74] INFO  com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction- pageNo =1pageSize =10
+11:19:33.050  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findPageByCond action
+11:19:33.050  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findPageByCond action
+11:19:33.056  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findPageByCond action
+11:19:33.061  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findPageByCond action
+11:19:33.061  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:19:33.061  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:19:33.065  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:19:33.065  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:19:33.065  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:19:33.066  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:19:33.068  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:19:33.069  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:19:33.069  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:19:33.069  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:19:33.071  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:19:33.071  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:19:33.071  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:19:33.071  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:19:33.073  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:19:33.073  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:19:33.074  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:19:33.074  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:19:33.075  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:19:33.075  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:19:33.075  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:19:33.075  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:19:33.077  [qtp327177752-74] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:19:33.078  [qtp327177752-74] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:19:34.684  [qtp327177752-78] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/excelPrint
+11:19:34.685  [qtp327177752-78] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findListByCond action
+11:19:34.685  [qtp327177752-78] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findListByCond action
+11:19:34.688  [qtp327177752-78] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findListByCond action
+11:19:34.688  [qtp327177752-78] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findListByCond action
+11:19:34.748  [qtp327177752-78] ERROR com.xingyi.dtjct.action.interceptor.DtjctExceptionInterceptor- Handler dispatch failed; nested exception is java.lang.NoSuchFieldError: DEFAULT
+11:19:34.754  [qtp327177752-78] WARN  org.eclipse.jetty.servlet.ServletHandler- 
+org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchFieldError: DEFAULT
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:982)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:821)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1685)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1158)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1090)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:119)
+	at org.eclipse.jetty.server.Server.handle(Server.java:517)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:242)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:261)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:75)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:213)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:147)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.lang.NoSuchFieldError: DEFAULT
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:122)
+	at com.xingyi.dtjct.action.utils.ExcelPrintUtil.excelPrint(ExcelPrintUtil.java:23)
+	at com.xingyi.dtjct.service.ExcelPrint.ExcelPrintService.excelPrint(ExcelPrintService.java:32)
+	at com.xingyi.dtjct.action.ExcelPrint.ExcelPrintAction.excelPrint(ExcelPrintAction.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	... 33 common frames omitted
+11:19:34.758  [qtp327177752-78] WARN  org.eclipse.jetty.server.HttpChannel- //localhost:9000/fm/excelPrint
+javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchFieldError: DEFAULT
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:119)
+	at org.eclipse.jetty.server.Server.handle(Server.java:517)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:242)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:261)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:75)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:213)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:147)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.web.util.NestedServletException: Handler dispatch failed; nested exception is java.lang.NoSuchFieldError: DEFAULT
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:982)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:861)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:687)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:821)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1685)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1158)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1090)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	... 12 common frames omitted
+Caused by: java.lang.NoSuchFieldError: DEFAULT
+	at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:122)
+	at com.xingyi.dtjct.action.utils.ExcelPrintUtil.excelPrint(ExcelPrintUtil.java:23)
+	at com.xingyi.dtjct.service.ExcelPrint.ExcelPrintService.excelPrint(ExcelPrintService.java:32)
+	at com.xingyi.dtjct.action.ExcelPrint.ExcelPrintAction.excelPrint(ExcelPrintAction.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	... 33 common frames omitted
