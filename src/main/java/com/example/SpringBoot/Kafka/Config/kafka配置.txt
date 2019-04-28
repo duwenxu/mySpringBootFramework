@@ -1,0 +1,178 @@
+1、	安装zookeeper
+直接docker安装zookeeper并创建运行容器
+docker run -d --name zookeeper -p 2181:2181 -t wurstmeister/zookeeper
+2、安装kafka
+cd /usr/local
+tar -zxvf kafka_2.10-0.10.2.1.tgz
+3、配置文件修改
+配置文件位置：kafka_2.11-0.10.1.1/config/ server.properties
+配置注意：网络最好采用 桥接模式
+		  需要关闭linux防火墙      查看防火墙状态：service firewalld status
+								   关闭防火墙：service firewalld stop
+		   需要ping通ip+端口      例：telnet  172.21.2.77 9092
+vim server.properties    #以下是kafka最新配置内容
+broker.id=1
+port=9092
+host.name=kafka1
+zookeeper.connect=kafka1:2181,kafka2:2181,kafka3:2181
+zookeeper.connection.timeout.ms=6000
+advertised.host.name=kafka1
+listeners=PLAINTEXT://kafka1:9092
+advertised.listeners=PLAINTEXT://kafka1:9092
+log.dirs=/usr/local/kafka_2.10-0.10.2.1/logs
+log.retention.hours=168
+log.segment.bytes=536870912
+log.retention.check.interval.ms=300000
+num.network.threads=3
+num.io.threads=8
+message.max.bytes=5242880                          #单条信息长度增加到5M
+socket.send.buffer.bytes=102400                       #默认值
+socket.receive.buffer.bytes=1048576                     #增大为1M
+socket.request.max.bytes=104857600
+num.partitions=30                                    #节点数与消费者的最小公倍数，5X6
+default.replication.factor=3
+num.recovery.threads.per.data.dir=1
+auto.create.topics.enable=true                    #默认是false，改为true，否则用户不能自动创建topic
+allow.everyone.if.no.acl.found=true                 #默认是false，改为true，提供所有人权限
+
+
+
+broker.id=1
+port=9092
+host.name=192.168.255.128
+zookeeper.connect=192.168.255.128:2181
+zookeeper.connection.timeout.ms=6000
+advertised.host.name=192.168.255.128
+listeners=PLAINTEXT:// 192.168.255.128:9092
+advertised.listeners=PLAINTEXT:// 192.168.255.128:9092
+log.dirs=/usr/local/kafka_2.10-0.10.2.1/logs
+log.retention.hours=168
+log.segment.bytes=536870912
+log.retention.check.interval.ms=300000
+num.network.threads=3
+num.io.threads=8
+message.max.bytes=5242880                          #单条信息长度增加到5M
+socket.send.buffer.bytes=102400                       #默认值
+socket.receive.buffer.bytes=1048576                     #增大为1M
+socket.request.max.bytes=104857600
+num.partitions=30                                    #节点数与消费者的最小公倍数，5X6
+default.replication.factor=3
+num.recovery.threads.per.data.dir=1
+#auto.create.topics.enable=true                    #默认是false，改为true，否则用户不能自动创建topic
+#allow.everyone.if.no.acl.found=true                 #默认是false，改为true，提供所有人权限
+
+4、启动
+/usr/local/zookeeper-3.4.9/bin/zkServer.sh start     #先起zk   可以通过压缩包安装或者docker安装均可
+./bin/kafka-server-start.sh config/server.properties      启动kafka
+5、创建topic及测试
+关于topic
+1.创建一个test 的topic命令：
+./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+2.查看列出一下topic是否创建好
+./kafka-topics.sh --list -zookeeper 192.168.255.128:2181
+3.以生产身份对topic进行广播
+./bin/kafka-console-producer.sh --broker-list 192.168.255.128:9092 --topic test
+1、	安装zookeeper
+直接docker安装zookeeper并创建运行容器
+docker run -d --name zookeeper -p 2181:2181 -t wurstmeister/zookeeper
+2、安装kafka
+cd /usr/local
+tar -zxvf kafka_2.10-0.10.2.1.tgz
+3、配置文件修改
+配置文件位置：kafka_2.11-0.10.1.1/config/ server.properties
+配置注意：网络最好采用 桥接模式
+		  需要关闭linux防火墙      查看防火墙状态：service firewalld status
+								   关闭防火墙：service firewalld stop
+		   需要ping通ip+端口      例：telnet  172.21.2.77 9092
+vim server.properties    #以下是kafka最新配置内容
+broker.id=1
+port=9092
+host.name=kafka1
+zookeeper.connect=kafka1:2181,kafka2:2181,kafka3:2181
+zookeeper.connection.timeout.ms=6000
+advertised.host.name=kafka1
+listeners=PLAINTEXT://kafka1:9092
+advertised.listeners=PLAINTEXT://kafka1:9092
+log.dirs=/usr/local/kafka_2.10-0.10.2.1/logs
+log.retention.hours=168
+log.segment.bytes=536870912
+log.retention.check.interval.ms=300000
+num.network.threads=3
+num.io.threads=8
+message.max.bytes=5242880                          #单条信息长度增加到5M
+socket.send.buffer.bytes=102400                       #默认值
+socket.receive.buffer.bytes=1048576                     #增大为1M
+socket.request.max.bytes=104857600
+num.partitions=30                                    #节点数与消费者的最小公倍数，5X6
+default.replication.factor=3
+num.recovery.threads.per.data.dir=1
+auto.create.topics.enable=true                    #默认是false，改为true，否则用户不能自动创建topic
+allow.everyone.if.no.acl.found=true                 #默认是false，改为true，提供所有人权限
+
+
+
+
+broker.id=1
+port=9092
+host.name=192.168.255.128
+zookeeper.connect=192.168.255.128:2181
+zookeeper.connection.timeout.ms=6000
+advertised.host.name=192.168.255.128
+listeners=PLAINTEXT:// 192.168.255.128:9092
+advertised.listeners=PLAINTEXT:// 192.168.255.128:9092
+log.dirs=/usr/local/kafka_2.10-0.10.2.1/logs
+log.retention.hours=168
+log.segment.bytes=536870912
+log.retention.check.interval.ms=300000
+num.network.threads=3
+num.io.threads=8
+message.max.bytes=5242880                          #单条信息长度增加到5M
+socket.send.buffer.bytes=102400                       #默认值
+socket.receive.buffer.bytes=1048576                     #增大为1M
+socket.request.max.bytes=104857600
+num.partitions=30                                    #节点数与消费者的最小公倍数，5X6
+default.replication.factor=3
+num.recovery.threads.per.data.dir=1
+#auto.create.topics.enable=true                    #默认是false，改为true，否则用户不能自动创建topic
+#allow.everyone.if.no.acl.found=true                 #默认是false，改为true，提供所有人权限
+
+4、启动
+/usr/local/zookeeper-3.4.9/bin/zkServer.sh start     #先起zk   可以通过压缩包安装或者docker安装均可
+./bin/kafka-server-start.sh config/server.properties      启动kafka
+5、创建topic及测试
+关于topic
+1.创建一个test 的topic命令：
+./kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+2.查看列出一下topic是否创建好
+./kafka-topics.sh --list -zookeeper 192.168.255.128:2181
+3.以生产身份对topic进行广播
+./bin/kafka-console-producer.sh --broker-list 192.168.255.128:9092 --topic test
+
+4.集群其他节点以顾客身份进行访问    在bin目录下
+./kafka-console-consumer.sh --zookeeper 192.168.255.128:2181 --from-beginning --topic test
+
+
+连接上后，producer发送任何消息，consumer都能实时接收到
+
+5. 创建topic
+./kafka-topics.sh --create --topic myTopicTest --zookeeper 192.168.255.128:2181 --config max.message.bytes=12800000 --config flush.messages=1 --partitions 5 --replication-factor 1
+
+6. 查看Topic的分区和副本情况
+#查看所有的topic和分区
+./bin/kafka-topics.sh --describe --zookeeper 192.168.255.128:2181
+查看指定的topic和分区
+./bin/kafka-topics.sh --describe --zookeeper 192.168.255.128:2181 --topic test0
+
+4.集群其他节点以顾客身份进行访问    在bin目录下
+./kafka-console-consumer.sh --zookeeper 192.168.255.128:2181 --from-beginning --topic test
+
+连接上后，producer发送任何消息，consumer都能实时接收到
+
+5. 创建topic
+./kafka-topics.sh --create --topic myTopicTest --zookeeper 192.168.255.128:2181 --config max.message.bytes=12800000 --config flush.messages=1 --partitions 5 --replication-factor 1
+
+6. 查看Topic的分区和副本情况
+#查看所有的topic和分区
+./bin/kafka-topics.sh --describe --zookeeper 192.168.255.128:2181
+查看指定的topic和分区
+./bin/kafka-topics.sh --describe --zookeeper 192.168.255.128:2181 --topic test0
