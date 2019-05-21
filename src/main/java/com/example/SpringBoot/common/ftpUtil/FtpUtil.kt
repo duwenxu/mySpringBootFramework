@@ -1,6 +1,5 @@
-package com.example.SpringBoot.common.Utils
+package com.example.SpringBoot.common.ftpUtil
 
-import com.example.SpringBoot.common.ftpUtil.Ftp
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream
 import org.apache.commons.net.ftp.FTPReply
 import org.apache.commons.net.ftp.FTPClient
@@ -84,7 +83,7 @@ class FtpUtil {
          * @Date: 2019/3/25
          */
         fun startDownload(f: Ftp, localPath: String): Boolean {
-            if (FtpUtil.connectFtp(f)) {
+            if (connectFtp(f)) {
                 val changeDir = ftp.changeWorkingDirectory("/${f.filePath}")
                 try {
                     if (changeDir) {
@@ -127,7 +126,7 @@ class FtpUtil {
             } catch (e: Exception) {
                 log.error("$e")
             } finally {
-                FtpUtil.closeFtp()
+                closeFtp()
             }
         }
 
@@ -137,7 +136,7 @@ class FtpUtil {
          * @Date: 2019/3/26
          */
         fun getFileByteArray(f: Ftp): ResponseEntity<ByteArray>? {
-            if (FtpUtil.connectFtp(f)) {
+            if (connectFtp(f)) {
                 val changeDir = ftp.changeWorkingDirectory("/${f.filePath}")
                 if (changeDir) {
                     ftp.controlEncoding = "UTF-8"
@@ -163,7 +162,7 @@ class FtpUtil {
             return headers
         }
 
-        open fun input2Bytes(inputStream: InputStream): ByteArray {
+        fun input2Bytes(inputStream: InputStream): ByteArray {
             val outStream = ByteOutputStream()
             val buff = ByteArray(100)
             var rc = 0

@@ -1,10 +1,6 @@
 package com.waytogalaxy.display.utils.timeutil
 
-import com.waytogalaxy.display.common.cons.Cons
-import com.waytogalaxy.display.utils.timeutil.TimeUtil.Companion.Y_S_CLOSE
-import com.waytogalaxy.display.utils.timeutil.TimeUtil.Companion.Y_S_NORMAL
-import org.joda.time.DateTime
-import org.joda.time.DateTimeZone
+
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import java.text.SimpleDateFormat
@@ -14,8 +10,6 @@ import java.util.*
 class TimeUtil {
 
     companion object {
-
-        lateinit var timeWorker: TimeWorker
 
         const val Y_S_NORMAL = "yyyy-MM-dd HH:mm:ss"
         const val Y_MS_NORMAL_30 = "yyyy-MM-dd HH:mm:ss.SSS"
@@ -29,18 +23,6 @@ class TimeUtil {
         const val Y_MS_SLASH = "yyyy-M-d H:m:s.SSSSSS"
         const val Y_MS3_EN_UNIT = "yyyy'Y'MM'M'dd'D'HH'H'mm'M'ss.SSS'S'"
 
-
-        fun date(spacecraftId: Int) = Date(System.currentTimeMillis() + (timeWorker.getOffset(spacecraftId) ?: 0))
-
-        fun date(spacecraftId: Int, current: Long) = Date((timeWorker.getOffset(spacecraftId) ?: 0) + current)
-
-        fun timeMill(spacecraftId: Int) = System.currentTimeMillis() + (timeWorker.getOffset(spacecraftId) ?: 0)
-
-    }
-
-    @Autowired
-    fun setTimeWorker(timeW: TimeWorker) {
-        timeWorker = timeW
     }
 
 

@@ -1,11 +1,9 @@
 package com.example.SpringBoot.fastDFS
 
-import com.example.SpringBoot.common.Utils.FtpUtil
-import org.apache.commons.net.ftp.FTP
+import com.example.SpringBoot.common.ftpUtil.FtpUtil
 import org.csource.common.MyException
 import org.csource.fastdfs.*
 import org.slf4j.LoggerFactory
-import org.slf4j.Logger
 import org.springframework.core.io.ClassPathResource
 
 import java.io.*

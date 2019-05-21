@@ -2,6 +2,7 @@ package com.example.SpringBoot;
 
 import com.example.SpringBoot.Entity.ConfigIDEABean;
 import org.apache.catalina.filters.RemoteIpFilter;
+import org.apache.log4j.BasicConfigurator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;

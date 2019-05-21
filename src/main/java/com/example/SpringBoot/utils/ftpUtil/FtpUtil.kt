@@ -165,7 +165,7 @@ class FtpUtil {
         /**
          * 输入流转ByteArray
          */
-        private fun input2Bytes(inputStream: InputStream): ByteArray {
+         fun input2Bytes(inputStream: InputStream): ByteArray {
             val outStream = ByteOutputStream()
             val buff = ByteArray(100)
             var rc = 0
@@ -179,9 +179,9 @@ class FtpUtil {
     }
 }
 
-//fun main(args: Array<String>) {
-//    val f = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/ftp", "CentOS-7-x86_64-DVD-1804.iso")
-//    val savePath = "E:\\FtpDownload"
-//    FtpUtil.startDownload(f, savePath)
-//    FtpUtil.getFileByteArray(f)
-//}
+fun main(args: Array<String>) {
+    val f = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/ftp", "CentOS-7-x86_64-DVD-1804.iso")
+    val savePath = "E:\\FtpDownload"
+    FtpUtil.startDownload(f, savePath)
+    FtpUtil.getFileByteArray(f)
+}

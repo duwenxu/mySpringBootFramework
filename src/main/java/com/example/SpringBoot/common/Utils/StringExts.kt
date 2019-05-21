@@ -6,7 +6,6 @@ import com.google.gson.Gson
 import java.math.BigDecimal
 fun <T> String.toFastObj(clazz: Class<T>) =JSON.parseObject(this,clazz)   //ali JSON.parseObject(this,clazz)不能用于google的JsonObject类
 fun <T> String.toObj(clazz: Class<T>) =Gson().fromJson(this,clazz)
-
 fun <T> String.toObjList(clazz: Class<T>) = JSONArray.parseArray(this,clazz)
 
 
