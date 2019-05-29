@@ -1,7 +1,7 @@
-package com.example.SpringBoot.service;
+package com.example.SpringBoot.DataBase_CRUD.service;
 
-import com.example.SpringBoot.Entity.BaseBean;
-import com.example.SpringBoot.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.Entity.BaseBean;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

@@ -1,13 +1,14 @@
-package com.example.SpringBoot.web;
+package com.example.SpringBoot.DataBase_CRUD.web;
 
-import com.example.SpringBoot.Entity.ConfigIDEABean;
-import com.example.SpringBoot.Entity.User;
-import com.example.SpringBoot.repository.UserDao;
+import com.example.SpringBoot.DataBase_CRUD.Entity.ConfigIDEABean;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.repository.UserDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * spring boot web开发非常的简单，其中包括常用的json输出、filters、property、log等
  */
 //添加@RestController注释，默认类中的方法都会以json的格式返回
+@Component
 @RestController
 public class HelloWorldController {
     /**

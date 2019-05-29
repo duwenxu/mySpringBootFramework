@@ -1,6 +1,6 @@
-package com.example.SpringBoot.repository;
+package com.example.SpringBoot.DataBase_CRUD.repository;
 
-import com.example.SpringBoot.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -82,8 +82,6 @@ public interface UserDao extends JpaRepository<User, Integer> {
      * Page<User> findByUserName(String userName,Pageable pageable);
      * Pageable 是spring封装的分页实现类，使用的时候需要传入页数、每页条数和排序规则
      */
-    //Page<User> findALL(Pageable pageable);
-
     Page<User> findByName(String username, Pageable pageable);
     Page<User> findAll(Pageable pageable);
 

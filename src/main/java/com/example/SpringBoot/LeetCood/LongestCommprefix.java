@@ -1,6 +1,5 @@
 package com.example.SpringBoot.LeetCood;
 
-import java.util.Arrays;
 
 /**
  * 最长公共前缀

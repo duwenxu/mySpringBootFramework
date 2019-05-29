@@ -1,20 +1,17 @@
 package com.example.SpringBoot;
 
 import com.example.SpringBoot.Kafka.producer.KafkaProducerTest;
-import com.example.SpringBoot.web.HelloWorldController;
-import com.example.SpringBoot.repository.UserDao;
-import com.example.SpringBoot.Entity.User;
-import lombok.val;
+import com.example.SpringBoot.DataBase_CRUD.web.HelloWorldController;
+import com.example.SpringBoot.DataBase_CRUD.repository.UserDao;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.platform.commons.logging.LoggerFactory;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
@@ -72,7 +69,7 @@ public class myTest {
 
     @Test
     public void updateTest() throws Exception{
-        //myDao.updateByPrimaryKey("周杰伦", 34, "台湾",28 );
+        myDao.updateByPrimaryKey("周杰伦", 34, "台湾",28 );
         myDao.findById(23);
     }
 

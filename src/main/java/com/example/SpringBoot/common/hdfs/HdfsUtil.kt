@@ -4,6 +4,7 @@ import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.FSDataInputStream
 import org.apache.hadoop.fs.FileSystem
+import org.apache.hadoop.fs.Hdfs
 import org.apache.hadoop.fs.Path
 import org.springframework.stereotype.Component
 import java.io.*
@@ -93,8 +94,12 @@ class HdfsUtil {
 }
 
 fun main(args: Array<String>) {
-    val file = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0302/jzd.txt")
-    val fileBytes = HdfsUtil().readFile(file)
-    print(fileBytes.toString())
+    val file1 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0101/ELPEAR.XML")
+    val file2 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0101/ELPMOO.XML")
+    val fileList= arrayListOf(file1,file2)
+
+    fileList.forEach {
+        print(HdfsUtil().readFile(it))
+    }
 }
 

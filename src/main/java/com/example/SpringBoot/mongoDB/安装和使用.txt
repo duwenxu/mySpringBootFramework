@@ -1,0 +1,32 @@
+1.安装： docker search mongo
+        run镜像  命名                           docker run --name mongo_server \
+        端口映射 默认端口27017                              -p 27017:27017 \
+        文件目录映射                                       -v 本地配置文件目录/configdb：/data/configdb/ 本地数据库文件目录/db/:/data/db/ \
+        设置后台运行                                       -d mongo --auth
+2.使用：
+        进入数据库命令行的两种方式：
+            1.docker exec -it 容器名/id bash
+              进入后 输入mongo或mongo admin（以admin身份进入）
+            2.docker exec -it 容器名/id mongo admin
+3.数据库操作：
+创建用户：
+        db.createUser({user:'admin',pwd:'123456',roles:[{role:"userAdminAnyDatabase",db:"admin"}]});
+
+        例：
+        db.createUser(
+          { user: "admin",
+            customData：{description:"superuser"},
+            pwd: "admin",
+            roles: [ { role: "userAdminAnyDatabase", db: "admin" } ]
+          }
+        )
+        user字段，为新用户的名字；
+        pwd字段，用户的密码；
+        cusomData字段，为任意内容，例如可以为用户全名介绍；
+        roles字段，指定用户的角色，可以用一个空数组给新用户设定空角色。在roles字段,可以指定内置角色和用户定义的角色。
+        超级用户的role有两种，userAdmin或者userAdminAnyDatabase(比前一种多加了对所有数据库的访问,仅仅是访问而已)。
+        db是指定数据库的名字，admin是管理数据库。
+        不能用admin数据库中的用户登录其他数据库。注：只能查看当前数据库中的用户，哪怕当前数据库admin数据库，也只能查看admin数据库中创建的用户。
+查看创建的用户：
+  show users 或 db.system.users.find() 或 db.runCommand({usersInfo:"userName"})
+  需要先在相应的数据库下验证权限

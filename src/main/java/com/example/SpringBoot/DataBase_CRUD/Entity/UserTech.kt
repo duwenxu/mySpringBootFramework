@@ -1,4 +1,4 @@
-package com.example.SpringBoot.Entity
+package com.example.SpringBoot.DataBase_CRUD.Entity
 
 //Kotlin 可以创建一个只包含数据的类，关键字为 data：
 //data class User(val name: String, val age: Int)

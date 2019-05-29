@@ -1,7 +1,7 @@
-package com.example.SpringBoot.web;
+package com.example.SpringBoot.DataBase_CRUD.web;
 
-import com.example.SpringBoot.Entity.User;
-import com.example.SpringBoot.service.impl.UserServiceImpl;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.service.impl.UserServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;

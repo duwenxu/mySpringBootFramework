@@ -1,7 +1,7 @@
-package com.example.SpringBoot.service.impl;
+package com.example.SpringBoot.DataBase_CRUD.service.impl;
 
-import com.example.SpringBoot.repository.UserDao;
-import com.example.SpringBoot.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.repository.UserDao;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

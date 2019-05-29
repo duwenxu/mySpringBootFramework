@@ -1,26 +1,24 @@
 package com.example.SpringBoot.KotlinTest.commontest
 
-import com.example.SpringBoot.Entity.TestEntitr
+import com.example.SpringBoot.DataBase_CRUD.Entity.TestEntitr
 import com.example.SpringBoot.common.Utils.TimeUtils.Companion.Y_S_CLOSE
-import com.example.SpringBoot.common.Utils.toArrayList
 import com.google.gson.Gson
 import java.text.SimpleDateFormat
-import java.util.*
 
 fun main(args: Array<String>) {
     /**
      * 循环控制语句等
      */
-//    var x=1;
-//    when(x){
-//        1 -> println("$x+2")
-//        2 -> println("$x+1")
-//    }
+    var x=1;
+    when(x){
+        1 -> println("$x+2")
+        2 -> println("$x+1")
+    }
 
-//    var a = "abccdacvfr"
-//    for (x in a.indices) {
-//        println(a[x])
-//    }
+    var a = "abccdacvfr"
+    for (x in a.indices) {
+        println(a[x])
+    }
 //
 //    println("------------------------------")
 //

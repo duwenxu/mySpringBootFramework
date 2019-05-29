@@ -1,4 +1,4 @@
-package com.example.SpringBoot.Entity;
+package com.example.SpringBoot.DataBase_CRUD.Entity;
 
 import javax.persistence.*;
 

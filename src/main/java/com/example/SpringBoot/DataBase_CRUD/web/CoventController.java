@@ -1,6 +1,6 @@
-package com.example.SpringBoot.web;
+package com.example.SpringBoot.DataBase_CRUD.web;
 
-import com.example.SpringBoot.web.text2voiceUtil.KTPublicUtil;
+import com.example.SpringBoot.DataBase_CRUD.web.text2voiceUtil.KTPublicUtil;
 import org.springframework.context.annotation.Scope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

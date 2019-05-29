@@ -1,8 +1,8 @@
-package com.example.SpringBoot.Entity;
+package com.example.SpringBoot.DataBase_CRUD.Entity;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 //从application.properties中引入属性绑定对象
-@ConfigurationProperties(prefix ="com.test")
+@ConfigurationProperties(prefix ="com.test")        //读取带有指定前缀的配置量
 public class ConfigIDEABean
 {
     private String name;
