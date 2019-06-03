@@ -1,6 +1,7 @@
 package com.example.SpringBoot.common.ftpUtil
 
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream
+import org.apache.commons.net.ftp.FTP
 import org.apache.commons.net.ftp.FTPReply
 import org.apache.commons.net.ftp.FTPClient
 import org.apache.commons.net.ftp.FTPClientConfig
@@ -9,10 +10,7 @@ import org.springframework.http.HttpHeaders
 import org.springframework.http.HttpStatus
 import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
-import java.io.File
-import java.io.FileOutputStream
-import java.io.IOException
-import java.io.InputStream
+import java.io.*
 
 
 class FtpUtil {
@@ -28,6 +26,7 @@ class FtpUtil {
          */
         fun connectFtp(f: Ftp): Boolean {
             ftp = FTPClient()
+            ftp.controlEncoding="UTF-8"
             try {
                 when (f.port == null) {
                     true -> ftp.connect(f.ipAddr, 21)
@@ -63,7 +62,6 @@ class FtpUtil {
          * @Author: duwenxu
          * @Date: 2019/3/25
          */
-        @Throws(IOException::class)
         fun closeFtp() {
             if (ftp != null && ftp.isConnected) {
                 try {
@@ -92,6 +90,7 @@ class FtpUtil {
                                 .forEach {
                                     if (f.fileName == it.name) {
                                         downloadFile(f.fileName, localPath)
+                                        log.info("下载成功-----------")
                                         return true
                                     }
                                 }
@@ -173,15 +172,117 @@ class FtpUtil {
             outStream.close()
             return bytes
         }
+
+        /**
+         * 上传文件
+         * @param filePath String
+         */
+        fun uploadFile(file:File){
+//            val file=File(filePath)
+            if (file.isDirectory){
+                ftp.makeDirectory(file.name)   //创建对应文件夹
+                ftp.changeWorkingDirectory(file.name)
+                val fileList = file.list()
+                fileList.forEach {
+                    val file1=File(file.path+"/"+it)
+                    if (file1.isDirectory){
+                        uploadFile(file1)
+                        ftp.changeToParentDirectory()
+                    }else{
+                        val inputStream=FileInputStream(file1)
+                        ftp.storeFile(file1.name,inputStream)
+                        inputStream.close()
+                        println("${file1.name}--->文件上传成功")
+                    }
+                }
+            }else{
+                val file1=File(file.path)
+                val inputStream=FileInputStream(file1)
+                ftp.storeFile(file1.name,inputStream)
+                inputStream.close()
+                println("${file1.name}--->文件上传成功")
+            }
+        }
+
+        /**
+         * 加入连接服务器后的上传
+         * @param f Ftp
+         * @param file File
+         */
+        fun startUpload(f: Ftp,file:File){
+            if (connectFtp(f)){
+                try {
+                    if (file.isDirectory){
+                        ftp.makeDirectory(file.name)   //创建对应文件夹
+                        ftp.changeWorkingDirectory(file.name)
+                        val fileList = file.list()
+                        fileList.forEach {
+                            val file1=File(file.path+"/"+it)
+                            if (file1.isDirectory){
+                                uploadFile(file1)
+                                ftp.changeToParentDirectory()
+                            }else{
+                                val inputStream=FileInputStream(file1)
+                                ftp.storeFile(file1.name,inputStream)
+                                inputStream.close()
+                                println("${file1.name}--->文件上传成功")
+                            }
+                        }
+                    }else{
+                        val file1=File(file.path)
+                        val inputStream=FileInputStream(file1)
+                        ftp.storeFile(file1.name,inputStream)
+                        inputStream.close()
+                        println("${file1.name}--->文件上传成功")
+                    }
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                } finally {
+                    closeFtp()
+                }
+            }else{
+                log.error("ftp服务器连接失败！")
+            }
+        }
+
+        /**
+         * 删除文件
+         * @param f Ftp
+         * @param fielName String
+         */
+        fun deleFile(f:Ftp){
+            if (connectFtp(f)){
+                try {
+                    val code = ftp.dele(f.fileName)
+                    println(code)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                } finally {
+                    closeFtp()
+                }
+            }
+        }
+
+
     }
 }
 
 fun main(args: Array<String>) {
-
-    val f = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "usr", "schedule.xml")
+    //文件下载
+    val f = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/display/fat", "轨道抬高描述文件201901281056.xml")
     val savePath = "E:\\FtpDownload"
-//    FtpUtil.startDownload(f, savePath)
+    FtpUtil.startDownload(f, savePath)
     FtpUtil.getFileByteArray(f)
+
+    //文件上传
+    val upF = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/display/fat","")
+    val file=File("C:\\datainject\\savedesc\\1\\XML\\轨道抬高描述文件201901281056.xml")
+    FtpUtil.startUpload(upF,file)
+
+    //文件删除
+    val delF = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/display/fat/","轨道抬高描述文件201901281056.xml")
+    FtpUtil.deleFile(delF)
+
 }
 
 
