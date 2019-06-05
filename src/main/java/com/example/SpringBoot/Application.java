@@ -1,6 +1,7 @@
 package com.example.SpringBoot;
 
 import com.example.SpringBoot.DataBase_CRUD.Entity.ConfigIDEABean;
+import com.waytogalaxy.display.common.config.jpa.extrepository.ExtJpaRepositoryFactoryBean;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -9,6 +10,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 import javax.servlet.*;
@@ -42,6 +44,7 @@ import java.io.IOException;
 @EnableScheduling    //开启定时任务注解    在方法上使用@Scheduled注解定时执行方法
 @SpringBootApplication
 //@SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
+@EnableJpaRepositories(repositoryFactoryBeanClass = ExtJpaRepositoryFactoryBean.class)  //spring jpa
 @EnableConfigurationProperties({ConfigIDEABean.class})
 public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {

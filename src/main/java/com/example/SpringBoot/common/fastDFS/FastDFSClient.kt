@@ -1,4 +1,4 @@
-package com.example.SpringBoot.fastDFS
+package com.example.SpringBoot.common.fastDFS
 
 import com.example.SpringBoot.common.ftpUtil.FtpUtil
 import org.csource.common.MyException

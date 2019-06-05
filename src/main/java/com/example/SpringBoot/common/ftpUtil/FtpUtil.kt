@@ -269,19 +269,19 @@ class FtpUtil {
 
 fun main(args: Array<String>) {
     //文件下载
-    val f = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/display/fat", "轨道抬高描述文件201901281056.xml")
+    val f = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/display/fat", "星下点3-拷贝_01.png___41")
     val savePath = "E:\\FtpDownload"
     FtpUtil.startDownload(f, savePath)
     FtpUtil.getFileByteArray(f)
 
     //文件上传
     val upF = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/display/fat","")
-    val file=File("C:\\datainject\\savedesc\\1\\XML\\轨道抬高描述文件201901281056.xml")
-    FtpUtil.startUpload(upF,file)
+//    val file=File("C:\\datainject\\savedesc\\1\\XML\\轨道抬高描述文件201901281056.xml")
+//    FtpUtil.startUpload(upF,file)
 
     //文件删除
     val delF = Ftp("172.23.0.21", 21, "ftpadmin", "123456", "/display/fat/","轨道抬高描述文件201901281056.xml")
-    FtpUtil.deleFile(delF)
+//    FtpUtil.deleFile(delF)
 
 }
 
