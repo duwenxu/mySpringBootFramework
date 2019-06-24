@@ -1,6 +1,6 @@
 package com.example.SpringBoot.common.fastDFS
 
-import com.example.SpringBoot.common.ftpUtil.FtpUtil
+import com.example.springboot.common.ftpUtil.FtpUtil
 import org.csource.common.MyException
 import org.csource.fastdfs.*
 import org.slf4j.LoggerFactory

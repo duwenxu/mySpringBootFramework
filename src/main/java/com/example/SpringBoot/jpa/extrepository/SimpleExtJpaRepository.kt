@@ -1,5 +1,6 @@
 package com.waytogalaxy.display.common.config.jpa.extrepository
 
+import com.example.springboot.jpa.extrepository.ExtJpaRepository
 import javax.persistence.EntityManager
 import org.springframework.data.jpa.repository.support.JpaEntityInformation
 import org.springframework.data.jpa.repository.support.SimpleJpaRepository

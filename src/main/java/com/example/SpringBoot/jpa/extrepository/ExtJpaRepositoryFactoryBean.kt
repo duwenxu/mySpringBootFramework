@@ -1,5 +1,6 @@
-package com.waytogalaxy.display.common.config.jpa.extrepository
+package com.example.SpringBoot.jpa.extrepository
 
+import com.waytogalaxy.display.common.config.jpa.extrepository.ExtJpaRepositoryFactory
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean
 import org.springframework.data.repository.core.support.RepositoryFactorySupport

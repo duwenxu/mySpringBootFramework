@@ -1,7 +1,6 @@
-package com.example.SpringBoot.common.ftpUtil
+package com.example.springboot.common.ftpUtil
 
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream
-import org.apache.commons.net.ftp.FTP
 import org.apache.commons.net.ftp.FTPReply
 import org.apache.commons.net.ftp.FTPClient
 import org.apache.commons.net.ftp.FTPClientConfig
@@ -12,6 +11,11 @@ import org.springframework.http.MediaType
 import org.springframework.http.ResponseEntity
 import java.io.*
 
+/**
+ * ftp上传下载接口需注意：
+ *             在每次上传下载结束后，或者发生异常时需要关闭连接
+ *
+ */
 
 class FtpUtil {
     companion object {
@@ -30,7 +34,7 @@ class FtpUtil {
             try {
                 when (f.port == null) {
                     true -> ftp.connect(f.ipAddr, 21)
-                    else -> ftp.connect(f.ipAddr, f.port)
+                    else -> ftp.connect(f.ipAddr, f.port!!)
                 }
                 ftp.login(f.username, f.password)
                 ftp.setFileType(FTPClient.BINARY_FILE_TYPE)
@@ -63,7 +67,7 @@ class FtpUtil {
          * @Date: 2019/3/25
          */
         fun closeFtp() {
-            if (ftp != null && ftp.isConnected) {
+            if (ftp.isConnected) {
                 try {
                     ftp.logout()
                     ftp.disconnect()
@@ -209,7 +213,7 @@ class FtpUtil {
          * @param f Ftp
          * @param file File
          */
-        fun startUpload(f: Ftp,file:File){
+        fun startUpload(f: Ftp, file:File){
             if (connectFtp(f)){
                 try {
                     if (file.isDirectory){
@@ -250,7 +254,7 @@ class FtpUtil {
          * @param f Ftp
          * @param fielName String
          */
-        fun deleFile(f:Ftp){
+        fun deleFile(f: Ftp){
             if (connectFtp(f)){
                 try {
                     val code = ftp.dele(f.fileName)

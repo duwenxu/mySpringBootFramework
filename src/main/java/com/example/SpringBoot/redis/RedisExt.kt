@@ -1,4 +1,4 @@
-package com.example.SpringBoot.redis
+package com.example.springboot.redis
 
 import com.example.SpringBoot.common.Cons
 import com.example.SpringBoot.common.Utils.toArrayList

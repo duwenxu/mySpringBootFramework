@@ -1,7 +1,7 @@
 package com.example.SpringBoot;
 
 import com.example.SpringBoot.DataBase_CRUD.Entity.ConfigIDEABean;
-import com.waytogalaxy.display.common.config.jpa.extrepository.ExtJpaRepositoryFactoryBean;
+import com.example.SpringBoot.jpa.extrepository.ExtJpaRepositoryFactoryBean;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
