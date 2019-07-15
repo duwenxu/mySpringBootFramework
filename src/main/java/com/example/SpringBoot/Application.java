@@ -3,6 +3,8 @@ package com.example.SpringBoot;
 import com.example.SpringBoot.DataBase_CRUD.Entity.ConfigIDEABean;
 import com.example.SpringBoot.jpa.extrepository.ExtJpaRepositoryFactoryBean;
 import org.apache.catalina.filters.RemoteIpFilter;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -48,7 +50,10 @@ import java.io.IOException;
 @EnableConfigurationProperties({ConfigIDEABean.class})
 public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
+        Logger logger = LoggerFactory.getLogger(Application.class);
+        logger.warn("------------------------------------------------------appStart-----------------------------------------------------------------------------------");
         SpringApplication.run(Application.class, args);
+        logger.warn("------------------------------------------------------appStarted-----------------------------------------------------------------------------------");
     }
 
     //Spring Boot、Spring Web和Spring MVC等其他框架，都提供了很多servlet 过滤器可使用，我们需要在配置文件中定义这些过滤器为bean对象。

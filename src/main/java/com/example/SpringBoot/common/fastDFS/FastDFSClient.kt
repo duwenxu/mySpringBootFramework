@@ -1,4 +1,4 @@
-package com.example.SpringBoot.common.fastDFS
+package com.example.springboot.common.fastDFS
 
 import com.example.springboot.common.ftpUtil.FtpUtil
 import org.csource.common.MyException
@@ -130,7 +130,7 @@ object FastDFSClient {
         }
 
         val dfsFile = FastDFSFile("picture", fileBytes!!, "jpg")
-        println(FastDFSClient.upload(dfsFile)!!.toString())
+        println(upload(dfsFile)!!.toString())
 
         //下载
         try {

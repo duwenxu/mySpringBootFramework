@@ -1,4 +1,5 @@
-package com.example.SpringBoot.common.fastDFS
+package com.example.springboot.common.fastDFS
+
 
 /**
  * fastDFS的封装类对象

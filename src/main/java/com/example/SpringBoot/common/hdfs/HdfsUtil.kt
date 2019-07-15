@@ -1,10 +1,8 @@
-package com.waytogalaxy.display.utils.hdfs
+package com.example.springboot.common.hdfs
 
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream
 import org.apache.hadoop.conf.Configuration
-import org.apache.hadoop.fs.FSDataInputStream
 import org.apache.hadoop.fs.FileSystem
-import org.apache.hadoop.fs.Hdfs
 import org.apache.hadoop.fs.Path
 import org.springframework.stereotype.Component
 import java.io.*
@@ -58,7 +56,7 @@ class HdfsUtil {
         return sb
     }
 
-    fun getInputStream(file:HdfsFile):ByteArrayInputStream?{
+    fun getInputStream(file: HdfsFile):ByteArrayInputStream?{
         val filePath = "hdfs://${file.hdfsIP}${file.hdfsFileName}"
         val conf = Configuration()
         try {
@@ -94,9 +92,9 @@ class HdfsUtil {
 }
 
 fun main(args: Array<String>) {
-    val file1 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0101/ELPEAR.XML")
-    val file2 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0101/ELPMOO.XML")
-    val fileList= arrayListOf(file1,file2)
+    val file1 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0302/RLING.TXT")
+//    val file2 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0101/ELPMOO.XML")
+    val fileList= arrayListOf(file1)
 
     fileList.forEach {
         print(HdfsUtil().readFile(it))

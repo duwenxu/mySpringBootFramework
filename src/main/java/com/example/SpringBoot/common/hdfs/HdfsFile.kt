@@ -1,4 +1,4 @@
-package com.waytogalaxy.display.utils.hdfs
+package com.example.springboot.common.hdfs
 
 data class HdfsFile(
         val hdfsIP:String,

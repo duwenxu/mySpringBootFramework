@@ -1,8 +1,7 @@
-package com.example.SpringBoot.webSocket
+package com.example.springboot.websocket
 
 import com.alibaba.fastjson.JSONObject
-import com.example.SpringBoot.webSocket.sessionConfigurator.GetHttpSessionConfigurator
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer
+import com.example.springboot.websocket.sessionConfigurator.GetHttpSessionConfigurator
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Component
 import java.io.IOException

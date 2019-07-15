@@ -1,10 +1,10 @@
 package com.waytogalaxy.display.common.config.jpa.extrepository
 
+import com.example.springboot.jpa.extrepository.SimpleExtJpaRepository
 import org.springframework.data.querydsl.QuerydslUtils.QUERY_DSL_PRESENT
 import org.springframework.data.repository.core.RepositoryMetadata
 import java.io.Serializable
 import javax.persistence.EntityManager
-import org.springframework.data.repository.core.RepositoryInformation
 import org.springframework.data.jpa.repository.support.JpaRepositoryFactory
 import org.springframework.data.jpa.repository.support.QuerydslJpaRepository
 import org.springframework.data.querydsl.QuerydslPredicateExecutor

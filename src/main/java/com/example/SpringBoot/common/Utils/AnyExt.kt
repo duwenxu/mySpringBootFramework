@@ -1,4 +1,4 @@
-package com.example.SpringBoot.common.Utils
+package com.example.springboot.common.Utils
 
 import com.alibaba.fastjson.JSON
 import com.alibaba.fastjson.JSONObject

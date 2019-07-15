@@ -1,6 +1,6 @@
 package com.example.SpringBoot;
 
-import com.example.SpringBoot.Kafka.producer.KafkaProducerTest;
+//import com.example.SpringBoot.Kafka.producer.KafkaProducerTest;
 import com.example.SpringBoot.DataBase_CRUD.web.HelloWorldController;
 import com.example.SpringBoot.DataBase_CRUD.repository.UserDao;
 import com.example.SpringBoot.DataBase_CRUD.Entity.User;
@@ -73,22 +73,22 @@ public class myTest {
         myDao.findById(23);
     }
 
-    @Autowired
-    KafkaProducerTest kafkaProducer;
-
-    /**
-     * kafka生产消费测试
-     */
-    @Test
-    public void kafkaTest(){
-        for (int i=0;i<100;i++){
-            System.out.println("send message="+i);
-            kafkaProducer.sendMessage(i+"");
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-    }
+//    @Autowired
+//    KafkaProducerTest kafkaProducer;
+//
+//    /**
+//     * kafka生产消费测试
+//     */
+//    @Test
+//    public void kafkaTest(){
+//        for (int i=0;i<100;i++){
+//            System.out.println("send message="+i);
+//            kafkaProducer.sendMessage(i+"");
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+//    }
 }

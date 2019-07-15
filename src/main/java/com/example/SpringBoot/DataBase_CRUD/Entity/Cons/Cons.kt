@@ -175,4 +175,14 @@ object Cons {
      * hdfs常量
      */
     const val HDFS_PORT = 9000
+
+    /**
+     * 暂时时间常量
+     */
+    const val DEAD_TIME="20191001000000"
+
+    /**
+     * 加密狗授权码
+     */
+    const val VENDOR_CODE="wEG6h5XDB0hlT6IaAf3e3fDwgfSDkVfiAZdSt2nj/vD/nQYt38OzbaylYRq2owHsO8UVkmjfaQHQM9IfLBsOV/wAxU1tmX/jCUmDY2vfJ9Sv2Deml6097aoHfrMzrIl3n+v5GONVEbu0IIz3VMh83b8DF5SOUptAxrD2F7zwI9huhSRHHVAoc6ha1J92gMSbj/f1QJCcnK8Wrdzn+NEg0e+fWCu4sow8C2YZQo5oLm3ardshZfxXDlqSYg/PUoefvm9WZhqG8mjO9bmePWDYfhoYZp5M0AnE2AwZEJlbo4w3vS7PZTDuNJOx8rxkOSa6qKuHAMiQEjIY978Y1Vbloz//EUq0nIOVqueWmAtgPzjgiVn9sgeB8EoEomkPRkqX7mZt7O3ekCK3w9AIhTuT0k5VTAU9/HNmTubhrLlzeuzi/hyxsP6YEAfryWIBBycsay1u1QX7ZPCxhNIFbxdFI0dAztPEmxUNausjnRNN94NAmzTS26Yv/XKUR+gtW0Rh0Dh5pa06tnpsVzJfAo71IT8X01rVgq033Ponw7ueJogy/hRAfe6eHtzhEU8Xf+PqgQRplASKLZKe9djIQf/aEsC9L8RZ9clgZamGBqe8QbE48Yh04GuNGdToA1wFxDfmhiK7aM4bhVg/1MRMOsaObEshY7YHDLNfF0GLMHEL1Axu1ItT/e7n89Zr860SCWeWLmkfuZH+eRbTuDI6+v1J2yYWlLIngjrA5sbT0YgdWpekT8csPeGw70eC5nEjorT/xb26kmqQDmfLf6YWMDxTE5JjrY0v22JFYj2CxOIC9NZ5ZnYAjTNeSsWNTChfw2J0tUeXKaeOLRaCS8Lb8yrPBxSG3dxvVev2QEytP5o6hi3mJ+POvmXwC+ChrvofxccjwL9izkCxWxnj3auvy+tE+rMgPIJQEiXZlU8svyjBSG47z3y78Jj3oxo27uZ3CxDsyhnNNjiX86lGkXePqDkA5g=="
 }

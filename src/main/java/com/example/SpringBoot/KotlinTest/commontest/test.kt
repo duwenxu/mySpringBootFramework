@@ -1,6 +1,5 @@
 package com.example.SpringBoot.KotlinTest.commontest
 
-import com.example.SpringBoot.DataBase_CRUD.Entity.TestEntitr
 import com.example.SpringBoot.common.Utils.TimeUtils.Companion.Y_S_CLOSE
 import com.google.gson.Gson
 import java.text.SimpleDateFormat
@@ -143,20 +142,20 @@ fun main(args: Array<String>) {
      *   只读Map。
      *   可变的MutableMap(MutableMap、HashMap、LinkedHashMap)。
      */
-    val p1=TestEntitr("liming",23)
-    val p2=TestEntitr("xiaoxiao",12)
-    //创建只读map
-    val mMap= mapOf(0 to p1,1 to p1,2 to p2,3 to p2)
-    println(mMap[0])
-    val map1=mapOf(123 to p1,345 to "sec",444 to "hhh")
-    val maplist= mutableListOf(mMap,map1)
-
-    println(Gson().toJson(maplist))
-    val String="caaaaab"
-    println(String.substring(1,String.length-1))
-
-    val time="20190327190537"
-    println(time.dateToStamp(Y_S_CLOSE))
+//    val p1= TestEntitr("liming",23)
+//    val p2= TestEntitr("xiaoxiao",12)
+//    //创建只读map
+//    val mMap= mapOf(0 to p1,1 to p1,2 to p2,3 to p2)
+//    println(mMap[0])
+//    val map1=mapOf(123 to p1,345 to "sec",444 to "hhh")
+//    val maplist= mutableListOf(mMap,map1)
+//
+//    println(Gson().toJson(maplist))
+//    val String="caaaaab"
+//    println(String.substring(1,String.length-1))
+//
+//    val time="20190327190537"
+//    println(time.dateToStamp(Y_S_CLOSE))
 
 }
 

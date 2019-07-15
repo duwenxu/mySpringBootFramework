@@ -1,12 +1,12 @@
-package com.example.SpringBoot.KotlinTest.IntefaceTest
+package com.example.springboot.KotlinTest.IntefaceTest
 
-import java.net.Inet4Address
+import com.example.SpringBoot.KotlinTest.IntefaceTest.MyInterface
 
 class MyInterfaceImpl(
         val name:String,
         val age:Int,
         val address: String
-) : MyInterface{
+) : MyInterface {
     override fun toString(): String {
         return "MyInterfaceImpl(name='$name', age=$age, address='$address')"
     }
