@@ -37,3 +37,27 @@ Root接口：代表Criteria查询的根对象，Criteria查询的查询根定义
         }
         return pageHeadReposity.findAll(spec).isNotEmpty()
     }
+
+       /**
+        * 动态条件查询
+        */
+       private fun findAllUser(userName: String?, levelId: Int?, taskId: Int, orgName: String?, pageStart: Int, pageLength: Int): Page<UserTask> {
+           val sort = Sort(Sort.Direction.DESC, "userName")
+           val spec = Specification<UserTask> { root, query, criteriaBuilder ->
+               val predicates = ArrayList<Predicate>()
+               predicates.add(criteriaBuilder.equal(root.get<Int>("taskId"), taskId))
+               if (levelId != null) {
+                   predicates.add(criteriaBuilder.equal(root.get<Int>("levelId"), levelId))
+               }
+               if (userName != null && userName != "") {
+                   predicates.add(criteriaBuilder.like(root.get<String>("userName"), "%$userName%"))
+               }
+               if (orgName != null && orgName != "") {
+                   predicates.add(criteriaBuilder.like(root.get<String>("orgName"), "%$orgName%"))
+               }
+               val predicate = criteriaBuilder.and(*predicates.toTypedArray())
+               query.where(predicate)
+               query.restriction
+           }
+           return userTaskRepository.findAll(spec, PageRequest.of(pageStart, pageLength, sort))
+       }
