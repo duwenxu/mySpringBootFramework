@@ -1,4 +1,4 @@
-package com.example.SpringBoot.DataBase_CRUD.Entity;
+package com.example.springboot.DataBase_CRUD.Entity;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 //从application.properties中引入属性绑定对象

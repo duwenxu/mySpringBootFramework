@@ -1,7 +1,7 @@
-package com.example.SpringBoot;
+package com.example.springboot;
 
-import com.example.SpringBoot.DataBase_CRUD.Entity.ConfigIDEABean;
 import com.example.SpringBoot.jpa.extrepository.ExtJpaRepositoryFactoryBean;
+import com.example.springboot.DataBase_CRUD.Entity.ConfigIDEABean;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

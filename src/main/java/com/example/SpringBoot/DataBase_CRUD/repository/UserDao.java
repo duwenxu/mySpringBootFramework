@@ -6,6 +6,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
@@ -21,6 +22,7 @@ import java.util.List;
  *      PagingAndSortingRepository 继承 CrudRepository
  * 　　JpaRepository 继承 PagingAndSortingRepository
  */
+@Component
 public interface UserDao extends JpaRepository<User, Integer> {
 
     //简单(DataJPA)内置查询
