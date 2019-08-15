@@ -1,7 +1,5 @@
-package com.example.SpringBoot.KotlinTest.commontest
+package com.example.springboot.KotlinTest.commontest
 
-import com.example.SpringBoot.common.Utils.TimeUtils.Companion.Y_S_CLOSE
-import com.google.gson.Gson
 import java.text.SimpleDateFormat
 
 fun main(args: Array<String>) {

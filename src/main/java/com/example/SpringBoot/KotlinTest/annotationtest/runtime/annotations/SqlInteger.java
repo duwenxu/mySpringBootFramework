@@ -1,4 +1,4 @@
-package com.example.SpringBoot.KotlinTest.annotationtest.runtime.annotations;
+package com.example.springboot.KotlinTest.annotationtest.runtime.annotations;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
