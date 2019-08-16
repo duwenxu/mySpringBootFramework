@@ -1,7 +1,7 @@
 package com.example.springboot;
 
 import com.example.springboot.jpa.extrepository.ExtJpaRepositoryFactoryBean;
-import com.example.springboot.DataBase_CRUD.Entity.ConfigIDEABean;
+import com.example.springboot.database.model.ConfigIDEABean;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -9,7 +9,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;

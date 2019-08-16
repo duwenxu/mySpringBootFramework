@@ -1,0 +1,32 @@
+package com.example.springboot.springsecurity.service
+
+import com.example.springboot.database.repository.UserDao
+import com.example.springboot.springsecurity.model.AuthorConf
+import com.example.springboot.springsecurity.model.UserInfo
+import org.springframework.beans.factory.annotation.Autowired
+import org.springframework.security.core.userdetails.UserDetails
+import org.springframework.security.core.userdetails.UserDetailsService
+import org.springframework.stereotype.Component
+
+/**
+ * userService类  返回UserInfo的对象实例
+ * @property userdao UserDao
+ */
+@Component
+class UserinfoService :UserDetailsService{
+
+    @Autowired
+    lateinit var userdao:UserDao
+
+    /**
+     * case sensitive：区分大小写
+     * 根据 用户名
+     * @param username String?
+     * @return UserDetails
+     */
+    override fun loadUserByUsername(username: String?): UserDetails {
+        val userInfo = userdao.findByName(username)?:null
+        val author=AuthorConf(accountNonExpired = true, accountNonLocked = true, credentialsNonExpired = true, enabled = true)
+        return UserInfo(userInfo,null,author)
+    }
+}

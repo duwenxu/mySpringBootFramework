@@ -1,0 +1,1 @@
+INSERT into role values (1,"管理员","")

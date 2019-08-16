@@ -48,6 +48,12 @@
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- kotlin反射依赖包：spring注入bean时需要  https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
         <!-- kotlin反射依赖包：kotlin对象注入spring时使用  https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect -->
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
