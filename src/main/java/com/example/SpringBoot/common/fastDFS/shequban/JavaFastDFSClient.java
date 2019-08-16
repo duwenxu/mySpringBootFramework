@@ -1,7 +1,7 @@
-package com.example.SpringBoot.common.fastDFS.shequban;
+package com.example.springboot.common.fastDFS.shequban;
 
 import com.example.springboot.common.ftpUtil.FtpUtil;
-import com.example.springboot.common.fastDFS.FastDFSFile;
+import com.example.springboot.common.fastdfs.FastDFSFile;
 import org.csource.common.MyException;
 import org.csource.fastdfs.*;
 import org.slf4j.Logger;

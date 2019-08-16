@@ -1,4 +1,4 @@
-package com.example.SpringBoot.KotlinTest.ProxyTest.JDKProxyImp;
+package com.example.springboot.KotlinTest.ProxyTest.JDKProxyImp;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -21,14 +21,11 @@ public class JDKProxyFactory {
     public Object getProxyInstance() {
         return Proxy.newProxyInstance(object.getClass().getClassLoader(),
                 object.getClass().getInterfaces(),
-                new InvocationHandler() {
-                    @Override
-                    public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                        System.out.println("before....");
-                        Object ObjectProxy = method.invoke(object, args);
-                        System.out.println("after....");
-                        return ObjectProxy;
-                    }
+                (proxy, method, args) -> {  //new InvocationHandler(){}  lambda表达式实现
+                    System.out.println("before....");
+                    Object ObjectProxy = method.invoke(object, args);
+                    System.out.println("after....");
+                    return ObjectProxy;
                 });
     }
 }

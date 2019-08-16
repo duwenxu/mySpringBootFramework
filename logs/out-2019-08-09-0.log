@@ -1,0 +1,657 @@
+11:35:43.682  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器配置::JettyConfig [port=9000, host=127.0.0.1, tempDir=null, logDir=logs, webDir=/E:/filemanager/src/main/webapp, contextPath=/fm, jettyMaxThreadNum=500, jettyMinThreadNum=1500, idleTimeOut=300000, acceptQueueSize=1000, acceptors=-1, selectors=4]
+11:35:43.850  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- webroot:file:///E:/filemanager/src/main/webapp/  descriptor:/E:/filemanager/src/main/webapp/WEB-INF/web.xml
+11:35:44.269  [main] INFO  /fm- Initializing Spring root WebApplicationContext
+11:35:44.737  [main] INFO  /fm- Initializing Spring FrameworkServlet 'spring-mvc'
+11:35:45.531  [main] INFO  org.hibernate.validator.internal.util.Version- HV000001: Hibernate Validator 5.0.2.Final
+11:35:46.213  [main] INFO  com.alibaba.druid.pool.DruidDataSource- {dataSource-1} inited
+11:35:46.644  [main] INFO  com.xingyi.dtjct.server.JettyWebServer- jetty服务器已经启动成功....
+11:36:37.297  [qtp168907708-51] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser findListByCond action
+11:36:37.297  [qtp168907708-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser findListByCond action
+11:36:37.443  [qtp168907708-51] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser findListByCond action
+11:36:37.443  [qtp168907708-51] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser findListByCond action
+11:36:38.097  [qtp168907708-361] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getFirstMenu
+11:36:38.098  [qtp168907708-361] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:38.118  [qtp168907708-361] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:38.118  [qtp168907708-361] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:38.126  [qtp168907708-361] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:38.127  [qtp168907708-361] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam findListByCond action
+11:36:38.129  [qtp168907708-361] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam findListByCond action
+11:36:38.167  [qtp168907708-44] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getSubMenu
+11:36:38.168  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:38.170  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:38.170  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:38.172  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:38.172  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:38.174  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:38.175  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:38.176  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:38.176  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:38.178  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:38.178  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:38.179  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:38.179  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:38.183  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:38.183  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:38.185  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:38.185  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:38.187  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:38.187  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:38.189  [qtp168907708-44] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:42.069  [qtp168907708-477] WARN  org.eclipse.jetty.servlet.ServletHandler- 
+org.apache.jasper.JasperException: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:473)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:377)
+	at org.eclipse.jetty.jsp.JettyJspServlet.service(JettyJspServlet.java:103)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:821)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1685)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1158)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1090)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:119)
+	at org.eclipse.jetty.server.Server.handle(Server.java:517)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:242)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:261)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:75)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:213)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:147)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.server.ResponseWriter.isOpen(ResponseWriter.java:133)
+	at org.eclipse.jetty.server.ResponseWriter.write(ResponseWriter.java:202)
+	at org.apache.jasper.runtime.JspWriterImpl.flushBuffer(JspWriterImpl.java:189)
+	at org.apache.jasper.runtime.PageContextImpl.release(PageContextImpl.java:240)
+	at org.apache.jasper.runtime.JspFactoryImpl.internalReleasePageContext(JspFactoryImpl.java:185)
+	at org.apache.jasper.runtime.JspFactoryImpl.releasePageContext(JspFactoryImpl.java:137)
+	at org.apache.jsp.jsp.filemanage.adminManage_jsp._jspService(adminManage_jsp.java:297)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:411)
+	... 31 common frames omitted
+Caused by: org.eclipse.jetty.io.EofException: null
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:197)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:419)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:313)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:141)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:743)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:241)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:224)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:509)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:673)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:722)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:177)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:163)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:441)
+	at java.io.ByteArrayOutputStream.writeTo(ByteArrayOutputStream.java:167)
+	at org.eclipse.jetty.server.Utf8HttpWriter.write(Utf8HttpWriter.java:183)
+	at org.eclipse.jetty.server.ResponseWriter.write(ResponseWriter.java:203)
+	at org.apache.jasper.runtime.JspWriterImpl.flushBuffer(JspWriterImpl.java:189)
+	at org.apache.jasper.runtime.JspWriterImpl.write(JspWriterImpl.java:463)
+	at org.apache.jasper.runtime.JspWriterImpl.write(JspWriterImpl.java:476)
+	at org.apache.jsp.jsp.filemanage.adminManage_jsp._jspService(adminManage_jsp.java:257)
+	... 34 common frames omitted
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:55)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:148)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:504)
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:177)
+	... 53 common frames omitted
+11:36:42.073  [qtp168907708-477] WARN  org.eclipse.jetty.server.HttpChannel- //localhost:9000/fm/jsp/filemanage/adminManage.jsp
+javax.servlet.ServletException: org.apache.jasper.JasperException: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:119)
+	at org.eclipse.jetty.server.Server.handle(Server.java:517)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:242)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:261)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:75)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:213)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:147)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.apache.jasper.JasperException: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:440)
+	at org.apache.jasper.servlet.JspServlet.serviceJspFile(JspServlet.java:473)
+	at org.apache.jasper.servlet.JspServlet.service(JspServlet.java:377)
+	at org.eclipse.jetty.jsp.JettyJspServlet.service(JettyJspServlet.java:103)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:821)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1685)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1158)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1090)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	... 12 common frames omitted
+Caused by: org.eclipse.jetty.io.RuntimeIOException: org.eclipse.jetty.io.EofException
+	at org.eclipse.jetty.server.ResponseWriter.isOpen(ResponseWriter.java:133)
+	at org.eclipse.jetty.server.ResponseWriter.write(ResponseWriter.java:202)
+	at org.apache.jasper.runtime.JspWriterImpl.flushBuffer(JspWriterImpl.java:189)
+	at org.apache.jasper.runtime.PageContextImpl.release(PageContextImpl.java:240)
+	at org.apache.jasper.runtime.JspFactoryImpl.internalReleasePageContext(JspFactoryImpl.java:185)
+	at org.apache.jasper.runtime.JspFactoryImpl.releasePageContext(JspFactoryImpl.java:137)
+	at org.apache.jsp.jsp.filemanage.adminManage_jsp._jspService(adminManage_jsp.java:297)
+	at org.apache.jasper.runtime.HttpJspBase.service(HttpJspBase.java:111)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.apache.jasper.servlet.JspServletWrapper.service(JspServletWrapper.java:411)
+	... 31 common frames omitted
+Caused by: org.eclipse.jetty.io.EofException: null
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:197)
+	at org.eclipse.jetty.io.WriteFlusher.flush(WriteFlusher.java:419)
+	at org.eclipse.jetty.io.WriteFlusher.write(WriteFlusher.java:313)
+	at org.eclipse.jetty.io.AbstractEndPoint.write(AbstractEndPoint.java:141)
+	at org.eclipse.jetty.server.HttpConnection$SendCallback.process(HttpConnection.java:743)
+	at org.eclipse.jetty.util.IteratingCallback.processing(IteratingCallback.java:241)
+	at org.eclipse.jetty.util.IteratingCallback.iterate(IteratingCallback.java:224)
+	at org.eclipse.jetty.server.HttpConnection.send(HttpConnection.java:509)
+	at org.eclipse.jetty.server.HttpChannel.sendResponse(HttpChannel.java:673)
+	at org.eclipse.jetty.server.HttpChannel.write(HttpChannel.java:722)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:177)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:163)
+	at org.eclipse.jetty.server.HttpOutput.write(HttpOutput.java:441)
+	at java.io.ByteArrayOutputStream.writeTo(ByteArrayOutputStream.java:167)
+	at org.eclipse.jetty.server.Utf8HttpWriter.write(Utf8HttpWriter.java:183)
+	at org.eclipse.jetty.server.ResponseWriter.write(ResponseWriter.java:203)
+	at org.apache.jasper.runtime.JspWriterImpl.flushBuffer(JspWriterImpl.java:189)
+	at org.apache.jasper.runtime.JspWriterImpl.write(JspWriterImpl.java:463)
+	at org.apache.jasper.runtime.JspWriterImpl.write(JspWriterImpl.java:476)
+	at org.apache.jsp.jsp.filemanage.adminManage_jsp._jspService(adminManage_jsp.java:257)
+	... 34 common frames omitted
+Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立的连接。
+	at sun.nio.ch.SocketDispatcher.writev0(Native Method)
+	at sun.nio.ch.SocketDispatcher.writev(SocketDispatcher.java:55)
+	at sun.nio.ch.IOUtil.write(IOUtil.java:148)
+	at sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:504)
+	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:177)
+	... 53 common frames omitted
+11:36:42.177  [qtp168907708-498] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findUserCombox
+11:36:42.178  [qtp168907708-498] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser findListByCond action
+11:36:42.178  [qtp168907708-498] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser findListByCond action
+11:36:42.184  [qtp168907708-515] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findDepartCombox
+11:36:42.185  [qtp168907708-515] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart findListByCond action
+11:36:42.185  [qtp168907708-515] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart findListByCond action
+11:36:42.189  [qtp168907708-515] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart findListByCond action
+11:36:42.189  [qtp168907708-515] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart findListByCond action
+11:36:42.190  [qtp168907708-498] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser findListByCond action
+11:36:42.191  [qtp168907708-498] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser findListByCond action
+11:36:42.193  [qtp168907708-500] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:42.205  [qtp168907708-493] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:42.205  [qtp168907708-500] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0041 isDefault=true
+11:36:42.205  [qtp168907708-500] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam findListByCond action
+11:36:42.208  [qtp168907708-500] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam findListByCond action
+11:36:42.211  [qtp168907708-493] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0042 isDefault=true
+11:36:42.212  [qtp168907708-493] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam findListByCond action
+11:36:42.214  [qtp168907708-515] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:42.214  [qtp168907708-493] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam findListByCond action
+11:36:42.215  [qtp168907708-515] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0041 isDefault=false
+11:36:42.221  [qtp168907708-514] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:42.222  [qtp168907708-514] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0042 isDefault=false
+11:36:42.297  [qtp168907708-486] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getFirstMenu
+11:36:42.297  [qtp168907708-486] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:42.299  [qtp168907708-486] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:42.299  [qtp168907708-486] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:42.304  [qtp168907708-486] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:42.328  [qtp168907708-482] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findFileInfo
+11:36:42.340  [qtp168907708-482] INFO  com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction- pageNo =1pageSize =10
+11:36:42.341  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findPageByCond action
+11:36:42.341  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findPageByCond action
+11:36:42.348  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findPageByCond action
+11:36:42.355  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findPageByCond action
+11:36:42.355  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.355  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.361  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.361  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.361  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.361  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.364  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.364  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.364  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.364  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.366  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.366  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.366  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.366  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.368  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.368  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.368  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.368  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.371  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.371  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.371  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.371  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.371  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.372  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.372  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.372  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.373  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.373  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.373  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.373  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.382  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.382  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.382  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.382  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.384  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.384  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:42.384  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:42.385  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:42.388  [qtp168907708-482] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:42.388  [qtp168907708-482] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:53.508  [qtp168907708-509] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser findListByCond action
+11:36:53.509  [qtp168907708-509] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser findListByCond action
+11:36:53.511  [qtp168907708-509] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser findListByCond action
+11:36:53.511  [qtp168907708-509] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser findListByCond action
+11:36:53.605  [qtp168907708-502] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getFirstMenu
+11:36:53.605  [qtp168907708-502] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:53.608  [qtp168907708-502] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:53.608  [qtp168907708-502] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:53.611  [qtp168907708-502] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:53.622  [qtp168907708-476] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getSubMenu
+11:36:53.622  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:53.624  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:53.624  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:53.626  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:53.626  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:53.628  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:53.628  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:53.629  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:53.629  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:53.633  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:53.634  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:53.635  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:53.635  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:53.637  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:53.637  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:53.638  [qtp168907708-476] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:58.656  [qtp168907708-474] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findUserCombox
+11:36:58.656  [qtp168907708-474] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser findListByCond action
+11:36:58.656  [qtp168907708-474] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser findListByCond action
+11:36:58.661  [qtp168907708-474] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser findListByCond action
+11:36:58.661  [qtp168907708-474] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser findListByCond action
+11:36:58.663  [qtp168907708-488] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findDepartCombox
+11:36:58.663  [qtp168907708-488] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart findListByCond action
+11:36:58.663  [qtp168907708-488] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart findListByCond action
+11:36:58.666  [qtp168907708-488] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart findListByCond action
+11:36:58.666  [qtp168907708-488] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart findListByCond action
+11:36:58.670  [qtp168907708-469] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:58.671  [qtp168907708-469] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0041 isDefault=true
+11:36:58.677  [qtp168907708-468] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:58.677  [qtp168907708-468] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0042 isDefault=true
+11:36:58.684  [qtp168907708-464] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:58.684  [qtp168907708-464] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0041 isDefault=false
+11:36:58.690  [qtp168907708-463] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findParaCombox
+11:36:58.691  [qtp168907708-463] INFO  com.xingyi.dtjct.action.utils.ParaComboxAction-  findParaCombox paraParentId =0042 isDefault=false
+11:36:58.752  [qtp168907708-462] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/getFirstMenu
+11:36:58.752  [qtp168907708-462] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmRole findListByCond action
+11:36:58.755  [qtp168907708-462] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmRole findListByCond action
+11:36:58.755  [qtp168907708-462] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmMenu findListByCond action
+11:36:58.757  [qtp168907708-462] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmMenu findListByCond action
+11:36:58.768  [qtp168907708-458] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findFileInfo
+11:36:58.769  [qtp168907708-458] INFO  com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction- pageNo =1pageSize =10
+11:36:58.769  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findPageByCond action
+11:36:58.769  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findPageByCond action
+11:36:58.773  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findPageByCond action
+11:36:58.775  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findPageByCond action
+11:36:58.775  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.775  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.777  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.777  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.777  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.777  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.779  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.779  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.779  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.779  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.783  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.783  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.783  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.783  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.784  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.784  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.784  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.785  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.786  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.786  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.786  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.786  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.788  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.788  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.788  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.788  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.789  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.790  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.790  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.790  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.791  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.791  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.791  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.791  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.792  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.792  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:36:58.792  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:36:58.792  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:36:58.793  [qtp168907708-458] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:36:58.794  [qtp168907708-458] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.464  [qtp168907708-496] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/saveFileInfo
+11:38:21.473  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmUser selectByPrimaryKey action
+11:38:21.473  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmUser selectByPrimaryKey action
+11:38:21.475  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmUser selectByPrimaryKey action
+11:38:21.475  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmUser selectByPrimaryKey action
+11:38:21.475  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findListByCond action
+11:38:21.475  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findListByCond action
+11:38:21.478  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findListByCond action
+11:38:21.478  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findListByCond action
+11:38:21.478  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.478  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.479  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.479  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.479  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmParam selectByPrimaryKey action
+11:38:21.479  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam selectByPrimaryKey action
+11:38:21.481  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam selectByPrimaryKey action
+11:38:21.481  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmParam selectByPrimaryKey action
+11:38:21.481  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmParam selectByPrimaryKey action
+11:38:21.481  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmParam selectByPrimaryKey action
+11:38:21.483  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmParam selectByPrimaryKey action
+11:38:21.483  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmParam selectByPrimaryKey action
+11:38:21.484  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager XyStFilemanager insert action
+11:38:21.484  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager insert action
+11:38:21.516  [qtp168907708-496] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager insert action
+11:38:21.517  [qtp168907708-496] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager insert action
+11:38:21.529  [qtp168907708-445] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findFileInfo
+11:38:21.530  [qtp168907708-445] INFO  com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction- pageNo =1pageSize =10
+11:38:21.531  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findPageByCond action
+11:38:21.531  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findPageByCond action
+11:38:21.533  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findPageByCond action
+11:38:21.535  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findPageByCond action
+11:38:21.535  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.535  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.536  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.537  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.537  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.537  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.538  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.538  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.538  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.538  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.539  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.539  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.539  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.539  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.540  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.541  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.541  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.541  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.542  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.542  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.542  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.542  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.543  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.544  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.544  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.544  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.545  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.545  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.545  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.545  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.546  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.547  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.547  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.547  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.548  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.548  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:21.548  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:21.548  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:21.549  [qtp168907708-445] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:21.549  [qtp168907708-445] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.022  [qtp168907708-433] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findFileInfo
+11:38:53.023  [qtp168907708-433] INFO  com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction- pageNo =2pageSize =10
+11:38:53.023  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findPageByCond action
+11:38:53.023  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findPageByCond action
+11:38:53.026  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findPageByCond action
+11:38:53.028  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findPageByCond action
+11:38:53.028  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.028  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.029  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.029  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.029  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.029  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.031  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.031  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.031  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.031  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.032  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.032  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.032  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.032  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.033  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.033  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.033  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.033  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.035  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.035  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.035  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.035  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.036  [qtp168907708-433] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.036  [qtp168907708-433] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.039  [qtp168907708-433] ERROR com.xingyi.dtjct.action.interceptor.DtjctExceptionInterceptor- null
+11:38:53.041  [qtp168907708-433] WARN  org.eclipse.jetty.servlet.ServletHandler- 
+org.springframework.web.util.NestedServletException: Request processing failed; nested exception is com.xingyi.dtjct.exception.DtjctException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:821)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1685)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1158)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1090)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:119)
+	at org.eclipse.jetty.server.Server.handle(Server.java:517)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:242)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:261)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:75)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:213)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:147)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: com.xingyi.dtjct.exception.DtjctException: null
+	at com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction.find(XyStFilemanagerAction.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 31 common frames omitted
+11:38:53.042  [qtp168907708-433] WARN  org.eclipse.jetty.server.HttpChannel- //localhost:9000/fm/findFileInfo
+javax.servlet.ServletException: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is com.xingyi.dtjct.exception.DtjctException
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:119)
+	at org.eclipse.jetty.server.Server.handle(Server.java:517)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:308)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:242)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:261)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:95)
+	at org.eclipse.jetty.io.SelectChannelEndPoint$2.run(SelectChannelEndPoint.java:75)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.produceAndRun(ExecuteProduceConsume.java:213)
+	at org.eclipse.jetty.util.thread.strategy.ExecuteProduceConsume.run(ExecuteProduceConsume.java:147)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:654)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:572)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: org.springframework.web.util.NestedServletException: Request processing failed; nested exception is com.xingyi.dtjct.exception.DtjctException
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:982)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:872)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:846)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:821)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1685)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:197)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1668)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:581)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:226)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1158)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:511)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:185)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1090)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:109)
+	... 12 common frames omitted
+Caused by: com.xingyi.dtjct.exception.DtjctException: null
+	at com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction.find(XyStFilemanagerAction.java:105)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:133)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:97)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:827)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:738)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:85)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:967)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:901)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:970)
+	... 31 common frames omitted
+11:38:53.275  [qtp168907708-427] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findFileInfo
+11:38:53.276  [qtp168907708-427] INFO  com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction- pageNo =0pageSize =10
+11:38:53.276  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findPageByCond action
+11:38:53.276  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findPageByCond action
+11:38:53.280  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findPageByCond action
+11:38:53.283  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findPageByCond action
+11:38:53.283  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.283  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.284  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.284  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.284  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.284  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.286  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.286  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.286  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.286  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.288  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.288  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.288  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.288  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.289  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.289  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.289  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.289  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.291  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.291  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.291  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.291  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.292  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.292  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.292  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.292  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.294  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.294  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.294  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.294  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.295  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.295  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.296  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.829  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.833  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.833  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.833  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.834  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.837  [qtp168907708-427] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.838  [qtp168907708-427] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.877  [qtp168907708-426] INFO  com.xingyi.dtjct.action.interceptor.LoginInterceptor- url:http://localhost:9000/fm/findFileInfo
+11:38:53.878  [qtp168907708-426] INFO  com.xingyi.dtjct.action.filemanager.XyStFilemanagerAction- pageNo =1pageSize =10
+11:38:53.878  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start XyStFilemanager findPageByCond action
+11:38:53.878  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start XyStFilemanager findPageByCond action
+11:38:53.881  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished XyStFilemanager findPageByCond action
+11:38:53.882  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished XyStFilemanager findPageByCond action
+11:38:53.882  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.882  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.884  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.884  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.884  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.884  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.885  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.885  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.885  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.885  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.887  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.887  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.887  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.887  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.888  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.888  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.888  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.888  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.889  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.890  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.890  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.890  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.891  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.891  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.891  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.891  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.894  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.895  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.895  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.895  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.896  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.896  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.896  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.896  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.898  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.898  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action
+11:38:53.898  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- start EcmDepart selectByPrimaryKey action
+11:38:53.898  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- start EcmDepart selectByPrimaryKey action
+11:38:53.899  [qtp168907708-426] INFO  com.xingyi.dtjct.dao.utils.DtjctBaseDao- finished EcmDepart selectByPrimaryKey action
+11:38:53.899  [qtp168907708-426] INFO  com.xingyi.dtjct.service.utils.DtjctBaseService- finished EcmDepart selectByPrimaryKey action

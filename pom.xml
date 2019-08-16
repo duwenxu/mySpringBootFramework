@@ -250,7 +250,11 @@
             <version>1.2.3</version>
             <scope>test</scope>
         </dependency>
-
+        <!--springSecurity集成：为基于Spring的企业应用系统提供声明式的安全访问控制解决方案的安全框架-->
+        <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
