@@ -1,6 +1,6 @@
 package com.example.springboot;
 
-import com.example.SpringBoot.jpa.extrepository.ExtJpaRepositoryFactoryBean;
+import com.example.springboot.jpa.extrepository.ExtJpaRepositoryFactoryBean;
 import com.example.springboot.DataBase_CRUD.Entity.ConfigIDEABean;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.slf4j.Logger;
@@ -65,16 +65,16 @@ public class Application extends SpringBootServletInitializer {
     }
 
     //可以通过创建FilterRegistrationBean对象并用 @Bean 标记,将自定义的过滤器添加并生效
-    @Bean
-    public FilterRegistrationBean testFilterRegistration() {
-        FilterRegistrationBean registration = new FilterRegistrationBean();
-        registration.setFilter(new MyFilter());//添加过滤器
-        registration.addUrlPatterns("/*");//设置过滤路径   /*：所有路径
-        registration.addInitParameter("paramName", "paramValue");//添加默认参数
-        registration.setName("MyFilter");//设置过滤器名称
-        registration.setOrder(1);//设置过滤器的执行顺序，值越小，越先执行
-        return registration;
-    }
+//    @Bean
+//    public FilterRegistrationBean testFilterRegistration() {
+//        FilterRegistrationBean registration = new FilterRegistrationBean();
+//        registration.setFilter(new MyFilter());//添加过滤器
+//        registration.addUrlPatterns("/*");//设置过滤路径   /*：所有路径
+//        registration.addInitParameter("paramName", "paramValue");//添加默认参数
+//        registration.setName("MyFilter");//设置过滤器名称
+//        registration.setOrder(1);//设置过滤器的执行顺序，值越小，越先执行
+//        return registration;
+//    }
 
     //实现Filter接口，并创建自定义Filter
     public class MyFilter implements Filter {

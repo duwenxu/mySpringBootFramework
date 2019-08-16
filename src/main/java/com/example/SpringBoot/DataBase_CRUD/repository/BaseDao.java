@@ -1,6 +1,6 @@
 package com.example.SpringBoot.DataBase_CRUD.repository;
 
-import com.example.SpringBoot.DataBase_CRUD.Entity.BaseBean;
+import com.example.springboot.DataBase_CRUD.Entity.BaseBean;
 
 /**
  * 增删改查的基础接口

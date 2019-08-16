@@ -48,6 +48,12 @@
             <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- kotlin反射依赖包：kotlin对象注入spring时使用  https://mvnrepository.com/artifact/org.jetbrains.kotlin/kotlin-reflect -->
+        <dependency>
+            <groupId>org.jetbrains.kotlin</groupId>
+            <artifactId>kotlin-reflect</artifactId>
+            <version>${kotlin.version}</version>
+        </dependency>
         <!--热启动配置：更改代码后需要 ctrl+F9 再次编译才会生效-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

@@ -1,8 +1,8 @@
 package com.example.SpringBoot;
 
 import com.example.springboot.DataBase_CRUD.web.HelloWorldController;
-import com.example.SpringBoot.DataBase_CRUD.repository.UserDao;
-import com.example.SpringBoot.DataBase_CRUD.Entity.User;
+import com.example.springboot.DataBase_CRUD.repository.UserDao;
+import com.example.springboot.DataBase_CRUD.Entity.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

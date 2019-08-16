@@ -1,5 +1,6 @@
 package com.example.springboot.DataBase_CRUD.Entity
 
+import lombok.Data
 import java.io.Serializable
 import javax.persistence.*
 
@@ -18,17 +19,10 @@ import javax.persistence.*
  * @Column 标识一些字段特性，字段别名，是否允许为空，是否唯一，是否进行插入和更新（比如由MySQL自动维护）
  * @Transient 标识该字段并非数据库字段映射
  */
-@Entity //实体类
+@Entity
+@Data
 //@Table(name = "USER")
-class User(
-        @Column(nullable = false, unique = true)//标识字段不为空，唯一
-        var name: String? = null,
-        @Column(nullable = false)
-        var age: Int? = 0,
-        @Column(nullable = false)
-        var address: String? = null
-) : Serializable {
-
+class User() : Serializable {
     companion object {
         const val serialVersionUID = 1L
     }
@@ -36,4 +30,19 @@ class User(
     @Id
     @GeneratedValue
     var id: Int = 0
+
+    @Column(nullable = false, unique = true)//标识字段不为空，唯一
+    var name: String? = null
+
+    @Column(nullable = false)
+    var age: Int? = 0
+
+    @Column(nullable = false)
+    var address: String? = null
+
+    constructor(
+            name: String?,
+            age: Int?,
+            address: String?
+    ) : this()
 }
