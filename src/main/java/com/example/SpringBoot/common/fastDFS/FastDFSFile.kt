@@ -1,4 +1,4 @@
-package com.example.springboot.common.fastdfs
+package com.example.springboot.common.fastDFS
 
 
 /**

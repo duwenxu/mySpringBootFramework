@@ -1,5 +1,4 @@
-package com.example.springboot.KotlinTest.ProxyTest.JDKProxyImp;
-
+package com.example.SpringBoot.KotlinTest.ProxyTest.JDKProxyImp;
 
 /**
  * UserDao

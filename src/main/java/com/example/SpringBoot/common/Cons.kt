@@ -1,4 +1,4 @@
-package com.example.springboot.common
+package com.example.SpringBoot.common
 
 /**
  * 常量

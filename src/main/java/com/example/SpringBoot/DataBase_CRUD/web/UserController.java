@@ -1,23 +1,24 @@
-package com.example.springboot.DataBase_CRUD.web;
+package com.example.SpringBoot.DataBase_CRUD.web;
 
-import com.example.springboot.DataBase_CRUD.Entity.User;
-import com.example.springboot.DataBase_CRUD.service.impl.UserServiceImpl;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.service.impl.UserServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
 public class UserController {
-    @Autowired
+    @Resource
     UserServiceImpl service;
 //return "user/userEdit"; 代表会直接去resources目录下找相关的文件。
 //return "redirect:/list"; 代表转发到对应的controller，这个示例就相当于删除内容之后自动调整到list请求，然后再输出到页面。
 
     /**
      * 首页
+     *
      * @return
      */
     @RequestMapping("/")
@@ -27,6 +28,7 @@ public class UserController {
 
     /**
      * 展示所有
+     *
      * @param model
      * @return
      */
@@ -44,6 +46,7 @@ public class UserController {
 
     /**
      * 新增
+     *
      * @param user
      * @return
      */
@@ -53,12 +56,6 @@ public class UserController {
         return "redirect:/list";
     }
 
-    /**
-     * 编辑
-     * @param model
-     * @param id
-     * @return
-     */
     @RequestMapping("/toEdit")
     public String update(Model model, int id) {
         User user = service.findUserById(id);
@@ -68,6 +65,7 @@ public class UserController {
 
     /**
      * 更新
+     *
      * @param user
      * @return
      */
@@ -79,6 +77,7 @@ public class UserController {
 
     /**
      * 删除
+     *
      * @param id
      * @return
      */
@@ -88,17 +87,4 @@ public class UserController {
         return "redirect:/list";
     }
 
-    /**
-     * 登陆页面
-     * @return
-     */
-    @RequestMapping("/login")
-    public String userLogin(){
-        return "demo_sign";
-    }
-
-    @RequestMapping("/login-error")
-    public String loginError(){
-        return "login_error";
-    }
 }

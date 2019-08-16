@@ -1,4 +1,4 @@
-package com.example.springboot.common.fastdfs
+package com.example.springboot.common.fastDFS
 
 import com.example.springboot.common.ftpUtil.FtpUtil
 import org.csource.common.MyException
@@ -47,7 +47,11 @@ object FastDFSClient {
         try {
             val storageClient = trackerClient
             uploadResults = storageClient.upload_file(file.content, file.ext, null)
-            logger.info("file upload success!" + "group_name=" + uploadResults[0] + ",remote_FileName=" + uploadResults[1])
+            if (uploadResults!![0] != null && uploadResults[1] != null) {
+                logger.info("file upload success!" + "group_name=" + uploadResults[0] + ",remote_FileName=" + uploadResults[1])
+            } else {
+                logger.error("file" + file.name + " upload fail:" + storageClient.errorCode)
+            }
 
         } catch (e: Exception) {
             logger.error("file" + file.name + " upload fail:" + e.message)

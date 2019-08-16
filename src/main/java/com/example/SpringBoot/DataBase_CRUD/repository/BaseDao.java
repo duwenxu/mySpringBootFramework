@@ -1,4 +1,4 @@
-package com.example.springboot.DataBase_CRUD.repository;
+package com.example.SpringBoot.DataBase_CRUD.repository;
 
 import com.example.SpringBoot.DataBase_CRUD.Entity.BaseBean;
 

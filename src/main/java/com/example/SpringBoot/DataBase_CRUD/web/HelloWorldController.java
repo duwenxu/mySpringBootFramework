@@ -1,7 +1,7 @@
 package com.example.springboot.DataBase_CRUD.web;
 
-import com.example.springboot.DataBase_CRUD.Entity.User;
-import com.example.springboot.DataBase_CRUD.repository.UserDao;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.repository.UserDao;
 import com.example.springboot.DataBase_CRUD.Entity.ConfigIDEABean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

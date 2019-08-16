@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.ProxyTest.cglibjavaImp;
+package com.example.SpringBoot.KotlinTest.ProxyTest.cglibjavaImp;
 
 /**
  * UserDao

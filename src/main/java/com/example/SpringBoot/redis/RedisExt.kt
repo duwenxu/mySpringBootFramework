@@ -1,8 +1,8 @@
 package com.example.springboot.redis
 
-import com.example.springboot.common.Cons
-import com.example.springboot.common.commonutils.toArrayList
-import com.example.springboot.common.commonutils.toJson
+import com.example.SpringBoot.common.Cons
+import com.example.springboot.common.Utils.toArrayList
+import com.example.springboot.common.Utils.toJson
 import org.springframework.data.redis.core.RedisTemplate
 import java.util.concurrent.TimeUnit
 

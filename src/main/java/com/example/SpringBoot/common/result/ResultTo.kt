@@ -2,7 +2,7 @@ package com.example.springboot.common.result
 
 import com.alibaba.fastjson.JSONArray
 import com.alibaba.fastjson.JSONObject
-import com.example.springboot.common.commonutils.toJson
+import com.example.springboot.common.Utils.toJson
 import java.io.Serializable
 import java.util.*
 

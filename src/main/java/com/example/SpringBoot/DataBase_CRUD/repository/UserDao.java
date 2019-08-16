@@ -1,6 +1,6 @@
-package com.example.springboot.DataBase_CRUD.repository;
+package com.example.SpringBoot.DataBase_CRUD.repository;
 
-import com.example.springboot.DataBase_CRUD.Entity.User;
+import com.example.SpringBoot.DataBase_CRUD.Entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

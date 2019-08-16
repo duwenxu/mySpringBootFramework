@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.annotationtest.runtime.annotations;
+package com.example.SpringBoot.KotlinTest.annotationtest.runtime.annotations;
 
 /**
  * sql注解   (自定义运行时注解)

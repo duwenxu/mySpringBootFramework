@@ -1,10 +1,10 @@
-package com.example.springboot.KotlinTest.commontest
+package com.example.SpringBoot.KotlinTest.commontest
 
 import com.alibaba.fastjson.JSONObject
-import com.example.springboot.common.commonutils.toFastJsonObj
-import com.example.springboot.common.commonutils.toFastObj
-import com.example.springboot.common.commonutils.toJson
-import com.example.springboot.common.commonutils.toJsonObj
+import com.example.springboot.common.Utils.toFastJsonObj
+import com.example.SpringBoot.common.Utils.toFastObj
+import com.example.springboot.common.Utils.toJson
+import com.example.springboot.common.Utils.toJsonObj
 
 
 fun main(args: Array<String>) {
