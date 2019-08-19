@@ -2,7 +2,7 @@ package com.example.SpringBoot;
 
 import com.example.springboot.database.web.HelloWorldController;
 import com.example.springboot.database.repository.UserDao;
-import com.example.springboot.database.model.User;
+import com.example.springboot.springsecurity.model.rbac_model.User;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;

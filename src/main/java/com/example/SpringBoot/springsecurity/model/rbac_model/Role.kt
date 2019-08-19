@@ -1,4 +1,4 @@
-package com.example.springboot.database.model
+package com.example.springboot.springsecurity.model.rbac_model
 
 import java.io.Serializable
 import java.util.*
@@ -6,6 +6,7 @@ import javax.persistence.*
 
 /**
  * 定义用户权限
+ * RBAC  用户角色
  * @property id Int?
  * @property descriptor String?
  * @property roleName String?

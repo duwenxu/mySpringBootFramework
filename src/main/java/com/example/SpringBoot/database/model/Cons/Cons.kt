@@ -79,6 +79,7 @@ object Cons {
      */
     const val ID_LENGTH = 32
     const val FILE_NAME_LENGTH = 256
+    const val URL_LENGTH=256
     const val NAME_LENGTH = 256
     const val FILE_EXT_LENGTH = 20
     const val FILE_LENGTH = 20

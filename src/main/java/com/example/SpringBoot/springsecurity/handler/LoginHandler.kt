@@ -1,4 +1,4 @@
-package com.example.springboot.springsecurity.loginhandler
+package com.example.springboot.springsecurity.handler
 
 import com.example.springboot.common.commonutils.ext.resp
 import com.example.springboot.common.result.ResultEnum
@@ -9,18 +9,18 @@ import org.springframework.security.core.AuthenticationException
 import org.springframework.security.core.session.SessionRegistry
 import org.springframework.security.web.authentication.AuthenticationFailureHandler
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler
-import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler
 import org.springframework.stereotype.Component
+import javax.annotation.Resource
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 /**
  * 自定义的登陆验证结果返回
  */
 @Component
-class AuthenticationResponeseHandler : AuthenticationSuccessHandler, AuthenticationFailureHandler {
+class LoginHandler : AuthenticationSuccessHandler, AuthenticationFailureHandler {
 
 //    @Autowired
-//    lateinit var sessionRegister: SessionRegistry
+//    lateinit var sessionRegisity: SessionRegistry
 
     /**
      * 登陆成功后的响应
@@ -31,7 +31,7 @@ class AuthenticationResponeseHandler : AuthenticationSuccessHandler, Authenticat
     override fun onAuthenticationSuccess(request: HttpServletRequest?, response: HttpServletResponse?, authentication: Authentication?) {
         authentication?.let {
             val usetinfo = it.principal
-//            sessionRegister.registerNewSession(request!!.session.id, usetinfo)
+//            sessionRegisity.registerNewSession(request!!.session.id, usetinfo)  //todo
             response?.resp(ResultTo(usetinfo).toJsonStr())
         }
     }

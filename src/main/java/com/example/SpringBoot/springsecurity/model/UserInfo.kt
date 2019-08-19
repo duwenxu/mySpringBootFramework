@@ -1,7 +1,7 @@
 package com.example.springboot.springsecurity.model
 
-import com.example.springboot.database.model.Role
-import com.example.springboot.database.model.User
+import com.example.springboot.springsecurity.model.rbac_model.Role
+import com.example.springboot.springsecurity.model.rbac_model.User
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.authority.AuthorityUtils
 import org.springframework.security.core.userdetails.UserDetails

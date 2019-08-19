@@ -1,7 +1,7 @@
 package com.example.springboot.database.service.impl;
 
 import com.example.springboot.database.repository.UserDao;
-import com.example.springboot.database.model.User;
+import com.example.springboot.springsecurity.model.rbac_model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;

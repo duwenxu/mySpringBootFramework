@@ -1,6 +1,6 @@
 package com.example.springboot.database.web;
 
-import com.example.springboot.database.model.User;
+import com.example.springboot.springsecurity.model.rbac_model.User;
 import com.example.springboot.database.repository.UserDao;
 import com.example.springboot.database.model.ConfigIDEABean;
 import org.springframework.beans.factory.annotation.Autowired;

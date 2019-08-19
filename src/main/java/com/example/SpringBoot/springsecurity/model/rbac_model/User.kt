@@ -1,4 +1,4 @@
-package com.example.springboot.database.model
+package com.example.springboot.springsecurity.model.rbac_model
 
 import lombok.Data
 import java.io.Serializable
@@ -18,6 +18,15 @@ import javax.persistence.*
  * @DynamicUpdate，@DynamicInsert 注解可以动态的生成insert、update 语句，默认会生成全部的update
  * @Column 标识一些字段特性，字段别名，是否允许为空，是否唯一，是否进行插入和更新（比如由MySQL自动维护）
  * @Transient 标识该字段并非数据库字段映射
+ */
+
+/**
+ * RBAC 中的用户
+ * @property id Int
+ * @property name String?
+ * @property psword String?
+ * @property age Int?
+ * @property address String?
  */
 @Entity
 @Data
