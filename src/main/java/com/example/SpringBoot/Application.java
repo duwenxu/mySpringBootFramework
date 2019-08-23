@@ -6,6 +6,7 @@ import org.apache.catalina.filters.RemoteIpFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -41,10 +42,8 @@ import java.io.IOException;
  * @Order(1)
  * @WebFilter(filterName = "testFilter1", urlPatterns = "/*")
  */
-
-@EnableScheduling    //开启定时任务注解    在方法上使用@Scheduled注解定时执行方法
 @SpringBootApplication
-//@SpringBootApplication(exclude={DataSourceAutoConfiguration.class,HibernateJpaAutoConfiguration.class})
+@EnableScheduling    //开启定时任务注解    在方法上使用@Scheduled注解定时执行方法
 @EnableJpaRepositories(repositoryFactoryBeanClass = ExtJpaRepositoryFactoryBean.class)  //spring jpa
 @EnableConfigurationProperties({ConfigIDEABean.class})
 public class Application extends SpringBootServletInitializer {

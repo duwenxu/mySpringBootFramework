@@ -1,15 +1,15 @@
 SpringBoot学习记录
 1.	日期：02.22
-1.	AOP无法切入同类调用的问题
-问题：即在本类中调用同类的方法时无法使用增强
-原因：https://blog.csdn.net/u012385190/article/details/82119928
-在greetTo()方法里面直接调用serverTo(……)方法，这里还隐含一个关键字，那就是this，实际上这里调用是这样的：this.serverTo(),this是当前对象。而调用greetTo()是的对象是被代理的，在代理对象中执行增强后，通过invoke，用实际Waiter对象来调用greetTo()方法执行业务逻辑。在业务逻辑内又调用了serverTo(……)方法，调用的对象是当前对象，当前对象是Waiter，问题就出在这里，因为要想用执行serverTo方法的增强，必须用代理对象执行，但是此时却直接用Waiter对象调用，绕过了代理对象增强的部分，也就是说代理增强部分失效。
-关键：调用本类方法时，默认的会有this.method()，相当于是本类直接调用方法，而不是通过代理调用，自然就不会被增强
-		解决方法：在调用的方法中获取本类的代理对象强转后再调用方法
-Java实现：(service)AopContext.currentProxy().method()
-Kotlin实现：
-val mySelfProxy = currentProxy() as KTPublicServiceImpl
-return mySelfProxy.getAuth(clientId,clientSecret)
+    1.	AOP无法切入同类调用的问题
+    问题：即在本类中调用同类的方法时无法使用增强
+    原因：https://blog.csdn.net/u012385190/article/details/82119928
+    在greetTo()方法里面直接调用serverTo(……)方法，这里还隐含一个关键字，那就是this，实际上这里调用是这样的：this.serverTo(),this是当前对象。而调用greetTo()是的对象是被代理的，在代理对象中执行增强后，通过invoke，用实际Waiter对象来调用greetTo()方法执行业务逻辑。在业务逻辑内又调用了serverTo(……)方法，调用的对象是当前对象，当前对象是Waiter，问题就出在这里，因为要想用执行serverTo方法的增强，必须用代理对象执行，但是此时却直接用Waiter对象调用，绕过了代理对象增强的部分，也就是说代理增强部分失效。
+    关键：调用本类方法时，默认的会有this.method()，相当于是本类直接调用方法，而不是通过代理调用，自然就不会被增强
+            解决方法：在调用的方法中获取本类的代理对象强转后再调用方法
+    Java实现：(service)AopContext.currentProxy().method()
+    Kotlin实现：
+    val mySelfProxy = currentProxy() as KTPublicServiceImpl
+    return mySelfProxy.getAuth(clientId,clientSecret)
 
 2.	@Cached注解
 	在spring环境下，使用@Cached注解可以为一个方法添加缓存，@CacheUpdate用于更新缓存，@CacheInvalidate用于移除缓存元素。
@@ -262,6 +262,8 @@ docker run -d --name kafka1 -p 9092:9092 --env KAFKA_ADVERTISED_HOST_NAME=localh
                 JDK1.8的put采用头插法
                 实质：插入操作过程的区别
           3. get的时间复杂度（对链表，对红黑树）
+
+
 
 
 

@@ -1,0 +1,5 @@
+1. redis的使用方式：
+    windows下安装使用：
+          开启服务端：打开一个cmd窗口，切换至redis的安装目录下,  运行  redis-server.exe redis.windows.conf
+                     //后面的那个 redis.windows.conf 可以省略，如果省略，会启用默认配置
+          开启客户端：同样打开一个cmd窗口，切换至redis的安装目录下,运行  redis-cli.exe -h 127.0.0.1 -p 6379 连接至服务器

@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping
 class RedisController{
 
     @Autowired
-    val redisTemple=StringRedisTemplate()
+    lateinit var redisTemplate: StringRedisTemplate
 
     @RequestMapping("/setGet")
     fun easyOperator():String{
-        redisTemple.opsForValue().set("key03","value01")
-        return redisTemple.opsForValue().get("key01")
+        redisTemplate.opsForValue().set("key03","value01")
+        return redisTemplate.opsForValue().get("key01")
     }
 
 

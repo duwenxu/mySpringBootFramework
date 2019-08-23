@@ -1,6 +1,6 @@
 //package com.example.SpringBoot.Kafka.producer
 //
-//import com.example.SpringBoot.Kafka.Config.KafkaConfig
+//import com.example.springboot.Kafka.Config.KafkaConfig
 //import org.springframework.beans.factory.annotation.Autowired
 //import org.springframework.stereotype.Component
 //

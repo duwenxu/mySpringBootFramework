@@ -16,7 +16,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.session.SessionRegistry
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter
 
-
 /**
  * springSecurity的配置文件
  *
@@ -84,7 +83,7 @@ open class SecurityConfig : WebSecurityConfigurerAdapter(){
                 .logoutUrl("/api/user/logout")
                 .addLogoutHandler(logoutHandler)
                 .logoutSuccessHandler(logoutHandler)
-                .invalidateHttpSession(true)   //todo
+                .invalidateHttpSession(true)   //配置SecurityContextLogoutHandler使登出后session失效
                 .and()
 
                 .exceptionHandling()  //todo
@@ -95,7 +94,7 @@ open class SecurityConfig : WebSecurityConfigurerAdapter(){
                 //session配置
                 .sessionManagement()   //todo
                 .maximumSessions(1)   //todo
-                .expiredSessionStrategy(sessionExpiredStrategy)
+                .expiredSessionStrategy(sessionExpiredStrategy)  //session过期策略
 //                .sessionRegistry(sessionRegister)
                 .maxSessionsPreventsLogin(false)   //todo
                 .and()

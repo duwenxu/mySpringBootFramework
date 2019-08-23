@@ -1,6 +1,6 @@
 //package com.example.SpringBoot
 //
-//import com.example.SpringBoot.Kafka.Config.KafkaConfig
+//import com.example.springboot.Kafka.Config.KafkaConfig
 //import org.junit.Test
 //import org.junit.runner.RunWith
 //import org.springframework.beans.factory.annotation.Autowired

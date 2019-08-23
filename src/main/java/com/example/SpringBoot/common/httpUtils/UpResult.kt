@@ -1,4 +1,4 @@
-package com.example.SpringBoot.common.httpUtils
+package com.example.springboot.common.httpUtils
 
 data class UpResult(
         val resultStatus:Boolean,
