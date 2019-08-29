@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.ProxyTest.JDKProxyImp;
+package com.example.springboot.spring.aop.proxytest.JDKProxyImp;
 
 import org.junit.Test;
 

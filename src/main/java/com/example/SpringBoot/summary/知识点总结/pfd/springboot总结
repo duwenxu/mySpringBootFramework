@@ -17,83 +17,86 @@ SpringBoot学习记录
 	@CacheUpdate和@CacheInvalidate的name和area属性必须和@Cached相同，name属性还会用做cache的key前缀。
 	@CacheUpdate和@CacheInvalidate的时候，相关的缓存操作可能会失败（比如网络IO错误），所以指定缓存的超时时间是非常重要的
 
-JetCache主要通过@Cached和@CreateCache实现缓存
-	@Cached是在接口方法或者类方法上添加缓存，一般以参数为key，以返回值为value存入缓存中（创建缓存方法）
-	@Cached调用原理：系统调用该接口方法时检测到@Cached标签，首先会根据key去缓存中调用get方法获取value值，如果存在value值则直接将值返回，如果不存在key，则会执行被@Cached标记的接口或方法得到结果，并自动调用get方法将返回值存入缓存中。
-	@CreateCache是直接创建一个缓存实例，然后调用put(T key， T value)、get(T key)等方法实现缓存。（创建缓存实例）
-配置方法：
-1.	在@SpringBootApplication注释的全局配置文件中开启缓存配置
+    JetCache主要通过@Cached和@CreateCache实现缓存
+    	@Cached是在接口方法或者类方法上添加缓存，一般以参数为key，以返回值为value存入缓存中（创建缓存方法）
+    	@Cached调用原理：系统调用该接口方法时检测到@Cached标签，首先会根据key去缓存中调用get方法获取value值，如果存在value值则直接将值返回，如果不存在key，则会执行被@Cached标记的接口或方法得到结果，并自动调用get方法将返回值存入缓存中。
+    	@CreateCache是直接创建一个缓存实例，然后调用put(T key， T value)、get(T key)等方法实现缓存。（创建缓存实例）
+            配置方法：
+            1.	在@SpringBootApplication注释的全局配置文件中开启缓存配置
 
-@EnableMethodCache(basePackages = ["com.waytogalaxy.display"]) //设置缓存扫描地址
-@EnableCreateCacheAnnotation  //缓存 激活@CreateCache
+            @EnableMethodCache(basePackages = ["com.waytogalaxy.display"]) //设置缓存扫描地址
+            @EnableCreateCacheAnnotation  //缓存 激活@CreateCache
 
-2.	配置JetCacheConfig类，激活@CreateCache和@Cached注解。
-@Value注解,在属性名上添加该注解：
-可以使用@Value 来读取application配置文件中的量   两种方式
-① ${ property : default_value }    注意：kotlin里$有其表示含义(字符串表达式中)，所以在这里要加\转义
-即 kotlin中   \${ property : default_value }
-② #{ obj.property? :default_value }
-第一个注入的是外部配置文件对应的property，第二个则是SpEL表达式对应的内容
-@Configuration
-@EnableMethodCache(basePackages = ["com.company.mypackage"])
-@EnableCreateCacheAnnotation
-@Configuration的使用：https://www.cnblogs.com/duanxz/p/7493276.html
-@Cached的属性值说明：
-	https://github.com/alibaba/jetcache/wiki/MethodCache_CN
+            2.	配置JetCacheConfig类，激活@CreateCache和@Cached注解。
+            @Value注解,在属性名上添加该注解：
+            可以使用@Value 来读取application配置文件中的量   两种方式
+            ① ${ property : default_value }    注意：kotlin里$有其表示含义(字符串表达式中)，所以在这里要加\转义
+            即 kotlin中   \${ property : default_value }
+            ② #{ obj.property? :default_value }
+            第一个注入的是外部配置文件对应的property，第二个则是SpEL表达式对应的内容
+            @Configuration
+            @EnableMethodCache(basePackages = ["com.company.mypackage"])
+            @EnableCreateCacheAnnotation
+            @Configuration的使用：https://www.cnblogs.com/duanxz/p/7493276.html
+            @Cached的属性值说明：
+                https://github.com/alibaba/jetcache/wiki/MethodCache_CN
 
 3.	Rest返回状态信息 ResultApi
-	使用SpringBoot编写接口的时候，最好是返回一个统一格式的JSON，该格式包含错误码，附带信息，以及携带的数据。这样前端在解析的时候就能统一解析，同时携带错误码可以更加容易的排查错误
+    	使用SpringBoot编写接口的时候，最好是返回一个统一格式的JSON，该格式包含错误码，附带信息，以及携带的数据。这样前端在解析的时候就能统一解析，同时携带错误码可以更加容易的排查错误
 2.	日期：02.27
-1.	Controller中传入PrintWriter参数后，XSSFWorkbook.write(OutputStream)报错 错误信息：WRITER
-2.	三种代理方式
-JDK中的动态代理（JDK代理，接口代理）是通过反射类Proxy以及InvocationHandler回调接口实现的
+    1.	Controller中传入PrintWriter参数后，XSSFWorkbook.write(OutputStream)报错 错误信息：WRITER
+    2.	三种代理方式
+    JDK中的动态代理（JDK代理，接口代理）是通过反射类Proxy以及InvocationHandler回调接口实现的
 
 3.	Kotlin中反射的使用
-	java中获取Class的方法有
-1、Class c = person.getClass(); //对象获取
-2、Class cc =Person.class;//类获取
-	Kotlin中：
-//对象获取
-person.javaClass    // javaClass
-person::class.java // javaClass
-//类获取
-Person::class  // kClass
- person.javaClass.kotlin  // kClass
-(Person::class as Any).javaClass  // javaClass
-Person::class.java   // javaClass
-	Kotlin与Java获取的Class两者的区别
-kotlin中的Class与Java不同，kotlin中有一个自己的Class叫做KClass，person::class 和Person::class都是获取kotlin的KClass，所以println(person::class == Person::class) 为true。
-我们可以从kotlin的KClass获取到java的Class,person::class.java就是如此，先获取到kotlin的KClass然后再获取javaClass。
-object/class->kClass->Class
-同样也可以通过java的Class获取kotlin的KClass，person.javaClass.kotlin就是先获取javaClass然后再获取kotlin的KClass
-object/class->Class->KClass
+    	java中获取Class的方法有
+    1、Class c = person.getClass(); //对象获取
+    2、Class cc =Person.class;//类获取
+    	Kotlin中：
+    //对象获取
+    person.javaClass    // javaClass
+    person::class.java // javaClass
+    //类获取
+    Person::class  // kClass
+     person.javaClass.kotlin  // kClass
+    (Person::class as Any).javaClass  // javaClass
+    Person::class.java   // javaClass
+    	Kotlin与Java获取的Class两者的区别
+    kotlin中的Class与Java不同，kotlin中有一个自己的Class叫做KClass，person::class 和Person::class都是获取kotlin的KClass，所以println(person::class == Person::class) 为true。
+    我们可以从kotlin的KClass获取到java的Class,person::class.java就是如此，先获取到kotlin的KClass然后再获取javaClass。
+    object/class->kClass->Class
+    同样也可以通过java的Class获取kotlin的KClass，person.javaClass.kotlin就是先获取javaClass然后再获取kotlin的KClass
+    object/class->Class->KClass
 4.	SpringSecurty
+
 3.	Kotlin
-1.	mapTo()
-mapTo()方法   将给定的变换函数应用于原始数组的每个元素，并将结果附加到给定目标
-2.	重要关键字
-Let:
-3.	高阶函数
-3.1 fold 函数
-计算集合累积值。
-assertEquals(25, list.fold(4) { total, next -> total + next })
-fold 函数有两个参数：initial 和 operation。
-其中 initial 为初始值，operation 为一个高阶函数，这个函数有两个参数 R 和 T 并返回 R。
-flod 函数会在所有集合元素上调用 operation 函数，在第一次调用的时候， R 值为 initial， T 为第一个集合元素，返回值作为下次调用 operation 的 R 参数，而 下一个集合元素为下一次 operation 调用的 T 参数，依次来遍历集合。
-所以上面示例代码中实现的功能是，使用初始值 4 来计算 lsit 集合中所有元素加上 4 的和。
-3.2	maxBy 函数
-迭代器均可调用
-例：获取map中的最大value所对应的key值
-Map . entries . maxBy {it . value}?.key
-3.3	Kotlin高阶函数使用
-cacheObj.subscriptCache[user.websocketName()].second.subscriptions.removeAll { cacheObj -> msg.subscriptions.any { it.pageId == cacheObj.pageId } }
-removeAll(): 删除所有满足条件匹配的项
+    1.	mapTo()
+    mapTo()方法   将给定的变换函数应用于原始数组的每个元素，并将结果附加到给定目标
+    2.	重要关键字
+    Let:
+    3.	高阶函数
+    3.1 fold 函数
+    计算集合累积值。
+    assertEquals(25, list.fold(4) { total, next -> total + next })
+    fold 函数有两个参数：initial 和 operation。
+    其中 initial 为初始值，operation 为一个高阶函数，这个函数有两个参数 R 和 T 并返回 R。
+    flod 函数会在所有集合元素上调用 operation 函数，在第一次调用的时候， R 值为 initial， T 为第一个集合元素，返回值作为下次调用 operation 的 R 参数，而 下一个集合元素为下一次 operation 调用的 T 参数，依次来遍历集合。
+    所以上面示例代码中实现的功能是，使用初始值 4 来计算 lsit 集合中所有元素加上 4 的和。
+    3.2	maxBy 函数
+    迭代器均可调用
+    例：获取map中的最大value所对应的key值
+    Map . entries . maxBy {it . value}?.key
+    3.3	Kotlin高阶函数使用
+    cacheObj.subscriptCache[user.websocketName()].second.subscriptions.removeAll { cacheObj -> msg.subscriptions.any { it.pageId == cacheObj.pageId } }
+    removeAll(): 删除所有满足条件匹配的项
+
+
 4.	Redis
-1.	命令行使用redis
-进入redis所在的目录后
-启动redis服务：redis-server.exe redis.windows.conf（不能够关闭）
-连接redis服务器： redis-cli.exe -h 127.0.0.1 -p 6379
-设置键值对及取出：set myKey abc      get mykey
+    1.	命令行使用redis
+    进入redis所在的目录后
+    启动redis服务：redis-server.exe redis.windows.conf（不能够关闭）
+    连接redis服务器： redis-cli.exe -h 127.0.0.1 -p 6379
+    设置键值对及取出：set myKey abc      get mykey
 
 
 2.	Jsonnull类型
@@ -263,6 +266,12 @@ docker run -d --name kafka1 -p 9092:9092 --env KAFKA_ADVERTISED_HOST_NAME=localh
                 实质：插入操作过程的区别
           3. get的时间复杂度（对链表，对红黑树）
 
+
+
+
+docker相关：https://github.com/Snailclimb/JavaGuide/blob/master/docs/tools/Docker.md
+    docker仓库的层级关系：
+            Docker Registry： 一个集中的存储、分发镜像的服务
 
 
 

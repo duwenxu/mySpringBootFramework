@@ -1,6 +1,5 @@
-package com.example.springboot.KotlinTest.ProxyTest.cglibKotlinImp
+package com.example.springboot.spring.aop.proxytest.cglibKotlinImp
 
-import com.example.SpringBoot.KotlinTest.ProxyTest.kotlinImp.PersonDao
 import org.junit.Test
 import org.springframework.cglib.proxy.Enhancer
 

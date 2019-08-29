@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.ProxyTest.cglibKotlinImp
+package com.example.springboot.spring.aop.proxytest.cglibKotlinImp
 
 
 import org.springframework.cglib.proxy.MethodInterceptor

@@ -1,4 +1,4 @@
-package com.example.SpringBoot.KotlinTest.ProxyTest.kotlinImp
+package com.example.springboot.spring.aop.proxytest.cglibKotlinImp
 
 /**
  * personDao

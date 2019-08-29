@@ -41,8 +41,8 @@ open class SecurityConfig : WebSecurityConfigurerAdapter(){
     @Autowired
     lateinit var sessionExpiredStrategy: SessionExpiredStrategy
 
-//    @Autowired
-//    lateinit var sessionRegistry:SessionRegistry   //todo   SessionRegistry无法注入
+    @Autowired
+    lateinit var sessionRegister:SessionRegistry   //todo   SessionRegistry无法注入   解决：手动注入相应的Bean就OK了
 
     /**
      * //将用户名和密码在代码中写死   实际中肯定不这么搞
@@ -95,7 +95,7 @@ open class SecurityConfig : WebSecurityConfigurerAdapter(){
                 .sessionManagement()   //todo
                 .maximumSessions(1)   //todo
                 .expiredSessionStrategy(sessionExpiredStrategy)  //session过期策略
-//                .sessionRegistry(sessionRegister)
+                .sessionRegistry(sessionRegister)
                 .maxSessionsPreventsLogin(false)   //todo
                 .and()
                 .and()  //todo
@@ -119,6 +119,8 @@ open class SecurityConfig : WebSecurityConfigurerAdapter(){
 
     @Bean
     open fun passwordEncoder()=DefinePasswordEncoder
+
+
 
 
 }

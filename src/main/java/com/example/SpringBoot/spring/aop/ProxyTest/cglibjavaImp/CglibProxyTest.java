@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.ProxyTest.cglibjavaImp;
+package com.example.springboot.spring.aop.proxytest.cglibjavaImp;
 
 import org.junit.Test;
 import org.springframework.cglib.proxy.Enhancer;

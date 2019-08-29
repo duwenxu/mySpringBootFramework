@@ -1,4 +1,4 @@
-package com.waytogalaxy.display.utils
+package com.example.springboot.utils
 
 import com.google.gson.Gson
 

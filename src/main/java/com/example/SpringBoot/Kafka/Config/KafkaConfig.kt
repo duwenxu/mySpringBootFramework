@@ -67,7 +67,7 @@
 //     * @Date: 2019/3/18
 //     */
 //    @Bean
-//    open fun producer(): ProducerFactory<Integer, String> {
+//    open fun producer(): ProducerFactory<Int, String> {
 //        val config = HashMap<String, Any>()
 //        config[ProducerConfig.BOOTSTRAP_SERVERS_CONFIG] = bootstrap_servers
 //        //1表示启用重试，0为不启用重试机制
@@ -80,7 +80,7 @@
 //        config[ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
 //        //值的序列化方式
 //        config[ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG] = StringSerializer::class.java
-//        return DefaultKafkaProducerFactory<Integer, String>(config)
+//        return DefaultKafkaProducerFactory<Int, String>(config)
 //    }
 //
 //    /**
@@ -118,7 +118,7 @@
 //     */
 //    @Bean("myKafkaTemplate")
 //    @Primary   //@Primary注解：在拥有多个同类型的Bean时，优先使用该Bean
-//    open fun myKafkaTemplate() = KafkaTemplate<Integer, String>(producer())
+//    open fun myKafkaTemplate() = KafkaTemplate<Int, String>(producer())
 //
 //    /**
 //     * kafka中发送消息方法
@@ -128,8 +128,8 @@
 //     *指定默认发送topic的KafkaTemplate
 //     */
 //    @Bean("defaultKafkaTemplate")
-//    open fun defaultKafkaTemplate(): KafkaTemplate<Integer, String> {
-//        val template=KafkaTemplate<Integer,String>(producer())
+//    open fun defaultKafkaTemplate(): KafkaTemplate<Int, String> {
+//        val template=KafkaTemplate<Int,String>(producer())
 //        template.defaultTopic="test0"
 //        return template
 //    }

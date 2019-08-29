@@ -13,14 +13,15 @@ import org.springframework.stereotype.Component
 import javax.annotation.Resource
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
+
 /**
  * 自定义的登陆验证结果返回
  */
 @Component
 class LoginHandler : AuthenticationSuccessHandler, AuthenticationFailureHandler {
 
-//    @Autowired
-//    lateinit var sessionRegisity: SessionRegistry
+    @Autowired
+    lateinit var sessionRegisity: SessionRegistry
 
     /**
      * 登陆成功后的响应
@@ -31,7 +32,7 @@ class LoginHandler : AuthenticationSuccessHandler, AuthenticationFailureHandler 
     override fun onAuthenticationSuccess(request: HttpServletRequest?, response: HttpServletResponse?, authentication: Authentication?) {
         authentication?.let {
             val usetinfo = it.principal
-//            sessionRegisity.registerNewSession(request!!.session.id, usetinfo)  //todo
+            sessionRegisity.registerNewSession(request!!.session.id, usetinfo)
             response?.resp(ResultTo(usetinfo).toJsonStr())
         }
     }

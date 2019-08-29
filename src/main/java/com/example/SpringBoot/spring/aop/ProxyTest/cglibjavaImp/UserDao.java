@@ -1,5 +1,4 @@
-package com.example.springboot.KotlinTest.ProxyTest.JDKProxyImp;
-
+package com.example.springboot.spring.aop.proxytest.cglibjavaImp;
 
 /**
  * UserDao
@@ -7,7 +6,7 @@ package com.example.springboot.KotlinTest.ProxyTest.JDKProxyImp;
  * @author duwenxu
  * @create 2019-02-28 17:55
  */
-public class UserDao implements IUserDao {
+public class UserDao {
     public void use(){
         System.out.println("开始使用...");
     }

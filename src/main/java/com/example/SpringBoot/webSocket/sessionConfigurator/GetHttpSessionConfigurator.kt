@@ -1,4 +1,4 @@
-package com.example.springboot.websocket.sessionConfigurator
+package com.example.springboot.websocket.sessionconfigurator
 
 import javax.websocket.HandshakeResponse
 import javax.websocket.server.HandshakeRequest
