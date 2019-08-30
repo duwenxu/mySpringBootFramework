@@ -1,0 +1,128 @@
+Spring IOC源码学习及原理：
+    构建ApplicationContext的几种方式：
+            ClassPathXmlApplicationContext ：在 ClassPath 中寻找 xml 配置文件，根据 xml 文件内容来构建 ApplicationContext
+            FileSystemXmlApplicationContext ：需要一个 xml 配置文件在系统中的路径，其他和 ClassPathXmlApplicationContext 基本上一样
+            AnnotationConfigApplicationContext ：基于注解的实现方式，不需要配置文件
+    1. 初始化的主要过程：读取XML资源，并解析，最终注册到Bean Factory中
+                        xml---->Resource---->BeanDefinition---->BeanFactory
+
+
+主要的几个BeanFactory:
+    1. BeanFactory: Spring Bean容器的顶级接口
+            方法:
+                Object getBean(String name) throws BeansException;    根据Bean名称返回一个Singleton 或 Prototype 的对象实例； Singleton时调用者将保持对象的引用；本工厂找不到Bean时会询问parentFactory
+                <T> T getBean(String name, @Nullable Class<T> requiredType) throws BeansException;      指定了返回Bean类型的实现，保证了类型安全
+                Object getBean(String name, Object... args) throws BeansException;      指定了构造参数的实现
+                <T> T getBean(Class<T> requiredType) throws BeansException;
+                <T> T getBean(Class<T> requiredType, Object... args) throws BeansException;
+                //getBean 中name传入别名时将会转换为规范的Bean名称
+                boolean containsBean(String name);
+                boolean isSingleton(String name) throws NoSuchBeanDefinitionException;      是否是单例，true时  即每次getBean()时是否会返回相同的实例
+                boolean isPrototype(String name) throws NoSuchBeanDefinitionException;      是否是多实例模型，true时 即每次getBean()时都会返回单独的实例
+                boolean isTypeMatch(String name, @Nullable Class<?> typeToMatch) throws NoSuchBeanDefinitionException;      检查具有给定名称的Bean是否与指定类型相匹配
+                Class<?> getType(String name) throws NoSuchBeanDefinitionException;
+                String[] getAliases(String name);       获取别名；若传入的是一个别名，则返回其原始Bean名称和其它别名，且原始Bean名称是其返回数组中的第一个元素
+    2. ListableBeanFactory extends BeanFactory: BeanFactory 的扩展，获得多个Bean的信息
+    3. HierarchicalBeanFactory extends BeanFactory: 具有层级结构的BeanFactory
+                @Nullable
+                BeanFactory getParentBeanFactory();
+                boolean containsLocalBean(String name);     判断当前BeanFactory中是否包含指定名称的Bean
+    4. AutowireCapableBeanFactory extends BeanFactory：BeanFactory的扩展接口，实现类工厂的自动注入，提供对存在实例的想要提供的方法的暴露
+    5. ApplicationContext extends EnvironmentCapable, ListableBeanFactory, HierarchicalBeanFactory, MessageSource, ApplicationEventPublisher, ResourcePatternResolver
+                应用程序配置的中心接口，提供了以下：
+                    * 连接应用程序component的BeanFactory
+                      用一种普遍的方式加载文件资源
+                      发布事件到已注册的监听器
+                ApplicationContext 继承自 BeanFactory,可以理解为：其内部持有一个实例化的 BeanFactory（DefaultListableBeanFactory）。以后所有的 BeanFactory 相关的操作其实是委托给这个实例来处理的。
+                为什么选择实例化DefaultListableBeanFactory ？
+                        答：DefaultListableBeanFactory 直接实现了 ConfigurableListableBeanFactory ，直接继承了 AbstractAutowireCapableBeanFactory
+                            间接实现或者继承了几乎所有的 BeanFactory，拥有BeanFactory的最具体的特性
+
+启动分析：
+    1.  核心方法是ClassPathXmlApplicationContext类里的  refresh() 方法 ：可以通过该方法刷新 ApplicationContext 的建立，即销毁原来的 ApplicationContext，并重新执行一次初始化操作
+        refresh()方法流程：
+                @Override
+                public void refresh() throws BeansException, IllegalStateException {
+                   // 来个锁，不然 refresh() 还没结束，你又来个启动或销毁容器的操作，那不就乱套了嘛
+                   synchronized (this.startupShutdownMonitor) {
+
+                      // 准备工作，记录下容器的启动时间、标记“已启动”状态、处理配置文件中的占位符
+                      prepareRefresh();
+
+                      // 这步比较关键，这步完成后，配置文件就会解析成一个个 Bean 定义，注册到 BeanFactory 中，
+                      // 当然，这里说的 Bean 还没有初始化，只是配置信息都提取出来了，
+                      // 注册也只是将这些信息都保存到了注册中心(说到底核心是一个 beanName-> beanDefinition 的 map)
+                      ConfigurableListableBeanFactory beanFactory = obtainFreshBeanFactory();                           xml配置文件--->BeanDefinition       具体的：obtainFreshBeanFactory()-->refreshBeanFactory()-->实例化DefaultListableBeanFactory并加载Bean-->customizeBeanFactory(beanFactory):配置是否允许 BeanDefinition 覆盖、是否允许循环引用
+                                                                                                                                                                                                                                                     			loadBeanDefinitions(beanFactory):根据配置，加载各个 Bean，然后放到 BeanFactory 中
+                                                                                                                        BeanDefinition 中保存了我们的 Bean 信息，比如这个 Bean 指向的是哪个类、是否是单例的、是否懒加载、这个 Bean 依赖了哪些 Bean 等等
+                                                                                                                        Spring的Bean以BeanDefinition的方式存在于Spring的BeanFactory中
+                                                                                                                        loadBeanDefinitions(beanFactory):
+                                                                                                                               1. 实例化一个 XmlBeanDefinitionReader并配置其加载环境，负责加载配置和解析
+                                                                                                                               2.
+
+                      // 设置 BeanFactory 的类加载器，添加几个 BeanPostProcessor，手动注册几个特殊的 bean
+                      // 这块待会会展开说
+                      prepareBeanFactory(beanFactory);
+
+                      try {
+                         // 【这里需要知道 BeanFactoryPostProcessor 这个知识点，Bean 如果实现了此接口，
+                         // 那么在容器初始化以后，Spring 会负责调用里面的 postProcessBeanFactory 方法。】
+
+                         // 这里是提供给子类的扩展点，到这里的时候，所有的 Bean 都加载、注册完成了，但是都还没有初始化
+                         // 具体的子类可以在这步的时候添加一些特殊的 BeanFactoryPostProcessor 的实现类或做点什么事
+                         postProcessBeanFactory(beanFactory);                                                           在应用程序上下文的标准初始化之后修改其内部bean工厂。所有bean定义都将被加载，但还没有实例化bean。
+                                                                                                                        这样就可以覆盖或添加属性，甚至可以对渴望初始化的bean进行覆盖或添加。
+                         // 调用 BeanFactoryPostProcessor 各个实现类的 postProcessBeanFactory(factory) 方法
+                         invokeBeanFactoryPostProcessors(beanFactory);
+
+                         // 注册 BeanPostProcessor 的实现类，注意看和 BeanFactoryPostProcessor 的区别
+                         // 此接口两个方法: postProcessBeforeInitialization 和 postProcessAfterInitialization
+                         // 两个方法分别在 Bean 初始化之前和初始化之后得到执行。注意，到这里 Bean 还没初始化
+                         registerBeanPostProcessors(beanFactory);
+
+                         // 初始化当前 ApplicationContext 的 MessageSource，国际化这里就不展开说了，不然没完没了了
+                         initMessageSource();
+
+                         // 初始化当前 ApplicationContext 的事件广播器，这里也不展开了
+                         initApplicationEventMulticaster();
+
+                         // 从方法名就可以知道，典型的模板方法(钩子方法)，
+                         // 具体的子类可以在这里初始化一些特殊的 Bean（在初始化 singleton beans 之前）
+                         onRefresh();
+
+                         // 注册事件监听器，监听器需要实现 ApplicationListener 接口。这也不是我们的重点，过
+                         registerListeners();
+
+                         // 重点，重点，重点
+                         // 初始化所有的 singleton beans
+                         //（lazy-init 的除外）
+                         finishBeanFactoryInitialization(beanFactory);
+
+                         // 最后，广播事件，ApplicationContext 初始化完成
+                         finishRefresh();
+                      }
+
+                      catch (BeansException ex) {
+                         if (logger.isWarnEnabled()) {
+                            logger.warn("Exception encountered during context initialization - " +
+                                  "cancelling refresh attempt: " + ex);
+                         }
+
+                         // Destroy already created singletons to avoid dangling resources.
+                         // 销毁已经初始化的 singleton 的 Beans，以免有些 bean 会一直占用资源
+                         destroyBeans();
+
+                         // Reset 'active' flag.
+                         cancelRefresh(ex);
+
+                         // 把异常往外抛
+                         throw ex;
+                      }
+
+                      finally {
+                         // Reset common introspection caches in Spring's core, since we
+                         // might not ever need metadata for singleton beans anymore...
+                         resetCommonCaches();
+                      }
+                   }
+                }

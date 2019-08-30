@@ -1,4 +1,4 @@
-package com.waytogalaxy.display.utils
+package com.example.springboot.utils
 
 import org.springframework.beans.BeansException
 import org.springframework.beans.factory.NoSuchBeanDefinitionException
@@ -12,7 +12,7 @@ object BeanFactoryUtil : BeanFactoryPostProcessor {
     lateinit var beanFactory: ConfigurableListableBeanFactory
 
     override fun postProcessBeanFactory(beanFactory: ConfigurableListableBeanFactory) {
-        this.beanFactory = beanFactory
+        BeanFactoryUtil.beanFactory = beanFactory
     }
 
     /**
