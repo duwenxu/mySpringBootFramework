@@ -58,7 +58,7 @@ Spring IOC源码学习及原理：
                                                                                                                         Spring的Bean以BeanDefinition的方式存在于Spring的BeanFactory中
                                                                                                                         loadBeanDefinitions(beanFactory):
                                                                                                                                1. 实例化一个 XmlBeanDefinitionReader并配置其加载环境，负责加载配置和解析
-                                                                                                                               2.
+                                                                                                                        //todo       2. BeanFactory 会将它解析得到的 <id, BeanDefinition> 键值对注册到自己的 beanDefinitionMap 中
 
                       // 设置 BeanFactory 的类加载器，添加几个 BeanPostProcessor，手动注册几个特殊的 bean
                       // 这块待会会展开说
@@ -69,10 +69,16 @@ Spring IOC源码学习及原理：
                          // 那么在容器初始化以后，Spring 会负责调用里面的 postProcessBeanFactory 方法。】
 
                          // 这里是提供给子类的扩展点，到这里的时候，所有的 Bean 都加载、注册完成了，但是都还没有初始化
-                         // 具体的子类可以在这步的时候添加一些特殊的 BeanFactoryPostProcessor 的实现类或做点什么事
-                         postProcessBeanFactory(beanFactory);                                                           在应用程序上下文的标准初始化之后修改其内部bean工厂。所有bean定义都将被加载，但还没有实例化bean。
+                         // 具体的子类可以在这步的时候添加一些特殊的 BeanFactoryPostProcessor 的实现类或做点什么事              BeanPostProcessor 接口：是 Spring 对外拓展的接口之一，其主要用途提供一个机会，让开发人员能够插手 bean 的实例化过程。
+                                                                                                                                                通过实现这个接口，我们就可在 bean 实例化时，对bean 进行一些处理。比如，我们所熟悉的 AOP 就是在这里将切面逻辑织入相关 bean 中的。正是因为有了 BeanPostProcessor 接口作为桥梁，才使得 AOP 可以和 IOC 容器产生联系
+                         postProcessBeanFactory(beanFactory);                                                           源码文档解释：在应用程序上下文的标准初始化之后修改其内部bean工厂。所有bean定义都将被加载，但还没有实例化bean。
                                                                                                                         这样就可以覆盖或添加属性，甚至可以对渴望初始化的bean进行覆盖或添加。
-                         // 调用 BeanFactoryPostProcessor 各个实现类的 postProcessBeanFactory(factory) 方法
+                         // 调用 BeanFactoryPostProcessor 各个实现类的 postProcessBeanFactory(factory) 方法                注册 BeanPostProcessor 相关实现类流程:
+                                                                                                                           1. 根据 BeanDefinition 记录的信息，寻找所有实现了 BeanPostProcessor 接口的类。
+                                                                                                                           2. 实例化 BeanPostProcessor 接口的实现类
+                                                                                                                           3. 将实例化好的对象放入 List中
+                                                                                                                           4. 重复2、3步，直至所有的实现类完成注册
+
                          invokeBeanFactoryPostProcessors(beanFactory);
 
                          // 注册 BeanPostProcessor 的实现类，注意看和 BeanFactoryPostProcessor 的区别
@@ -125,4 +131,20 @@ Spring IOC源码学习及原理：
                          resetCommonCaches();
                       }
                    }
-                }
+}
+BeanFactory 的生命流程：
+    1. BeanFactory 加载 Bean 配置文件，将读到的 Bean 配置封装成 BeanDefinition 对象
+    2. 将封装好的 BeanDefinition 对象注册到 BeanDefinition 容器中
+    3. 注册 BeanPostProcessor 相关实现类到 BeanPostProcessor 容器中
+    4. BeanFactory 进入就绪状态
+    5. 外部调用 BeanFactory 的 getBean(String name) 方法，BeanFactory 着手实例化相应的 bean
+    6. 重复步骤 3 和 4，直至程序退出，BeanFactory 被销毁
+
+
+
+
+
+
+
+
+

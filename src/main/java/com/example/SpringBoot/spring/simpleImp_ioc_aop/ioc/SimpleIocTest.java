@@ -1,7 +1,8 @@
 package com.example.springboot.spring.simpleImp_ioc_aop.ioc;
 
+import com.example.springboot.spring.simpleImp_ioc_aop.ioc.bean.Car;
+import com.example.springboot.spring.simpleImp_ioc_aop.ioc.bean.Wheel;
 import org.junit.Test;
-
 import java.util.Objects;
 
 /**
@@ -14,8 +15,9 @@ public class SimpleIocTest {
 
     @Test
     public void getBeanTest() throws Exception {
-        String location = Objects.requireNonNull(SimpleIoc.class.getClassLoader().getResource("ioc_test.xml")).getFile();
-        SimpleIoc simpleIoc = new SimpleIoc(location);
-
+        String location = "D:\\SpringBoot\\src\\main\\java\\com\\example\\springboot\\spring\\simpleImp_ioc_aop\\ioc\\ioc_test.xml";
+        SimpleIoc ioc = new SimpleIoc(location);
+        Car car =(Car) ioc.getBean("car");
+        System.out.println(car);
     }
 }

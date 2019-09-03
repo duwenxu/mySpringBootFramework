@@ -1,0 +1,24 @@
+singleton 类型 bean 的生命周期:
+
+
+
+    1. 实例化bean对象--->
+    2. 填充配置文件内容到bean中，即设置对象属性--->
+        普通类型的属性
+        对象属性--对象依赖   循环依赖： 构造器参数循环依赖
+                                     setter方式单例，默认方式
+                                     setter方式原型，prototype
+    3. 检查bean是否实现Aware--->
+        关于BeanFactoryAware接口的理解：
+
+    4. 调用 BeanPostProcessor 前置处理方法--->
+    5. 检查是否实现了InitializingBean接口--->
+    6. 调用 BeanPostProcessor 后置处理方法--->
+         SpringAop织入就在此处：
+                进行生成代理类的逻辑是在 AbstractAutoProxyCreator 相关子类中实现的，比如 DefaultAdvisorAutoProxyCreator、AspectJAwareAdvisorAutoProxyCreator 等
+                
+
+    7. 注册Destruction 相关回调方法
+    8. bean处于就绪状态，可以使用
+    9. 应用上下文被销毁，调用注册的 Destruction 相关方法
+        如果 bean 实现了 DispostbleBean 接口，Spring 容器会调用 destroy 方法。如果在配置文件中配置了 destroy 属性，Spring 容器则会调用 destroy 属性对应的方法。

@@ -1,4 +1,5 @@
-package com.example.springboot.spring.aop.proxytest.cglibjavaImp;
+package com.example.springboot.spring.simpleImp_ioc_aop.aop.userdao;
+
 
 /**
  * UserDaoImpl
@@ -6,7 +7,7 @@ package com.example.springboot.spring.aop.proxytest.cglibjavaImp;
  * @author duwenxu
  * @create 2019-02-28 17:55
  */
-public class UserDao {
+public class UserDaoImpl implements IUserDao {
     public void use(){
         System.out.println("开始使用...");
     }

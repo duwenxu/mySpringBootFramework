@@ -1,0 +1,17 @@
+基于JDK的简单AOP实现：
+        定义一个包含切面逻辑的对象，这里假设叫 logMethodInvocation
+        定义一个 Advice 对象（实现了 InvocationHandler 接口），并将上面的 logMethodInvocation 和 目标对象传入
+        将上面的 Adivce 对象和目标对象传给 JDK 动态代理方法，为目标对象生成代理
+
+总结： 实质上是利用 jdkDynamicProxy 将 InvocationHandler 部分进行拓展，延伸出了 Advice 通知类接口和具体的通知类。
+      并在其中嵌入具体的 切面逻辑，即 methodInvocation 的实现类
+
+Jdk动态代理只能代理接口而不能代理类，因此：
+    如果目标对象的实现类实现了接口，Spring AOP 将会采用 JDK 动态代理来生成 AOP 代理类；
+    如果目标对象的实现类没有实现接口，Spring AOP 将会采用 CGLIB 来生成 AOP 代理类——不过这个选择过程对开发者完全透明、开发者也无需关心。
+
+Spring AOP 基于AspectJ注解如何实现AOP ：
+    AspectJ是一个AOP框架，它能够对java代码进行AOP编译（一般在编译期进行），让java代码具有AspectJ的AOP功能（当然需要特殊的编译器）
+    Spring底层通过动态代理来实现 AOP
+    AspectJ底层是依赖于特殊的 ajc编译器 来实现静态织入
+    Spring 只是使用了与 AspectJ 5 一样的注解，但仍然没有使用 AspectJ 的编译器，底层是使用了动态代理(JDK或者CGLib)技术的动态植入，因此并不依赖于 AspectJ 的编译器

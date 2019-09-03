@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component
 
 /**
  * userService类  返回UserInfo的对象实例
- * @property userdao UserDao
+ * @property userdao UserDaoImpl
  */
 @Component
 class UserinfoService :UserDetailsService{

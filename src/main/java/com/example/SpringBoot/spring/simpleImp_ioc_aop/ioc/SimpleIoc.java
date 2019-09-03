@@ -71,7 +71,7 @@ public class SimpleIoc {
 
                 NodeList propertyList = element.getElementsByTagName("property");
                 for (int j = 0; j < propertyList.getLength(); j++) {
-                    Node propertyNode = propertyList.item(i);
+                    Node propertyNode = propertyList.item(j);
                     if (propertyNode instanceof Element) {
                         Element property = (Element) propertyNode;
                         String name = property.getAttribute("name");
@@ -80,16 +80,16 @@ public class SimpleIoc {
                         Field declaredField = bean.getClass().getDeclaredField(name);
                         declaredField.setAccessible(true);
 
-                        if (value != null && value.length() > 0) {
+                        if (value != null && value.length() > 0) {      //value为空时 应该是使用了 引用对象
                             //填充value到相关字段中
-                            declaredField.set(name, value);     //不应该是填充相关字段吗
+                            declaredField.set(bean, value);     //字段名.set(bean,value)  例：name.set(bean，"lucy") 设置Bean中的name为lucy
                         } else {
                             String ref = property.getAttribute("ref");
-                            if (ref != null && ref.length() > 0) {
+                            if (ref == null || ref.length() ==0) {
                                 throw new IllegalArgumentException("ref config error");
                             }
                             //将引用填充到相关字段中
-                            declaredField.set(ref, getBean(ref));
+                            declaredField.set(bean, getBean(ref));   //将已存在的bean注入引用中
                         }
                         //注册Bean
                         registryBean(id, bean);
