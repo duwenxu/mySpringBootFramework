@@ -1,4 +1,4 @@
-package com.example.SpringBoot.LeetCood.AddTwoNumbers;
+package com.example.springboot.LeetCood.AddTwoNumbers;
 
 /**
  * 链表类：
