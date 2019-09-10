@@ -2,8 +2,8 @@ package com.example.springboot.superdog.DogCheck
 
 import com.example.springboot.common.result.ResultTo
 import com.example.springboot.superdog.DogStatus
-import com.waytogalaxy.display.utils.timeutil.TimeUtil
-import com.waytogalaxy.display.utils.timeutil.dateToStamp
+import com.example.springboot.utils.timeutil.TimeUtil
+import com.example.springboot.utils.timeutil.dateToStamp
 import io.swagger.annotations.Api
 import io.swagger.annotations.ApiOperation
 import org.springframework.web.bind.annotation.GetMapping

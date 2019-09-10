@@ -1,6 +1,6 @@
 package com.waytogalaxy.display.utils
 
-import com.waytogalaxy.display.utils.timeutil.TimeUtil
+import com.example.springboot.utils.timeutil.TimeUtil
 import java.text.ParseException
 import java.text.SimpleDateFormat
 import java.util.Calendar

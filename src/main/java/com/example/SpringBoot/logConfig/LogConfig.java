@@ -1,4 +1,4 @@
-package com.example.SpringBoot.logConfig;
+package com.example.springboot.logConfig;
 //tips:insert使光标键切换模式 插入模式--覆盖模式
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

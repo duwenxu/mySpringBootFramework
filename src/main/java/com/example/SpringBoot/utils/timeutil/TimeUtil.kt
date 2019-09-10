@@ -1,10 +1,8 @@
-package com.waytogalaxy.display.utils.timeutil
+package com.example.springboot.utils.timeutil
 
 
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Component
 import java.text.SimpleDateFormat
-import java.util.*
 
 @Component
 class TimeUtil {
@@ -48,6 +46,3 @@ fun String.dateToStamp(format:String):Long{
     return SimpleDateFormat(format).parse(this).time.toString().toLong()
 }
 
-fun Long.stampToDate(format:String):String{
-    return SimpleDateFormat(format).format(this)
-}

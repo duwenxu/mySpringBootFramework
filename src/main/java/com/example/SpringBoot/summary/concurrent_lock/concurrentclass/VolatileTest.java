@@ -1,11 +1,10 @@
-package com.example.springboot.summary.lock;
+package com.example.springboot.summary.concurrent_lock.concurrentclass;
 
 import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
- * CAS以及concurrent包原子类的测试类
+ * CAS以及concurrent包原子类的测试类(compare and swap)
  * CAS:它涉及到三个操作数：内存值、预期值、新值。当且仅当预期值和内存值相等时才将内存值修改为新值 。
  * CAS的三个缺点：
  *     1. 只能保证对一个共享变量的原子操作       解决： 1. JDK1.5以后AtomicReference类可以保证引用对象之间的原子性，可以把多个变量放在一个对象里来进行 CAS 操作
@@ -69,11 +68,11 @@ public class VolatileTest {
                     /**
                      * CountDownLatch是一个计数器闭锁，通过它可以完成类似于阻塞当前线程的功能，即：一个线程或多个线程一直等待，直到其他线程执行的操作完成。
                      *      初始化:可以用一个给定的计数器（count值）来初始化，该计数器的操作是原子操作，即同时只能有一个线程去操作该计数器
-                     *      await方法：await的线程会一直处于阻塞状态，直到其他线程调用countDown方法使当前计数器的值变为零
-                     *      countDown:每次调用countDown方法使计数器的值减一，当计数器的值减为0时，释放所有阻塞的线程继续执行
+                     *      await方法：await的线程会一直处于阻塞状态，直到其他线程调用countDown方法使当前计数器的值变为0
+                     *      countDown:每次调用countDown方法使计数器的值减一(CAS原子操作减一)，当计数器的值减为0时，释放所有阻塞的线程继续执行
                      *      CountDownLatch只会出现一次计数器为0的情况，因为他的计数器不能被重置。  CycliBarrier：可重置计数器次数
                      */
-                    countDownLatch.countDown();
+                    countDownLatch.countDown();  //表示一个线程已完成任务
                 }
             });
             threads[i].start();

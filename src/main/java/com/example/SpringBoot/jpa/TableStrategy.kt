@@ -1,4 +1,4 @@
-package com.waytogalaxy.display.common.config.jpa
+package com.example.springboot.jpa
 
 import org.hibernate.boot.model.naming.Identifier
 import org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

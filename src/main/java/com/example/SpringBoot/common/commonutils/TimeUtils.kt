@@ -1,4 +1,4 @@
-package com.example.SpringBoot.common.Utils
+package com.example.springboot.common.commonutils
 
 import java.text.SimpleDateFormat
 

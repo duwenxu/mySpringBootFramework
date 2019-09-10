@@ -13,7 +13,7 @@ import org.springframework.session.security.SpringSessionBackedSessionRegistry
 @Configuration
 open class SessionRegistry {        //todo   Classes annotated with '@Configuration' could be implicitly subclassed(隐式子类化) and must not be final
 
-    @Bean
+    @Bean("mySessionRegister")
     open fun sessionRegistry() = SessionRegistryImpl()
 
 //    @Bean

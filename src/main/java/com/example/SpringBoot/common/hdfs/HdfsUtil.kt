@@ -1,5 +1,6 @@
 package com.example.springboot.common.hdfs
 
+import com.example.springboot.common.hdfs.cons.FileCons
 import com.sun.xml.internal.messaging.saaj.util.ByteOutputStream
 import org.apache.hadoop.conf.Configuration
 import org.apache.hadoop.fs.FileSystem
@@ -24,7 +25,7 @@ class HdfsUtil {
      * @return StringBuffer
      */
     fun readFile(file: HdfsFile): StringBuffer {
-        var sb = StringBuffer()
+        val sb = StringBuffer()
         var fs : FileSystem? = null
         var bufferReader: BufferedReader? = null
         try {
@@ -73,6 +74,15 @@ class HdfsUtil {
         return null
     }
 
+
+    fun write2File(filename:String){
+        val file = File("E:\\forecast\\$filename")
+        if (!file.exists()){
+            file.createNewFile()
+        }
+
+    }
+
     /**
      * InputStream转byteArray
      * @param inputStream InputStream
@@ -92,7 +102,7 @@ class HdfsUtil {
 }
 
 fun main(args: Array<String>) {
-    val file1 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0302/RLING.TXT")
+    val file1 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0101/${FileCons.JZD}.TXT")
 //    val file2 = HdfsFile("172.23.5.1:9000", "/temp/predictData/TC0101/ELPMOO.XML")
     val fileList= arrayListOf(file1)
 

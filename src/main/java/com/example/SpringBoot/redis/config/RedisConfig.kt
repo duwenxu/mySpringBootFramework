@@ -64,7 +64,7 @@ open class RedisConfig {
      * StringRedisTemplate类： 基于String的redisTemplate的最小化通用配置
      */
     @Bean
-    open fun redisTemplate()=StringRedisTemplate()
+    open fun redisTemplate(connectionFactory: JedisConnectionFactory)=StringRedisTemplate(connectionFactory)
 
     /**
      * 自定义序列化方式的  redisTemplate<Int,String>类型的bean
