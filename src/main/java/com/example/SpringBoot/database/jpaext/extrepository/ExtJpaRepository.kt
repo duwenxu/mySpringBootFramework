@@ -1,4 +1,4 @@
-package com.example.springboot.jpa.extrepository
+package com.example.springboot.database.jpaext.extrepository
 
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.data.repository.NoRepositoryBean

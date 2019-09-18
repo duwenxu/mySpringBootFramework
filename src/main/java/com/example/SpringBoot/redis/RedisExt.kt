@@ -12,7 +12,14 @@ fun <T : Any> RedisTemplate<String, T>.just(key: String, value: T) {
     this.opsForValue()[key] = value
 }
 
-
+/**
+ * 设置value等信息，key不能为空
+ * @receiver RedisTemplate<String, T>
+ * @param key String
+ * @param value T
+ * @param time Long
+ * @param unit TimeUnit
+ */
 fun <T : Any> RedisTemplate<String, T>.just(key: String, value: T, time: Long, unit: TimeUnit) {
     this.opsForValue().set(key, value, time, unit)
 }

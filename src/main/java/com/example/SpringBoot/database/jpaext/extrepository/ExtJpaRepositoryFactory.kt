@@ -1,6 +1,6 @@
 package com.waytogalaxy.display.common.config.jpa.extrepository
 
-import com.example.springboot.jpa.extrepository.SimpleExtJpaRepository
+import com.example.springboot.database.jpaext.extrepository.SimpleExtJpaRepository
 import org.springframework.data.querydsl.QuerydslUtils.QUERY_DSL_PRESENT
 import org.springframework.data.repository.core.RepositoryMetadata
 import java.io.Serializable

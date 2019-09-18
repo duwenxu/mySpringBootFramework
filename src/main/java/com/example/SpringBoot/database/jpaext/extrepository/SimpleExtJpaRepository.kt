@@ -1,4 +1,4 @@
-package com.example.springboot.jpa.extrepository
+package com.example.springboot.database.jpaext.extrepository
 
 import javax.persistence.EntityManager
 import org.springframework.data.jpa.repository.support.JpaEntityInformation

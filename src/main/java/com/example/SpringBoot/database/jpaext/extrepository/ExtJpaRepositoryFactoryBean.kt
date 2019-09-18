@@ -1,4 +1,4 @@
-package com.example.springboot.jpa.extrepository
+package com.example.springboot.database.jpaext.extrepository
 
 import com.waytogalaxy.display.common.config.jpa.extrepository.ExtJpaRepositoryFactory
 import org.springframework.data.jpa.repository.JpaRepository

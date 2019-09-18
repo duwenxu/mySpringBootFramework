@@ -1,12 +1,11 @@
 package com.example.springboot;
 
-import com.example.springboot.jpa.extrepository.ExtJpaRepositoryFactoryBean;
+import com.example.springboot.database.jpaext.extrepository.ExtJpaRepositoryFactoryBean;
 import com.example.springboot.database.model.ConfigIDEABean;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
@@ -52,6 +51,7 @@ import java.io.IOException;
 public class Application extends SpringBootServletInitializer {
     public static void main(String[] args) {
         Logger logger = LoggerFactory.getLogger(Application.class);
+
         logger.warn("------------------------------------------------------appStart-----------------------------------------------------------------------------------");
         SpringApplication.run(Application.class, args);
         logger.warn("------------------------------------------------------appStarted-----------------------------------------------------------------------------------");

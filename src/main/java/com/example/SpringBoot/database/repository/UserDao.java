@@ -43,8 +43,7 @@ public interface UserDao extends JpaRepository<User, Integer> {
      * 方式1：可以在占位符上添加"%",这样在查询方法中就不用添加"%"
      * 方式2：不在占位符上添加"%",这样就必须在查询方法的参数上添加"%"。
      * 设置nativeQuery=true   即可以使用原生的SQL进行查询
-     * @Modifying注解
-     * 1、在@Query注解中编写JPQL实现DELETE和UPDATE操作的时候必须加上@modifying注解，以通知Spring Data 这是一个DELETE或UPDATE操作。
+     * @Modifying注解 1、在@Query注解中编写JPQL实现DELETE和UPDATE操作的时候必须加上@modifying注解，以通知Spring Data 这是一个DELETE或UPDATE操作。
      * 　　　　2、UPDATE或者DELETE操作需要使用事务，此时需要 定义Service层，在Service层的方法上添加事务操作。
      * 　　　　3、注意JPQL不支持INSERT操作。
      * @Modifying需要和@Transactional配合使用才能正常使用 原因：
@@ -84,15 +83,20 @@ public interface UserDao extends JpaRepository<User, Integer> {
      * Pageable 是spring封装的分页实现类，使用的时候需要传入页数、每页条数和排序规则
      */
     Page<User> findByName(String username, Pageable pageable);
+
     Page<User> findAll(Pageable pageable);
 
-
     User findByName(String username);
+
+
     //多表查询
+
 /**
  *多表查询在spring data jpa中有两种实现方式：
  *          第一种是利用hibernate的级联查询来实现
- *          第二种是创建一个结果集的接口来接收连表查询后的结果，这里主要第二种方式
+ *          第二种是创建一个结果集的接口来接收连表查询后的结果，这里主要第二种方式.  其实还是使用native sql 实现查询，然后用自定义的类来接收查询后的结果
  */
+
+
 
 }

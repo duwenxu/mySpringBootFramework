@@ -24,7 +24,7 @@ import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
  *          Exclusive（独占）：只有一个线程能执行，如ReentrantLock。又可分为公平锁和非公平锁：
  *                  公平锁：按照线程在队列中的排队顺序，先到者先拿到锁
  *                  非公平锁：当线程要获取锁时，无视队列顺序直接去抢锁，谁抢到就是谁的
- *          Share（共享）：多个线程可同时执行，如 SemaphoreTest/CountDownLatch
+ *          Share（共享）：多个线程可同时执行，如 Semaphore/CountDownLatch
  *  4. 几种同步器的比较：
  *      ReentrantLock：
  *                     state初始化为0，表示未锁定状态
