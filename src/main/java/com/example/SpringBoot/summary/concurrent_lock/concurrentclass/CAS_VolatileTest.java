@@ -16,7 +16,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @author duwenxu
  * @create 2019-08-28 14:58
  */
-public class VolatileTest {
+public class CAS_VolatileTest {
     /**
      * 可见性：
      *

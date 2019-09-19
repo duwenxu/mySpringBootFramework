@@ -26,7 +26,7 @@ import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
  *                  非公平锁：当线程要获取锁时，无视队列顺序直接去抢锁，谁抢到就是谁的
  *          Share（共享）：多个线程可同时执行，如 Semaphore/CountDownLatch
  *  4. 几种同步器的比较：
- *      ReentrantLock：
+ *      ReentrantLock(重入锁)：
  *                     state初始化为0，表示未锁定状态
  *                     调用tryAcquire()独占该锁并将state+1;
  *                     调用tryRelease()释放该锁并将state-1;
