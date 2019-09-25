@@ -1,10 +1,10 @@
-package com.example.springboot.KotlinTest.annotationtest.runtime.annotationProcess;
+package com.example.springboot.kotlintest.annotationtest.runtime.annotationProcess;
 
 
-import com.example.springboot.KotlinTest.annotationtest.runtime.annotations.Contraints;
-import com.example.springboot.KotlinTest.annotationtest.runtime.annotations.DBtable;
-import com.example.springboot.KotlinTest.annotationtest.runtime.annotations.SqlInteger;
-import com.example.springboot.KotlinTest.annotationtest.runtime.annotations.SqlString;
+import com.example.springboot.kotlintest.annotationtest.runtime.annotations.Contraints;
+import com.example.springboot.kotlintest.annotationtest.runtime.annotations.DBtable;
+import com.example.springboot.kotlintest.annotationtest.runtime.annotations.SqlInteger;
+import com.example.springboot.kotlintest.annotationtest.runtime.annotations.SqlString;
 
 import javax.annotation.processing.SupportedAnnotationTypes;
 import java.lang.annotation.Annotation;

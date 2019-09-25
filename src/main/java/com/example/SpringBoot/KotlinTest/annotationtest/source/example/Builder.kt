@@ -1,4 +1,4 @@
-package com.example.SpringBoot.KotlinTest.annotationtest.source.example
+package com.example.springboot.kotlintest.annotationtest.source.example
 
 
 @Target(AnnotationTarget.CLASS)

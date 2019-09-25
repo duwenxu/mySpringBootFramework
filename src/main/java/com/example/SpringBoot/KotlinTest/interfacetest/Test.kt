@@ -1,6 +1,6 @@
 //package com.example.SpringBoot.KotlinTest.IntefaceTest
 //
-//import com.example.springboot.KotlinTest.IntefaceTest.MyInterfaceImpl
+//import com.example.springboot.KotlinTest.interfacetest.MyInterfaceImpl
 //import org.junit.Test
 //
 //class Test {

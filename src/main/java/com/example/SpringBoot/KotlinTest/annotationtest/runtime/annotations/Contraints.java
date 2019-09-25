@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.annotationtest.runtime.annotations;
+package com.example.springboot.kotlintest.annotationtest.runtime.annotations;
 
 /**
  * 约束注解

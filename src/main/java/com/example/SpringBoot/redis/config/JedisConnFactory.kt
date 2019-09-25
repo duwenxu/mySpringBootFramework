@@ -4,8 +4,10 @@ import org.springframework.data.redis.connection.RedisPassword
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory
+import org.springframework.stereotype.Component
 import java.time.Duration
 
+@Component
 object JedisConnFactory {
 
 

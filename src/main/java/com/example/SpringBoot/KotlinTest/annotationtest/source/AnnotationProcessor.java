@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.annotationtest.source;
+package com.example.springboot.kotlintest.annotationtest.source;
 
 
 import javax.annotation.processing.*;

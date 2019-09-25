@@ -1,6 +1,4 @@
-package com.example.springboot.KotlinTest.IntefaceTest
-
-import com.example.SpringBoot.KotlinTest.IntefaceTest.MyInterface
+package com.example.springboot.kotlintest.interfacetest
 
 class MyInterfaceImpl(
         val name:String,
