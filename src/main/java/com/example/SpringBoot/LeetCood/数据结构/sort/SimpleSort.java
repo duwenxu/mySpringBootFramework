@@ -56,20 +56,27 @@ public class SimpleSort {
      * 选择排序
      * <p>
      * 算法思路：一趟遍历记录最小(最大)的数，放到第一个位置； 再一趟遍历记录剩余列表中最小(最大)的数，继续放置；
-     *  //todo   想清楚再补充完整
+     *  实现：
+     *      1. 两层循环：外层循环调整每次取最小值的序列大小
+     *                  内层循环寻找每次的最小索引，从当前位置 i+1 开始
+     *      2. 比较交换： 比较当前位置i与索引最小的位置 min，不相等则交换
      * @param arr
      */
     public static void selectSort(int[] arr) {
         int length = arr.length;
-        int minIndex,tmp=0;
-        for (int i = 0; i < length - 1; i++) {     //排序趟数：len个元素需要 len-1 趟
-            minIndex=i;
-            for (int j = i+1; j < length ; j++) {      //第i趟排序时的遍历次数：len-i 次
-                if (arr[j] > tmp) {
-                    tmp = arr[j];
+        int min,tmp;
+        for (int i = 0; i < length - 1; i++) {
+            min=i;
+            for (int j = i+1; j < length ; j++) {
+                if (arr[min] > arr[j]) {  //i处元素与其之后的每个元素一一比较大小，得到最小元素对应的下标
+                    min=j;
                 }
             }
-            arr[i] = tmp;
+            if (min!=i){  //最小下标不是i时，将最小下标值与当前的arr[i]交换位置
+                tmp=arr[i];
+                arr[i]=arr[min];
+                arr[min]=tmp;
+            }
         }
     }
 

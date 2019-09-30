@@ -53,6 +53,12 @@ public class FastSort {
         quickSort2(arr, 0,arr.length-1 );
     }
 
+    /**
+     * 快速排序
+     * @param arr
+     * @param start
+     * @param end
+     */
     private static void quickSort1(int[] arr, int start, int end) {
         if (start>end){
             return;
