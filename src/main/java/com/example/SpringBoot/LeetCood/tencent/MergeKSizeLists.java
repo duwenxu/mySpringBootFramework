@@ -2,8 +2,7 @@ package com.example.springboot.LeetCood.tencent;
 
 import com.example.springboot.LeetCood.AddTwoNumbers.ListNode;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 
 
 /**
@@ -18,7 +17,8 @@ public class MergeKSizeLists {
     /**
      * 使用两个链表的合并求K个链表   或者叫  分治法
      * 思想： 通过不断地二分递归求 k 个有序链表的合并，最终全都转化为了 mergeTwoLists() 进行合并
-     *       这也是分治法的一般思想，通过无限的细分最终转化为简单问题
+     * 这也是分治法的一般思想，通过无限的细分最终转化为简单问题
+     *
      * @param lists
      * @return
      */
@@ -32,7 +32,7 @@ public class MergeKSizeLists {
         }
 
         /**
-         * 从从中间处将两个链表分开，递归合并
+         * 从中间处将两个链表分开，递归合并
          */
         int len = lists.length;
         int mid = len / 2;
@@ -42,8 +42,7 @@ public class MergeKSizeLists {
         }
 
         ListNode[] right = new ListNode[len - mid];
-//      for (int i = mid, j = 0; j < len - mid; i++, j++) {
-        for (int i = mid, j = 0; i<len; i++, j++) { //注意此处循环的结束条件
+        for (int i = mid, j = 0; i < len; i++, j++) { //注意此处循环的结束条件
             right[j] = lists[i];
         }
 
@@ -51,36 +50,77 @@ public class MergeKSizeLists {
     }
 
     /**
-     * 暴力法
+     * 暴力法  直接遍历拿出所有节点放入数组，再将数组拼接为ListNode
+     * 时间复杂度： O(m*n)
+     *
      * @param lists
      * @return
      */
     private static ListNode mergeKLists2(ListNode[] lists) {
-        if (lists.length==0){
+        if (lists == null || lists.length == 0) {
             return null;
         }
         ArrayList<Integer> nodeValueList = new ArrayList<>();
         int len = lists.length;
         for (int i = 0; i < len; i++) {
             ListNode listI = lists[i];
-            while (listI!=null){
-               nodeValueList.add(listI.val);
-               listI=listI.next;
-           }
+            while (listI != null) {
+                nodeValueList.add(listI.val);
+                listI = listI.next;
+            }
         }
         Collections.sort(nodeValueList);
-        ListNode headNode = new ListNode(-1);
-        ListNode tmp=headNode;
-        for (int i = 0; i < nodeValueList.size(); i++) {
-            tmp.next=new ListNode(nodeValueList.get(i));
-
-        }
-        return headNode.next;
+        return createListNode(nodeValueList);
     }
 
+    /**
+     * 类似 贪心算法
+     * 使用 priorityQueue(优先队列)进行排序
+     * 注意：一般使用堆(最大堆、最小堆)实现优先队列
+     *
+     * @param lists
+     * @return
+     */
+    private static ListNode mergeKLists3(ListNode[] lists) {
+        if (lists == null || lists.length == 0) {
+            return null;
+        }
+        int len = lists.length;
+        ListNode resNode = new ListNode(-1);
+        ListNode curr = resNode;
+        PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(len, Comparator.comparingInt(node -> node.val)); //比较每个ListNode的头元素的值
+        for (ListNode node : lists) {
+            if (node != null) {
+                priorityQueue.add(node);
+            }
+        }
+        while (!priorityQueue.isEmpty()) {
+            ListNode smallerNode = priorityQueue.poll();
+            /**注意 链表的拼接过程**/
+            curr.next = smallerNode;
+            curr = curr.next;
+            if (curr.next != null) {
+                priorityQueue.add(curr.next);
+            }
+        }
+        return resNode.next;
+    }
 
-
-
+    /**
+     * 数组 转  链表  list--->listNode
+     *
+     * @param datas
+     * @return
+     */
+    private static ListNode createListNode(List<Integer> datas) {
+        if (datas.isEmpty()) {
+            return null;
+        }
+        ListNode firstNode = new ListNode(datas.get(0));
+        ListNode nextNode = createListNode(datas.subList(1, datas.size()));//subList 包左不包右
+        firstNode.next = nextNode;
+        return firstNode;
+    }
 
 
     private static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
@@ -115,7 +155,9 @@ public class MergeKSizeLists {
         l8.next = l9;
         ListNode[] lists = {l1, l4, l7};
 //        ListNode listNode = mergeKLists1(lists);
-        mergeKLists2(lists);
+//        System.out.println(mergeKLists2(lists).toString());
+        System.out.println(mergeKLists3(lists).toString());
     }
+
 
 }
