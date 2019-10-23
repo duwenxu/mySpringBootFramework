@@ -1,4 +1,4 @@
-package com.example.springboot.LeetCood.Dynamic_509_70;
+package com.example.springboot.leetcood.Dynamic_509_70;
 
 /**
  * 斐波那契系列问题------爬楼梯问题

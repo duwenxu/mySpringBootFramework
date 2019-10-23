@@ -1,4 +1,4 @@
-package com.example.springboot.database.service;
+package com.example.springboot.jpa.service;
 
 import com.example.springboot.database.model.BaseBean;
 import com.example.springboot.springsecurity.model.rbac_model.User;

@@ -1,4 +1,4 @@
-package com.example.springboot.database.repository;
+package com.example.springboot.jpa.repository;
 
 import com.example.springboot.springsecurity.model.rbac_model.User;
 import org.springframework.data.domain.Page;

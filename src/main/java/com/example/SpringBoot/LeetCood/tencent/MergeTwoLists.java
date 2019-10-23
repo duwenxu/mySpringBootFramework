@@ -1,6 +1,6 @@
-package com.example.springboot.LeetCood.tencent;
+package com.example.springboot.leetcood.tencent;
 
-import com.example.springboot.LeetCood.AddTwoNumbers.ListNode;
+import com.example.springboot.leetcood.AddTwoNumbers.ListNode;
 
 /**
  * 合并两个有序链表

@@ -20,10 +20,14 @@ import java.util.Set;
 //@SupportedOptions()
 class AnnotationProcessor extends AbstractProcessor {
 
-    private Filer filer=null;        //创建文件
-    private Types typeUtils=null;       //用来处理TypeMirror. 也就是一个类的父类。   TypeMirror superClassType = currentClass.getSuperclass();
-    private Elements elementUtils=null;    //将要产生类中的所有元素抽象为Element元素
-    private Messager messager=null;    // 来将一些错误信息打印到控制台上
+    //创建文件
+    private Filer filer=null;
+    //用来处理TypeMirror. 也就是一个类的父类。   TypeMirror superClassType = currentClass.getSuperclass();
+    private Types typeUtils=null;
+    //将要产生类中的所有元素抽象为Element元素
+    private Elements elementUtils=null;
+    // 来将一些错误信息打印到控制台上
+    private Messager messager=null;
 
     /**
      * 在整个编译期间仅仅被调用一次，作用就是初始化参数ProcessingEnvironment。

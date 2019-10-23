@@ -1,4 +1,4 @@
-package com.example.springboot.database.jpaext
+package com.example.springboot.jpa.jpaext
 
 import org.hibernate.boot.model.naming.Identifier
 import org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl

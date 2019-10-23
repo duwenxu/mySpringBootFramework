@@ -1,4 +1,4 @@
-package com.example.springboot.kotlintest.annotationtest.runtime.annotationProcess;
+package com.example.springboot.kotlintest.annotationtest.runtime.annotationprocess;
 
 
 import com.example.springboot.kotlintest.annotationtest.runtime.annotations.Contraints;
@@ -26,7 +26,8 @@ class AnnotationProcess {
 
     public static String createSQL(String className) throws ClassNotFoundException {
         Class<?> clazz = Class.forName(className);
-        DBtable dBtable = clazz.getAnnotation(DBtable.class); //获取该注解名的class
+        //获取该注解名的class
+        DBtable dBtable = clazz.getAnnotation(DBtable.class);
         if (dBtable==null){
             System.out.println("The method descripted with DBtable not exist");
             return null;
@@ -40,7 +41,8 @@ class AnnotationProcess {
         for (Field field:clazz.getDeclaredFields()) {
             String fieldName=null;
             Annotation[] annos = field.getDeclaredAnnotations();
-            if (annos.length<1){  //该字段上没有注解
+            //该字段上没有注解
+            if (annos.length<1){
                continue;
            }
            if (annos[0] instanceof SqlInteger){

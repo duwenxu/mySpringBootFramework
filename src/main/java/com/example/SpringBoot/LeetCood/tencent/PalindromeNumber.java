@@ -1,4 +1,4 @@
-package com.example.springboot.LeetCood.tencent;
+package com.example.springboot.leetcood.tencent;
 
 /**
  * 回文数字：判断一个数字是否是回文

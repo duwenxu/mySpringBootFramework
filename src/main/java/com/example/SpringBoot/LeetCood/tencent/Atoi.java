@@ -1,4 +1,4 @@
-package com.example.springboot.LeetCood.tencent;
+package com.example.springboot.leetcood.tencent;
 
 
 /**

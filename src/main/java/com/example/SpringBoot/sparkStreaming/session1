@@ -1,0 +1,11 @@
+1. 学习建议：
+   官网和gitHub: https://github.com/apache/spark    注意里边的example
+
+linux需要root权限的操作：
+    sudo + command
+hadoop：cdh5.7.0      http://archive.cloudera.com/cdh5/cdh/5/
+spark： 2.20
+scala:  2.11.8
+
+
+

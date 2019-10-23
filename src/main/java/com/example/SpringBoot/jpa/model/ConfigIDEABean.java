@@ -1,4 +1,4 @@
-package com.example.springboot.database.model;
+package com.example.springboot.jpa.model;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 //从application.properties中引入属性绑定对象

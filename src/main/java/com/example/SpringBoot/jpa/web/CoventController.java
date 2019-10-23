@@ -1,4 +1,4 @@
-package com.example.springboot.database.web;
+package com.example.springboot.jpa.web;
 
 import com.example.SpringBoot.DataBase_CRUD.web.text2voiceUtil.KTPublicUtil;
 import org.springframework.context.annotation.Scope;

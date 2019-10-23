@@ -1,4 +1,4 @@
-package com.example.springboot.spring.simpleImp_ioc_aop.aop.advice;
+package com.example.springboot.spring.simpleimp_ioc_aop.aop.advice;
 
 import java.lang.reflect.InvocationHandler;
 

@@ -1,6 +1,6 @@
-package com.example.springboot.spring.simpleImp_ioc_aop.aop;
+package com.example.springboot.spring.simpleimp_ioc_aop.aop;
 
-import com.example.springboot.spring.simpleImp_ioc_aop.aop.advice.Advice;
+import com.example.springboot.spring.simpleimp_ioc_aop.aop.advice.Advice;
 
 import java.lang.reflect.Proxy;
 

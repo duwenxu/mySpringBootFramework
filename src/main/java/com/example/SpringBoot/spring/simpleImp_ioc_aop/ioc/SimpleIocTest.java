@@ -1,9 +1,7 @@
-package com.example.springboot.spring.simpleImp_ioc_aop.ioc;
+package com.example.springboot.spring.simpleimp_ioc_aop.ioc;
 
-import com.example.springboot.spring.simpleImp_ioc_aop.ioc.bean.Car;
-import com.example.springboot.spring.simpleImp_ioc_aop.ioc.bean.Wheel;
+import com.example.springboot.spring.simpleimp_ioc_aop.ioc.bean.Car;
 import org.junit.Test;
-import java.util.Objects;
 
 /**
  * SimpleIoc 测试

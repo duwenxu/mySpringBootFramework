@@ -1,8 +1,8 @@
-package com.example.springboot.database.web;
+package com.example.springboot.jpa.web;
 
 import com.example.springboot.springsecurity.model.rbac_model.User;
-import com.example.springboot.database.repository.UserDao;
-import com.example.springboot.database.model.ConfigIDEABean;
+import com.example.springboot.jpa.repository.UserDao;
+import com.example.springboot.jpa.model.ConfigIDEABean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.domain.PageRequest;

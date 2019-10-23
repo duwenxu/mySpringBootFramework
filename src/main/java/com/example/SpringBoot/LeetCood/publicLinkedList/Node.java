@@ -1,4 +1,4 @@
-package com.example.springboot.LeetCood.publicLinkedList;
+package com.example.springboot.leetcood.publicLinkedList;
 
 
 /**

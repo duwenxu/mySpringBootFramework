@@ -1,4 +1,4 @@
-package com.example.springboot.spring.simpleImp_ioc_aop.ioc;
+package com.example.springboot.spring.simpleimp_ioc_aop.ioc;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;

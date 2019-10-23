@@ -1,4 +1,5 @@
-package com.example.springboot.database.repository;
+package com.example.springboot.jpa.repository;
+
 
 import com.example.springboot.database.model.BaseBean;
 

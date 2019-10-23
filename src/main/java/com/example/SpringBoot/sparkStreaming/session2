@@ -1,0 +1,107 @@
+SESSION   1
+1. 学习建议：
+   官网和gitHub: https://github.com/apache/spark    注意里边的example
+
+linux需要root权限的操作：
+    sudo + command
+hadoop：cdh5.7.0      http://archive.cloudera.com/cdh5/cdh/5/
+spark： 2.20
+scala:  2.11.8
+
+
+SESSION 2
+1.需求分析
+需求：统计主站每个课程访问的客户端、地域信息分布
+        地域： ip转换    SparkSQL项目实战
+        客户端： useragent 获取   Hadoop基础课程
+        ======如上两个操作：可以采用离线(Spark/MapReduce)的方式进行统计
+
+实现步骤：
+    通过课程编号(对应display项目中的 页面信息)、ip信息、useragent
+    进行相应的统计信息分析操作：MapReduce/Spark
+
+项目架构：
+    日志收集：Flume
+    离线分析：MapReduce/Spark
+    统计结果的图形化显示
+
+问题：
+    处理数据的频率问题
+    10min--->5min---->5s------1s?   ======>需要实时流处理框架
+
+2. 实时与离线的对比
+实时流处理：  1） 实时    2） 流式
+离线数据与实时数据的对比：
+     1）数据来源：
+        离线：例如 HDFS 的历史数据， 数据量较大
+        实时：一般是从 消息队列(例如: kafka), 实时推送过来的数据
+     2）处理过程：
+        离线：MapReduce: map + reduce
+        实时：Spark(DStream/SS)
+     3) 处理速度：
+        离线：慢
+        实时：快
+     4）进程：
+        离线： 启动+ 销毁
+        实时： 7*24   是一个持久的服务
+
+
+3. 实时流处理框架对比：
+    Apache Storm        真 实时处理
+    Apache Spark Streaming          微批次处理，可以调整处理时间间隔
+    LinkedIn Kafka
+    Apache Flink
+
+
+SESSION 3
+分布式日志收集框架 Flume
+1.业务现状分析
+如何将日志收集到大数据平台Hadoop集群上进行分析？
+  a.传统方式  shell脚本   cp到Hadoop进行分析
+  b.Flume
+2. 概述
+http://flume.apache.org/
+Flume is a distributed, reliable(可靠的), and available service for efficiently collecting, aggregating, and moving large amounts of log data.
+webServer(源端)  ---->  flume   -----> hdfs(目的地)
+同类产品的对比：  Flume: Cloudera/Apache     Java开发
+                LogStash: ELK(ElasticSearch,kibana)
+3. Flume 架构和核心组件
+一个agent主要包括以下三个核心组件：
+    a. source   收集   负责指定从哪些地方收集日志
+    b. channel   聚集    Memory Channel
+                        File  Channel
+                        Kafka Channel
+    c. sink     输出  从channel读取数据，推送到目的地
+
+4. 环境安装和搭建
+System Requirements
+        Java Runtime Environment - Java 1.8 or later
+        Memory - Sufficient memory for configurations used by sources, channels or sinks
+        Disk Space - Sufficient disk space for configurations used by channels or sinks
+        Directory Permissions - Read/Write permissions for directories used by agent
+
+使用Flume的关键：主要是配置文件的编写
+
+场景a. 从指定网络端口采集数据输出到控制台
+启动agent
+$ bin/flume-ng agent
+     -n $agent_name  \   (--name)
+     -c conf   \         (--conf)
+     -f conf/flume-conf.properties.template  \   (--conf-file)
+     -Dflume.root.logger=INFO,console    该条命令表示直接打印日志到控制台，但在flume的配置文件目录及 conf 目录中有log4j.properties配置文件，其实就已经配置了flume启动日志输出位置
+
+使用telnet进行测试：    telnet ip/域名 端口
+                       发送数据，查看Flume端是否收到数据
+
+Event: 是Flume数据传输的基本单元，每条记录相当于一个event
+       Event = 可选的header + byte Array
+
+场景b. 监控某文件实时采集新增加的数据输出到控制台
+agent选型：(策略配置)  exec source(通过linux命令不断地输出数据) + memory channel + logger sink
+    离线处理：输出到 HDFS  -----> HDFS sink
+    实时处理：输出到 kafka -----> kafka sink
+
+场景c. (生产场景，多个agent) 收集A服务器的日志数据到 B服务器
+   agent1:  exec source + memory channel +avro sink
+   agent2:  avro source + memory channel + logger sink
+日志收集过程：

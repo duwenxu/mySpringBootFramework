@@ -1,6 +1,6 @@
-package com.example.springboot.spring.simpleImp_ioc_aop.aop.advice;
+package com.example.springboot.spring.simpleimp_ioc_aop.aop.advice;
 
-import com.example.springboot.spring.simpleImp_ioc_aop.aop.aspectImpl.MethodInvocation;
+import com.example.springboot.spring.simpleimp_ioc_aop.aop.aspectImpl.MethodInvocation;
 
 import java.lang.reflect.Method;
 

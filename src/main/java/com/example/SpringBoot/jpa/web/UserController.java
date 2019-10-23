@@ -1,7 +1,7 @@
-package com.example.springboot.database.web;
+package com.example.springboot.jpa.web;
 
 import com.example.springboot.springsecurity.model.rbac_model.User;
-import com.example.springboot.database.service.impl.UserServiceImpl;
+import com.example.springboot.jpa.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;

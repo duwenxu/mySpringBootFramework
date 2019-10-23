@@ -1,7 +1,7 @@
 package com.example.springboot;
 
 import com.example.springboot.database.jpaext.extrepository.ExtJpaRepositoryFactoryBean;
-import com.example.springboot.database.model.ConfigIDEABean;
+import com.example.springboot.jpa.model.ConfigIDEABean;
 import org.apache.catalina.filters.RemoteIpFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

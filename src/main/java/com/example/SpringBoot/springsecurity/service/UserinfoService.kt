@@ -1,6 +1,6 @@
 package com.example.springboot.springsecurity.service
 
-import com.example.springboot.database.repository.UserDao
+import com.example.springboot.jpa.repository.UserDao
 import com.example.springboot.springsecurity.model.AuthorConf
 import com.example.springboot.springsecurity.model.UserInfo
 import org.springframework.beans.factory.annotation.Autowired
@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component
 class UserinfoService :UserDetailsService{
 
     @Autowired
-    lateinit var userdao:UserDao
+    lateinit var userdao: UserDao
 
     /**
      * case sensitive：区分大小写

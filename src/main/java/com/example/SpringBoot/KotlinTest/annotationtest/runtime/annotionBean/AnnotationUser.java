@@ -1,4 +1,4 @@
-package com.example.springboot.kotlintest.annotationtest.runtime.annotionBean;
+package com.example.springboot.kotlintest.annotationtest.runtime.annotionbean;
 
 import com.example.springboot.kotlintest.annotationtest.runtime.annotations.Contraints;
 import com.example.springboot.kotlintest.annotationtest.runtime.annotations.DBtable;

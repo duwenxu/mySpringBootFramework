@@ -1,9 +1,9 @@
-package com.example.springboot.spring.simpleImp_ioc_aop.aop;
+package com.example.springboot.spring.simpleimp_ioc_aop.aop;
 
-import com.example.springboot.spring.simpleImp_ioc_aop.aop.advice.AfterAdvice;
-import com.example.springboot.spring.simpleImp_ioc_aop.aop.aspectImpl.MethodInvocation;
-import com.example.springboot.spring.simpleImp_ioc_aop.aop.userdao.IUserDao;
-import com.example.springboot.spring.simpleImp_ioc_aop.aop.userdao.UserDaoImpl;
+import com.example.springboot.spring.simpleimp_ioc_aop.aop.advice.AfterAdvice;
+import com.example.springboot.spring.simpleimp_ioc_aop.aop.aspectImpl.MethodInvocation;
+import com.example.springboot.spring.simpleimp_ioc_aop.aop.userdao.IUserDao;
+import com.example.springboot.spring.simpleimp_ioc_aop.aop.userdao.UserDaoImpl;
 import org.junit.Test;
 
 /**

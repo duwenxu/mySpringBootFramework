@@ -1,4 +1,4 @@
-package com.example.springboot.LeetCood.数据结构.sort;
+package com.example.springboot.leetcood.数据结构.sort;
 
 /**
  * low sort   3种 简单排序
