@@ -13,9 +13,14 @@ package com.example.springboot.summary.concurrent_lock;
  *                  ThreadLocal：解决的是每个线程都需要一个单独的变量进行统一操作，但该变量只能在线程内共享，线程间隔离。即如何优雅的解决 变量在线程间隔离与线程内共享的问题。(不需要每个线程去主动的创建该对象)
  *                               当某些数据是以线程为作用域并且不同线程具有不同的数据副本的时候，就可以考虑采用ThreadLocal
  *      2.具体的实现：
- *          ThreadLocal的 静态内部类(static class) ThreadLocalMap为每个Thread维护了一个Entry数组table,每个ThreadLocal根据其key值确定了一个数组下标，而这个下标就是value存储的对应位置
+ *          ThreadLocal的 静态内部类(static class) ThreadLocalMap为每个Thread维护了一个Entry数组table,每个ThreadLocal根据其key（key即为当前线程）值确定了一个数组下标，而这个下标就是value存储的对应位置
+ *          Thread与ThreadLocals的关系：每一个Thread(线程对象)都持有一个ThreadLocalMap对象，每一个新Thread都会实例化一个ThreadLocalMap并赋值给Thread的成员变量threadLocals,使用时若threadLocals已存在则使用已存在的threadLocals
  *          ThreadLocal.set(T value)：
  *                  1.获取当前线程及其对应的ThreadLocalMap,set值时调用了ThreadLocalMap的set()方法
+ *                                          Thread t = Thread.currentThread();
+ *                              其实是通过   ThreadLocalMap map = getMap(t);
+ *                                          getMap(): return t.threadLocals;
+ *                                          以当前线程为key获取 当前Thread的threadLocals即ThreadLocalMap对象并进行赋值
  *                  2.ThreadLocalMap类：
  *                              默认构造： a. 实例化了一个长度为16的一个Entry数组
  *                                        b. 生成数组下标方式： int i = firstKey.threadLocalHashCode & (INITIAL_CAPACITY - 1) ---------默认构造时
@@ -31,8 +36,8 @@ package com.example.springboot.summary.concurrent_lock;
  *                                                  (1L << 32) - (long) ((1L << 31) * (Math.sqrt(5) - 1)) = 0x61c88647
  *          ThreadLocal.get()：通过计算出索引直接从数组对应位置读取即可
  *          总结如下：
- *                  1. 对于某一ThreadLocal来讲，他的索引值i是确定的，在不同线程之间访问时访问的是不同的table数组的同一位置即都为table[i]，只不过这个不同线程之间的table是独立的。
- *                  2. 对于同一线程的不同ThreadLocal来讲，这些ThreadLocal实例共享一个table数组，然后每个ThreadLocal实例在table中的索引i是不同的。
+ *                  1. 对于某一ThreadLocal来讲，他的索引值i是确定的，在不同Thread之间访问时访问的是不同的table数组的同一位置即都为table[i]，只不过这个不同线程之间的table是独立的。
+ *                  2. 对于同一Thread的不同ThreadLocal来讲，这些ThreadLocal实例共享一个table数组，然后每个ThreadLocal实例在table中的索引i是不同的。
  */
 public class ThreadlocalTest {
 

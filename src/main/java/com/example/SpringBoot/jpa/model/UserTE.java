@@ -1,4 +1,4 @@
-package com.example.SpringBoot.DataBase_CRUD.Entity;
+package com.example.springboot.jpa.model;
 
 public class UserTE {
     private int id;

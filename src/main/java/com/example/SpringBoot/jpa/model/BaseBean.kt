@@ -1,4 +1,4 @@
-package com.example.springboot.database.model
+package com.example.springboot.jpa.model
 
 open class BaseBean(){
 

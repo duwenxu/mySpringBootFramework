@@ -1,6 +1,7 @@
 package com.example.springboot.leetcood.tencent;
 
 
+import javax.persistence.Table;
 import java.util.ArrayList;
 
 /**

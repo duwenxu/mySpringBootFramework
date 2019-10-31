@@ -1,7 +1,7 @@
 package com.example.springboot.jpa.repository;
 
 
-import com.example.springboot.database.model.BaseBean;
+import com.example.springboot.jpa.model.BaseBean;
 
 /**
  * 增删改查的基础接口
