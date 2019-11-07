@@ -1,4 +1,4 @@
-package com.example.springboot.KotlinTest.commontest
+package com.example.springboot.kotlintest.commontest
 
 import com.example.springboot.common.commonutils.toArrayList
 import java.io.File
