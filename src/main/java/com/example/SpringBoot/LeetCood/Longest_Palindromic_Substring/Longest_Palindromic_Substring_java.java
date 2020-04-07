@@ -1,4 +1,4 @@
-package com.example.SpringBoot.LeetCood.Longest_Palindromic_Substring;
+package com.example.springboot.leetcood.Longest_Palindromic_Substring;
 
 import java.util.HashSet;
 import java.util.Iterator;

@@ -1,4 +1,4 @@
-package com.example.springboot.summary.concurrent_lock;
+package com.example.springboot.summary.并发锁相关;
 
 import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
 

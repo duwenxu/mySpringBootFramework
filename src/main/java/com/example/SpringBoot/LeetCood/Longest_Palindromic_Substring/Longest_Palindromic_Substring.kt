@@ -1,6 +1,5 @@
-package com.example.SpringBoot.LeetCood.Longest_Palindromic_Substring
 
-import com.example.SpringBoot.LeetCood.Longest_Palindromic_Substring.Longest_Palindromic_Substring.longestPalindrome1
+import Longest_Palindromic_Substring.longestPalindrome1
 
 
 /**

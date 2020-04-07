@@ -1,4 +1,4 @@
-package com.example.springboot.summary.concurrent_lock.concurrentclass;
+package com.example.springboot.summary.并发锁相关.concurrentclass;
 
 
 import java.util.concurrent.ExecutorService;

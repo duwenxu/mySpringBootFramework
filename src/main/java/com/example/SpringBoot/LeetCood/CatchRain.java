@@ -1,4 +1,4 @@
-package com.example.SpringBoot.LeetCood;
+package com.example.springboot.leetcood;
 
 /**
  * leetCode: 接雨水（困难）

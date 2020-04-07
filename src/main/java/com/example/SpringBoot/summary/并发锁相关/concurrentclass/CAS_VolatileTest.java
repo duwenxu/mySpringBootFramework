@@ -1,4 +1,4 @@
-package com.example.springboot.summary.concurrent_lock.concurrentclass;
+package com.example.springboot.summary.并发锁相关.concurrentclass;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -9,8 +9,9 @@ import java.util.concurrent.atomic.AtomicInteger;
  * CAS的三个缺点：
  *     1. 只能保证对一个共享变量的原子操作       解决： 1. JDK1.5以后AtomicReference类可以保证引用对象之间的原子性，可以把多个变量放在一个对象里来进行 CAS 操作
  *                                                 2.使用锁
- *     2. ABA问题       解决：JDK1.5以后的AtomicStampedReference 类：相当于是带有版本标记的CAS实现
- *                          以原子的方式对 reference和stamp的Pair 进行 CAS（底层调用的是 native compareAndSwapObject()方法 native方法：JNI调用native方法调用由C++编写的硬件级别指令）
+ *     2. ABA问题
+ *                              解决：JDK1.5以后的AtomicStampedReference 类：相当于是带有版本标记的CAS实现
+ *                              以原子的方式对 reference和stamp的Pair 进行 CAS（底层调用的是 native compareAndSwapObject()方法 native方法：JNI调用native方法调用由C++编写的硬件级别指令）
  *     3. CAS是一个自旋操作(不成功就一直循环重试)。如果长时间不成功，会给CPU带来非常大的执行开销
  *
  * @author duwenxu

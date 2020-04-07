@@ -2,12 +2,18 @@ package com.example.springboot.leetcood.数据结构.sort;
 
 /**
  * 归并排序
+ * <p>
+ * 算法思想：
+ * 合并：即将两个有序表进行合并成一个有序表
+ * 将待排序列分为若干个有序的子序列，进行递归的合并得到最终的有序序列
  *
- *  算法思想：
- *      合并：即将两个有序表进行合并成一个有序表
- *      将待排序列分为若干个有序的子序列，进行递归的合并得到最终的有序序列
+ * 基本思路：
+ * 　　　　分解：将列表越分越小，直至分成一个元素。
+ * 　　　　终止条件：一个元素是有序的。
+ * 　　　　合并：将两个有序列表归并，列表越来越大。
+ * <p>
+ * 时间复杂度为O(nlog₂n) 这是该算法中最好、最坏和平均的时间性能。空间复杂度为 O(n)。归并排序比较占用内存，但却是一种效率高且稳定的算法。
  *
- *  时间复杂度为O(nlog₂n) 这是该算法中最好、最坏和平均的时间性能。空间复杂度为 O(n)。归并排序比较占用内存，但却是一种效率高且稳定的算法。
  * @author duwenxu
  * @create 2019-09-12 11:16
  */
@@ -16,22 +22,22 @@ public class MergeSort {
     /**
      * 合并两有序序列
      */
-    private static void merge(int[] nums,int left,int mid,int right){
-        int[] tmp=new int[right-left+1];
-        int i=left,j=mid+1,k=0; //两个子序列和最终序列的起始index
+    private static void merge(int[] nums, int left, int mid, int right) {
+        int[] tmp = new int[right - left + 1];
+        int i = left, j = mid + 1, k = 0; //两个子序列和最终序列的起始index
 
-        while (i<=mid && j<=right){
-            if (nums[i]<nums[j]){
-                tmp[k++]=nums[i++];
-            }else {
-                tmp[k++]=nums[j++];
+        while (i <= mid && j <= right) {
+            if (nums[i] < nums[j]) {
+                tmp[k++] = nums[i++];
+            } else {
+                tmp[k++] = nums[j++];
             }
         }
-        while (i<=mid){
-            tmp[k++]=nums[i++];
+        while (i <= mid) {
+            tmp[k++] = nums[i++];
         }
-        while (j<=right){
-            tmp[k++]=nums[j++];
+        while (j <= right) {
+            tmp[k++] = nums[j++];
         }
         /**
          * System.arraycopy 相当于是for循环复制元素
@@ -40,11 +46,11 @@ public class MergeSort {
         System.arraycopy(tmp, 0, nums, left, tmp.length);  //将合并后的有序序列填充到原数组中
     }
 
-    public static int[] mergeSort(int[] nums,int left,int right){  //递归二分
-        int mid=(left+right)/2;
-        if (left<right){
+    public static int[] mergeSort(int[] nums, int left, int right) {  //递归二分
+        int mid = (left + right) / 2;
+        if (left < right) {
             mergeSort(nums, left, mid);
-            mergeSort(nums, mid+1, right);
+            mergeSort(nums, mid + 1, right);
             merge(nums, left, mid, right);
         }
         return nums;
@@ -61,6 +67,6 @@ public class MergeSort {
             System.out.print(i + " ");
         }
         System.out.println();
-        System.out.println("mergeSort 排序耗时：" + Long.toString(eTime1 - sTime1) + "ms");
+        System.out.println("mergeSort 排序耗时：" + (eTime1 - sTime1) + "ms");
     }
 }

@@ -1,4 +1,4 @@
-package com.example.springboot.summary.concurrent_lock.threadpool;
+package com.example.springboot.summary.并发锁相关.threadpool;
 
 import java.util.concurrent.*;
 

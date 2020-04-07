@@ -164,107 +164,7 @@ docker run -d --name kafka1 -p 9092:9092 --env KAFKA_ADVERTISED_HOST_NAME=localh
     解决：
         在进行删除操作时对用户的订阅缓存信息加锁，保证在一次删除过程中获取到的缓存信息不变
 
-9.HashMap数据结构分析比较：
-    作用:存放键值对数据，是基于哈希表的Map接口实现，是常用的Java集合之一
-    1.8前后的主要变化：
-        JDK1.8 之前 HashMap 由 数组+链表 组成的，数组是 HashMap 的主体，链表则是主要为了解决哈希冲突而存在的（“拉链法”解决冲突）.
-            拉链法：  链表解决hash冲突原理：
-                        链表数组即 数组中每一格(或者每个元素即为一个链表)，当遇到hash冲突时，将冲突的值加入到链表尾部即可。
-        JDK1.8 以后在解决哈希冲突时有了较大的变化，当链表长度大于阈值（默认为 8）时，将链表转化为红黑树，以减少搜索时间
-                (TreeMap和TreeSet的底层也用到了红黑树)
-
-    底层数据结构分析：
-        1.8之前：HashMap 底层是 数组和链表 结合在一起使用也就是 链表散列
-            如何得到元素存放位置： HashMap通过 key 的 hashCode 经过扰动函数(HashMap 的 hash 方法)处理过后得到 hash 值，然后通过 (n - 1) & hash 判断当前元素存放的位置（这里的 n 指的是数组的长度）
-                注：hash函数
-                static final int hash(Object key) {
-                        int h;
-                        // key.hashCode()：返回散列值也就是hashcode，该方法为native方法，调用底层库的方法
-                        // ^ ：按位异或
-                        // >>>:无符号右移，忽略符号位，空位都以0补齐
-                        return (key == null) ? 0 : (h = key.hashCode()) ^ (h >>> 16);
-                    }
-
-    HashMap 类的主要属性：
-        public class HashMap<K,V> extends AbstractMap<K,V> implements Map<K,V>, Cloneable, Serializable {
-            // 序列号
-            private static final long serialVersionUID = 362498820763181265L;
-            // 默认的初始容量是16
-            static final int DEFAULT_INITIAL_CAPACITY = 1 << 4;
-            // 最大容量
-            static final int MAXIMUM_CAPACITY = 1 << 30;
-            // 默认的填充因子 0.75
-            static final float DEFAULT_LOAD_FACTOR = 0.75f;
-            // 当桶(bucket)上的结点数大于这个值时会转成红黑树
-            static final int TREEIFY_THRESHOLD = 8;
-                关于为什么是8的解释：
-                        根据泊松分布结合填充因子为0.75来看
-                        对于HashMap.table[].length的空间来说，放入0.75*length个数据，某一个bin中放入节点数量的概率情况如上图注释中给出的数据（表示数组某一个下标存放数据数量为0~8时的概率情况）
-                             * 0:    0.60653066
-                             * 1:    0.30326533
-                             * 2:    0.07581633
-                             * 3:    0.01263606
-                             * 4:    0.00157952
-                             * 5:    0.00015795
-                             * 6:    0.00001316
-                             * 7:    0.00000094
-                             * 8:    0.00000006
-                        对于HashMap table[]中任意一个bin(即table中的链表元素)上节点个数>=8 是小概率事件，即0.00000006，此时将会从Node转化为TreeNode  链表-->红黑树
-
-            // 当桶(bucket)上的结点数小于这个值时树转链表
-            static final int UNTREEIFY_THRESHOLD = 6;
-            // 桶中结构转化为红黑树对应的table的最小大小
-            static final int MIN_TREEIFY_CAPACITY = 64;
-            // 存储元素的数组，总是2的幂次倍
-            transient Node<k,v>[] table;
-                关于HashMap的长度为什么总是2的幂次方：
-                    tableSizeFor() 方法保证了容量总是2次幂
-                    Hash值的范围:有符号整数的范围   -Integer.MAX_VALUE+1~Integer.MAX_VALUE
-                                类似的： Byte范围 -128~127   1字节 8位
-                    为什么：为了减少碰撞，保证HashMap存取高效，需要把数据尽量均匀的分布。因为Hash值的范围(即为有符号整数的范围)过大不能直接作为数组使用，需要对其长度取余hash%length
-                            而  取余操作中如果除数是2的幂次方则等价于和其除数减一的&(按位与)操作，即当length是2的次幂时， hash%length==hash&(length-1)
-                            且 采用二进制的按位与&操作相对于%运算可以提高效率，所以总采用HashMap长度为2的幂次方，用 hash&(n-1)(n代表数组长度)来计算数组下标
-            // 存放具体元素的集
-            transient Set<map.entry<k,v>> entrySet;
-            // 存放元素的个数，注意这个不等于数组的长度。
-            transient int size;
-            // 每次扩容和更改map结构的计数器
-            transient int modCount;
-            // 临界值
-            int threshold;
-            // 加载因子
-            final float loadFactor;
-        }
-
-        关于几个常见的参数：
-            1. loadFactor加载因子：控制数组存放数据的疏密程度  默认值：0.75
-                为什么是0.75：
-                    太大：会导致 1.查找元素的效率降低 2.增加插入元素时的Hash冲突(Hash碰撞)
-                    太小：数组空间的浪费，利用率降低，发生更多次数的reSize
-                    0.75: 仅仅是一个在时间上和空间上的折衷选择。本质还是时间与空间的平衡。
-            2. threshold 是否扩容的临界值，由默认容量和填充因子决定
-                当实际大小(容量*填充因子)超过临界值时，会进行扩容   则默认容量为16，填充因子0.75时，默认的扩容长度为12
-
-    put方法的原码分析：
-         1.8:(其实是调用了putVal方法)
-            ①如果定位到的 数组位置 没有元素 就直接插入。
-            ②如果定位到的 数组位置 有元素
-                                    就和要插入的key比较
-                                        如果key相同就直接覆盖
-                                        如果key不相同，就判断p是否是一个树节点
-                                            如果是就调用e = ((TreeNode<K,V>)p).putTreeVal(this, tab, hash, key,value)将元素添加进入---红黑树插入
-                                            如果不是就遍历链表插入(插入的是链表尾部)。---尾插法
-         1.7：
-            ①如果定位到的数组位置没有元素 就直接插入。
-            ②如果定位到的数组位置有元素，遍历以这个元素为头结点的链表，依次和插入的key比较，如果key相同就直接覆盖，不同就采用头插法插入元素.----头插法
-
-        关于HashMap可能会问到的问题：
-          1. HashMap, ConcurrentHashMap,HashTable 的结构，在JDK 1.7 和1.8 中有什么不同（最基础）
-          2. put时，是加到链表头还是链表尾
-                JDK1.8的put采用尾插法，实际调用的是putVal方法(该方法是个final方法，并没有提供给用户使用)
-                JDK1.8的put采用头插法
-                实质：插入操作过程的区别
-          3. get的时间复杂度（对链表，对红黑树）
+9.
 
 
 
@@ -272,6 +172,15 @@ docker run -d --name kafka1 -p 9092:9092 --env KAFKA_ADVERTISED_HOST_NAME=localh
 docker相关：https://github.com/Snailclimb/JavaGuide/blob/master/docs/tools/Docker.md
     docker仓库的层级关系：
             Docker Registry： 一个集中的存储、分发镜像的服务
+
+
+
+
+
+
+
+
+
 
 
 

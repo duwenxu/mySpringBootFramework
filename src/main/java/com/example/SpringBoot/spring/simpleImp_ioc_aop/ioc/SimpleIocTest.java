@@ -13,7 +13,7 @@ public class SimpleIocTest {
 
     @Test
     public void getBeanTest() throws Exception {
-        String location = "D:\\SpringBoot\\src\\main\\java\\com\\example\\springboot\\spring\\simpleImp_ioc_aop\\ioc\\ioc_test.xml";
+        String location = "D:\\SpringBoot\\src\\main\\java\\com\\example\\springboot\\spring\\simpleimp_ioc_aop\\ioc\\ioc_test.xml";
         SimpleIoc ioc = new SimpleIoc(location);
         Car car =(Car) ioc.getBean("car");
         System.out.println(car);

@@ -15,3 +15,6 @@ Spring AOP 基于AspectJ注解如何实现AOP ：
     Spring底层通过动态代理来实现 AOP
     AspectJ底层是依赖于特殊的 ajc编译器 来实现静态织入
     Spring 只是使用了与 AspectJ 5 一样的注解，但仍然没有使用 AspectJ 的编译器，底层是使用了动态代理(JDK或者CGLib)技术的动态植入，因此并不依赖于 AspectJ 的编译器
+
+    SpringBoot中AspectJ注解：
+        @EnableAspectJAutoProxy(exposeProxy = true, proxyTargetClass = true)

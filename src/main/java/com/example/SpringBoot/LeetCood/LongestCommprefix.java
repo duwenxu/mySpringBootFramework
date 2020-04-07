@@ -1,4 +1,4 @@
-package com.example.SpringBoot.LeetCood;
+package com.example.springboot.leetcood;
 
 
 /**

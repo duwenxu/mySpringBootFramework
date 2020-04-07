@@ -1,4 +1,4 @@
-package com.example.springboot.summary.concurrent_lock;
+package com.example.springboot.summary.并发锁相关;
 
 /**
  * ThreadLocal 类的原理、使用
