@@ -44,6 +44,7 @@ public class ThreadlocalTest {
     /**
      * 一般总将ThreadLocal定义为static类型的：
      *      1. ThreadLocal对于当前线程共享，设置为static，仅需在第一次使用时分配一块内存空间，使当前线程内的所有类都共享此变量。
+     *
      *      2. static使ThreadLocal 变为强引用，key不会在GC时被清理，执行remove方法时能够正确定位并删除。
      */
     private static ThreadLocal<Integer> threadLocal=new ThreadLocal<>();

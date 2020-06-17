@@ -1,6 +1,6 @@
 package com.example.springboot.jpa.web;
 
-import com.example.springboot.springsecurity.model.rbac_model.User;
+import com.example.springboot.springsecurity.actualdemo.model.rbac_model.User;
 import com.example.springboot.jpa.repository.UserDao;
 import com.example.springboot.jpa.model.ConfigIDEABean;
 import org.springframework.beans.factory.annotation.Autowired;

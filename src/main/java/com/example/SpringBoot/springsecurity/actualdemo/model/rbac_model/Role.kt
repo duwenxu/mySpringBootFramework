@@ -1,4 +1,4 @@
-package com.example.springboot.springsecurity.model.rbac_model
+package com.example.springboot.springsecurity.actualdemo.model.rbac_model
 
 import java.io.Serializable
 import java.util.*

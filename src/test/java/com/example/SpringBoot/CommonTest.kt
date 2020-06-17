@@ -1,6 +1,6 @@
 package com.example.SpringBoot
 
-import com.example.springboot.springsecurity.model.rbac_model.Role
+import com.example.springboot.springsecurity.actualdemo.model.rbac_model.Role
 import com.example.springboot.database.repository.RoleRepository
 import org.junit.Test
 import org.springframework.beans.factory.annotation.Autowired

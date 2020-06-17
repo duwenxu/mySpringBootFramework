@@ -1,7 +1,7 @@
 package com.example.springboot.jpa.service;
 
 import com.example.springboot.jpa.model.BaseBean;
-import com.example.springboot.springsecurity.model.rbac_model.User;
+import com.example.springboot.springsecurity.actualdemo.model.rbac_model.User;
 import org.springframework.data.domain.Page;
 
 import java.util.List;

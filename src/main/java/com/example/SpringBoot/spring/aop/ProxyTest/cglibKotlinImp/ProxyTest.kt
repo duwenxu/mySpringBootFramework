@@ -13,7 +13,7 @@ class ProxyTest {
 
     @Test
     fun test() {
-        var person = ProxyFactory() as PersonDao  //获取到代理类并转换为目标类，执行方法
+        val person = ProxyFactory() as PersonDao  //获取到代理类并转换为目标类，执行方法
         person.eat()
         person.sleep()
     }
@@ -21,7 +21,7 @@ class ProxyTest {
 
         //生成动态代理类
         fun ProxyFactory(): Any {
-            var enhancer = Enhancer()           //创建enhancer增强工具对象
+            val enhancer = Enhancer()           //创建enhancer增强工具对象
             enhancer.setSuperclass(PersonDao::class.java)     //将被代理类设置为父类
             enhancer.setCallback(InterceptDemo())   //自定义拦截器
             return enhancer.create()

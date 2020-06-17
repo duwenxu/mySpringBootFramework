@@ -33,6 +33,7 @@ import java.util.concurrent.*;
  *          虽然是单线程处理，一旦线程因为处理异常等原因终止的时候，ThreadPoolExecutor会自动创建一个新的线程继续进行工作。
  *          SingleThreadExecutor 适用于：
  *               在逻辑上需要单线程处理任务的场景，同时无界的LinkedBlockingQueue保证新任务都能够放入队列，不会被拒绝；缺点和FixedThreadPool相同，当处理任务无限等待的时候会造成内存问题。
+ * 5）jdk1.8新增
  * <p>
  * 阿里规范：
  * 在实际应用中，最好是通过 ThreadPoolExecutor 自定义创建线程，上述线程底层都是使用 ThreadPoolExecutor创建的，只不过增加了许多限制

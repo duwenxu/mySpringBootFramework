@@ -1,4 +1,4 @@
-package com.example.springboot.springsecurity.model
+package com.example.springboot.springsecurity.actualdemo.model
 
 import java.io.Serializable
 

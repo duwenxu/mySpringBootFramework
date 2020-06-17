@@ -14,9 +14,9 @@ public class JDKProxyTest {
         IUserDao userDao = new UserDao();//创建目标对象作为代理工厂的传入参数
 
         //创建代理对象
-        IUserDao JDKProxy = (IUserDao) new JDKProxyFactory(userDao).getProxyInstance();
-        JDKProxy.discard();
-        JDKProxy.use();
+        IUserDao proxyUserDao = (IUserDao) new JDKProxyFactory(userDao).getProxyInstance();
+        proxyUserDao.discard();
+        proxyUserDao.use();
     }
 
 }

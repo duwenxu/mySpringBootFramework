@@ -1,10 +1,10 @@
-package com.example.springboot.springsecurity
+package com.example.springboot.springsecurity.actualdemo
 
-import com.example.springboot.springsecurity.authentication.MyAuthenticationProvider
-import com.example.springboot.springsecurity.handler.AccessDeniedHandler
-import com.example.springboot.springsecurity.handler.LoginHandler
-import com.example.springboot.springsecurity.handler.LogoutHandler
-import com.example.springboot.springsecurity.handler.SessionExpiredStrategy
+import com.example.springboot.springsecurity.actualdemo.authentication.MyAuthenticationProvider
+import com.example.springboot.springsecurity.actualdemo.handler.AccessDeniedHandler
+import com.example.springboot.springsecurity.actualdemo.handler.LoginHandler
+import com.example.springboot.springsecurity.actualdemo.handler.LogoutHandler
+import com.example.springboot.springsecurity.actualdemo.handler.SessionExpiredStrategy
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
@@ -27,16 +27,16 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 open class SecurityConfig : WebSecurityConfigurerAdapter(){
 
     @Autowired
-    lateinit var provider:MyAuthenticationProvider
+    lateinit var provider: MyAuthenticationProvider
 
     @Autowired
-    lateinit var loginHandler:LoginHandler
+    lateinit var loginHandler: LoginHandler
 
     @Autowired
-    lateinit var logoutHandler:LogoutHandler
+    lateinit var logoutHandler: LogoutHandler
 
     @Autowired
-    lateinit var accessDeniedHandle:AccessDeniedHandler
+    lateinit var accessDeniedHandle: AccessDeniedHandler
 
     @Autowired
     lateinit var sessionExpiredStrategy: SessionExpiredStrategy
@@ -68,7 +68,8 @@ open class SecurityConfig : WebSecurityConfigurerAdapter(){
                 .permitAll()
                 .and()
 
-                .authorizeRequests().antMatchers("/index").permitAll()   //表示 /index这个页面不需要权限认证，所有人都可以访问
+                .authorizeRequests()
+                .antMatchers("/index").permitAll()   //表示 /index这个页面不需要权限认证，所有人都可以访问
                 .antMatchers("/personalInfo").hasRole("ADMIN")      //表示/whoim的这个资源需要有ROLE_ADMIN的这个角色才能访问。不然就会提示拒绝访问
                 //表示Delete请求须同时满足hasRole和hasIpAddress两种权限   ADMIN会自动使用 ROLE_前缀，即此时的用户角色为 ROLE_ADMIN
                 .antMatchers(HttpMethod.GET,"/*").hasRole("ADMIN")
@@ -118,7 +119,7 @@ open class SecurityConfig : WebSecurityConfigurerAdapter(){
     }
 
     @Bean
-    open fun passwordEncoder()=DefinePasswordEncoder
+    open fun passwordEncoder()= DefinePasswordEncoder
 
 
 

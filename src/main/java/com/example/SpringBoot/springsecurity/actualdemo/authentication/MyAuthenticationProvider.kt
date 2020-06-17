@@ -1,7 +1,7 @@
-package com.example.springboot.springsecurity.authentication
+package com.example.springboot.springsecurity.actualdemo.authentication
 
-import com.example.springboot.springsecurity.model.UserInfo
-import com.example.springboot.springsecurity.service.UserinfoService
+import com.example.springboot.springsecurity.actualdemo.model.UserInfo
+import com.example.springboot.springsecurity.actualdemo.service.UserinfoService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.authentication.AuthenticationProvider
 import org.springframework.security.authentication.BadCredentialsException

@@ -1,4 +1,4 @@
-package com.example.springboot.summary.并发锁相关;
+package com.example.springboot.summary.并发锁相关.concurrentclass;
 
 import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
 
@@ -49,9 +49,12 @@ import java.util.concurrent.locks.AbstractQueuedLongSynchronizer;
  *                              ③死锁检测：一个非常方便的使用场景是，你可以使用n个线程访问共享资源，在每次测试阶段的线程数目是不同的，并尝试产生死锁。
  *                      4.CountDownLatch 类中主要的方法？
  *
- *     Semaphore(信号量):Semaphore是信号量，用于管理一组资源。其内部是基于AQS的共享模式，AQS的状态表示许可证的数量，在许可证数量不够时，线程将会被挂起；而一旦有一个线程释放一个资源，那么就有可能重新唤醒等待队列中的线程继续执行。
+ *     Semaphore(信号量):Semaphore是信号量，用于管理一组资源。其内部是基于AQS的共享模式，AQS的状态表示许可证的数量，在许可证数量不够时，线程将会被挂起；
+ *                      而一旦有一个线程释放一个资源，那么就有可能重新唤醒等待队列中的线程继续执行。
  *     CyclicBarrier(循环栅栏)：可重复进行的，多个线程之间互相等待直到一定数目(定义为屏障)的线程数到达屏障后再进行接下来的操作。
  *                             在线程数目达到设置的数目之前，每个线程都通过await()方法通知已到达屏障。
+ *     ReentrantReadWriteLock(可重入读写锁)：
+ *     StampedLock:
  *
  *
  *

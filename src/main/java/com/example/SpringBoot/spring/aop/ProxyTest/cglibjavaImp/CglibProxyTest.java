@@ -22,8 +22,8 @@ public class CglibProxyTest {
         Enhancer enhancer = new Enhancer();
         enhancer.setSuperclass(UserDao.class);
         enhancer.setCallback(new UserIncerceptDemo());
-        Object object = enhancer.create();
-        return object;
+        Object proxy = enhancer.create();
+        return proxy;
     }
 
     @Test

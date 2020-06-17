@@ -7,6 +7,9 @@ package com.example.springboot.leetcood.数据结构.sort;
  * 分类： 数据结构不同分为：最大堆，根节点元素都不小于其孩子节点
  * 最小堆，根节点元素都不大于其左右孩子
  * 堆排序的核心思想： 构造堆，将数据构造成堆经过以下步骤就可以得到有序的数据：
+ *
+ * 一般：  升序用大顶堆
+ *         降序用小顶堆
  * <p>
  * 1. 建立堆
  * 2. 得到堆顶元素，为最大元素
@@ -26,9 +29,10 @@ package com.example.springboot.leetcood.数据结构.sort;
  * 5）继续对不满足堆性质的子树进行上述交换操作，直到叶子结点，堆被建成。
  * <p>
  * 2. 对n个元素初始建堆的过程
+ * (从第一个非叶子节点 从下至上，从右至左调整结构)
  * 建堆方法：对初始序列建堆的过程，就是一个反复进行筛选的过程。
- * 1）n 个结点的完全二叉树，则最后一个结点是第个结点的子树。
- * 2）筛选从第个结点为根的子树开始，该子树成为堆。
+ * 1）n 个结点的完全二叉树，则最后一个结点是第 n/2-1 个结点的子树。
+ * 2）筛选从第 n/2-1 个结点为根的子树开始，该子树成为堆。
  * 3）之后向前依次对各结点为根的子树进行筛选，使之成为堆，直到根结点。
  *
  * @author duwenxu
@@ -41,9 +45,9 @@ public class HeapSort {
         buildMaxHeap(arr, len);  //创建最大堆
 
         for (int i = len - 1; i > 0; i--) {
-            swap(arr, 0, i);  //每次将根节点元素 arr[0] 置于 i 处，即使最大元素从后向前排列
+            swap(arr, 0, i);  //每次将根节点元素 arr[0] 置于 i 处，即使最大元素排至最后，元素升序排列
             len--;  //最大堆根节点元素出堆后，再次调整堆结构时元素个数减一
-            heapify(arr, 0, len);
+            heapify(arr, 0, len);  //已建立对结构时，从上向下调整堆
         }
         return arr;
     }
@@ -57,20 +61,24 @@ public class HeapSort {
 
     /**
      * 调整数据结构使其重新成为 最大堆
+     * @param arr  待排序数据
+     * @param i 最后一个非叶子节点的根节点
+     * @param len 数组长度
      */
     private static void heapify(int[] arr, int i, int len) {
         int left = 2 * i + 1;
         int right = 2 * i + 2;
-        int max = i;
+        int max = i;  //根节点
         if (left < len && arr[left] > arr[max]) {
             max = left;
         }
         if (right < len && arr[right] > arr[max]) {
             max = right;
         }
+        //调整完当前子树后，可能会破环左右堆的结构，因此进行递归调整（此处是递归向下调整）
         if (max != i) {
             swap(arr, i, max);
-            heapify(arr, max, len);  //调整完当前子树后，可能会破环左右堆的结构，因此进行递归调整
+            heapify(arr, max, len);
         }
     }
 

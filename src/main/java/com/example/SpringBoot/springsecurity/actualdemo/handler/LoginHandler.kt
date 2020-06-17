@@ -1,4 +1,4 @@
-package com.example.springboot.springsecurity.handler
+package com.example.springboot.springsecurity.actualdemo.handler
 
 import com.example.springboot.common.commonutils.ext.resp
 import com.example.springboot.common.result.ResultEnum
@@ -10,7 +10,6 @@ import org.springframework.security.core.session.SessionRegistry
 import org.springframework.security.web.authentication.AuthenticationFailureHandler
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler
 import org.springframework.stereotype.Component
-import javax.annotation.Resource
 import javax.servlet.http.HttpServletRequest
 import javax.servlet.http.HttpServletResponse
 

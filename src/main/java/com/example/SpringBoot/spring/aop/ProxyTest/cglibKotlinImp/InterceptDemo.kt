@@ -15,7 +15,7 @@ import java.lang.reflect.Method
 class InterceptDemo : MethodInterceptor {
     override fun intercept(o: Any, method: Method, objects: Array<Any>, methodProxy: MethodProxy): Any {
         println("开启事务....")
-        var obj = methodProxy.invokeSuper(o, objects)
+        val obj = methodProxy.invokeSuper(o, objects)
         println("结束事务....")
         return obj
     }

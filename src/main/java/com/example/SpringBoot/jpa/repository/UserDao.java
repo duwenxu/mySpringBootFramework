@@ -1,6 +1,6 @@
 package com.example.springboot.jpa.repository;
 
-import com.example.springboot.springsecurity.model.rbac_model.User;
+import com.example.springboot.springsecurity.actualdemo.model.rbac_model.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
