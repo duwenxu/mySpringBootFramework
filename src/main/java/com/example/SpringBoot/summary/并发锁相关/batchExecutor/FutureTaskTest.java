@@ -11,7 +11,7 @@ import java.util.concurrent.FutureTask;
  * @author duwenxu
  * @create 2020-04-02 19:01
  */
-public class CallableAndFutureTest {
+public class FutureTaskTest {
     public static void main(String[] args) {
 
         Callable<Integer> callable = new Callable<Integer>() {
