@@ -1,5 +1,6 @@
-package com.example.springboot.disignpattern.actionpattern.strategypattern;
+package com.example.springboot.disignpattern.actionpattern.strategypattern.concretestrategy;
 
+import com.example.springboot.disignpattern.actionpattern.strategypattern.AbstractStrategy;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -13,7 +14,7 @@ public class Vip2Startegy extends AbstractStrategy {
 
     @Override
     public double compute(double price) {
-        log.info("二级用户打9折！");
+        log.error("二级用户打9折！");
         return price*0.9;
     }
 }
