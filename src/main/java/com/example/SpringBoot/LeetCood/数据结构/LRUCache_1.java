@@ -1,4 +1,4 @@
-package com.example.springboot.leetcood.数据结构;
+package com.example.SpringBoot.LeetCood.数据结构;
 
 import java.util.LinkedList;
 import java.util.concurrent.ConcurrentHashMap;
@@ -9,7 +9,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * @author duwenxu
  * @create 2020-11-07 15:24
  */
-class LRUCache {
+class LRUCache_1 {
 
     static class Node {
        public int key, val;
@@ -24,7 +24,7 @@ class LRUCache {
     private ConcurrentHashMap<Integer, Node> map;
     private int cap;
 
-    public LRUCache(int capacity) {
+    public LRUCache_1(int capacity) {
         this.cap = capacity;
         this.cache = new LinkedList<>();
         this.map = new ConcurrentHashMap<>();

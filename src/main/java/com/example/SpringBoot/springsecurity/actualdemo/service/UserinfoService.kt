@@ -1,6 +1,5 @@
 package com.example.springboot.springsecurity.actualdemo.service
 
-import com.example.springboot.jpa.repository.UserDao
 import com.example.springboot.springsecurity.actualdemo.model.AuthorConf
 import com.example.springboot.springsecurity.actualdemo.model.UserInfo
 import org.springframework.beans.factory.annotation.Autowired
