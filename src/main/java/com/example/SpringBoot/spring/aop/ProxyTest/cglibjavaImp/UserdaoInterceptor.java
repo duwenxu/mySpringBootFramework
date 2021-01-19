@@ -12,7 +12,7 @@ import java.lang.reflect.Method;
  * @author duwenxu
  * @create 2019-02-28 17:57
  */
-public class UserIncerceptDemo implements MethodInterceptor {
+public class UserdaoInterceptor implements MethodInterceptor {
     @Override
     /**
      * intercept方法的几个参数的含义为：

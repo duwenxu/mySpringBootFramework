@@ -14,21 +14,9 @@ import org.springframework.cglib.proxy.Enhancer;
  */
 public class CglibProxyTest {
 
-    /**
-     * 生成动态代理对象
-     * @return
-     */
-    public static Object proxyFactory(){
-        Enhancer enhancer = new Enhancer();
-        enhancer.setSuperclass(UserDao.class);
-        enhancer.setCallback(new UserIncerceptDemo());
-        Object proxy = enhancer.create();
-        return proxy;
-    }
-
     @Test
     public void test(){
-        UserDao Cglibproxy = (UserDao) CglibProxyTest.proxyFactory();
+        UserDao Cglibproxy = (UserDao) CglibProxyFactory.getProxy(UserDao.class);
         Cglibproxy.use();
         Cglibproxy.discard();
     }

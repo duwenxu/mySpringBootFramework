@@ -1,4 +1,4 @@
-package com.example.SpringBoot.LeetCood.数据结构;
+package com.example.springboot.leetcood.数据结构.lru;
 
 import java.util.LinkedList;
 import java.util.concurrent.ConcurrentHashMap;
