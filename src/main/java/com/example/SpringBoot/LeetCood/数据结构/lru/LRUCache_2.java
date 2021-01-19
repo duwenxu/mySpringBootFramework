@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
  * ["LRUCache","put","put","get","put","put","get"]
  * [[2],[2,1],[2,2],[2],[1,1],[4,1],[2]]
  */
-class LRUCache {
+class LRUCache_2 {
 
     /**
      * 定义链中的Node
@@ -29,7 +29,7 @@ class LRUCache {
     private int size;
     private int capacity;
 
-    public LRUCache(int cap) {
+    public LRUCache_2(int cap) {
         this.capacity = cap;
         this.size = 0;
         this.head = new DLinkedNode();
@@ -124,7 +124,7 @@ class LRUCache {
 
 
     public static void main(String[] args) {
-        LRUCache lruCache = new LRUCache(2);
+        LRUCache_2 lruCache = new LRUCache_2(2);
         lruCache.put(2,1);
         lruCache.put(2,2);
         lruCache.get(2);
