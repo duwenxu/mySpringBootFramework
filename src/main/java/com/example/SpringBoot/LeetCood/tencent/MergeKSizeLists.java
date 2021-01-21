@@ -88,7 +88,8 @@ public class MergeKSizeLists {
         int len = lists.length;
         ListNode resNode = new ListNode(-1);
         ListNode curr = resNode;
-        PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(len, Comparator.comparingInt(node -> node.val)); //比较每个ListNode的头元素的值
+        //比较每个ListNode的头元素的值
+        PriorityQueue<ListNode> priorityQueue = new PriorityQueue<>(len, Comparator.comparingInt(node -> node.val));
         for (ListNode node : lists) {
             if (node != null) {
                 priorityQueue.add(node);
